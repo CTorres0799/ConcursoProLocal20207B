@@ -16,7 +16,7 @@ body {
 .form-control{
 background: rgba(94, 94, 94, 0.294);
 border-style: none;
-transition: 0.5s ease-in;
+transition: 0.2s ease-in;
 outline: none;
 }
 
@@ -35,9 +35,19 @@ outline: none;
     font-weight: 700!important;
     color: rgb(24, 66, 131);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
-    transition: 0.5s ease-in;
+    transition: 0.2s ease-in;
 }
 
 .aceptar:hover {
-    color: cornsilk;
+    background: red;
+    color: white;
+}
+
+.olvide {
+    color: white;
+    transition: 0.2s ease-in;;
+}
+
+.olvide:hover {
+    color: yellow;
 }
