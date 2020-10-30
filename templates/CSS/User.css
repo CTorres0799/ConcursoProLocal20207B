@@ -1,5 +1,4 @@
 body {
-    /*background-image: url(../img/gui-Login.PNG);*/
     transition: 0.2s ease-in;
     background-repeat: no-repeat;
     background-size: cover;
@@ -7,12 +6,21 @@ body {
 }
 
 ul{
-    background: rgb(24, 66, 131);;
+    background: rgb(24, 66, 131);
     color: white;
     font-size: 18px;
     padding: 10px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
     transition: 0.2s ease-in;
+}
+
+#texto1{
+    color: wheat;
+}
+
+#Cerrar{
+    position: relative;
+    left: 58%;
 }
 
 h1 {
@@ -41,4 +49,9 @@ h1 {
 .aceptar:hover {
     background: green;
     color: white;
+}
+
+#copy{
+    background: rgb(24, 66, 131);
+    color: seashell;
 }

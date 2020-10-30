@@ -3,8 +3,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/Eliminar.css">
-    <title>Eliminar</title>
+    <link rel="stylesheet" href="../CSS/User.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Consulta</title>
 </HEAD>
 
 <BODY>
@@ -12,35 +15,42 @@
         <ul class="navbar-nav">
             <img src="../img/tec-navBar.png" alt="Logo" style="width:40px;">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Eliminar</a>
+                <a class="nav-link" href="#">Consulta</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Categorias</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a class="nav-link" href="#">Docentes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../bancoProblemas/Problenas.html">bancoProblemas</a>
+                <div class="container">                                     
+                    <div class="dropdown">
+                      <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">
+                        Problemas
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../bancoProblemas/Problemas.html">Banco</a>
+                        <a class="dropdown-item" href="../problemasPropuestos/readme.txt">Propuesta</a>
+                        <a class="dropdown-item" href="../problemasResueltos/readme.txt">Resultados</a>
+                      </div>
+                    </div>
+                </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link " href="#">ProblemasPropuestos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../problemasResueltos/readme.txt">ProblemasResueltos</a>
-            </li>
-            <button  id="Cerrar" type="button" class="close" data-dismiss = "modal" aria-label="close">
+            <li class="nav-item" id="Cerrar">
+            <button type="button" class="close" data-dismiss = "modal" aria-label="close">
                 Cerrar
                 <span aria-hidden="true">
                     &times; 
                 </span>
             </button>
+            </li>   
         </ul>
     </nav>
 
     <main>
         <section>
-           <h1>Lista Usuarios</h1>
+           <h1>Consulta</h1>
            <div class="text-center">
            <!--<img src="#" class="rounded-circle" width="100px">-->
            <br>
@@ -49,7 +59,7 @@
            <button>Buscar</button>
            <br>
            <br>
-           <a class="linkButton btn link" href="../Alumnos/altaAlumnos.html">Agregar Alumno</a> 
+           <a class="btn link" href="../Alumnos/altaAlumnos.html">Agregar Alumno</a> 
            <table class="table table-striped table-bordered table-hover">
                 <thead class="thead-dark">
                     <th scope="col">ID</th>
@@ -66,28 +76,28 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>123467</td>
+                        <td>12345678</td>
                         <td>Jose</td>
                         <td>Masculino</td>
-                        <td>#</td>
+                        <td>351 999 999</td>
                         <td>algo#@accitesz.com</td>
                         <td>Ing. En Sistemas</td>
                         <td>Activo</td>
                         <td>Alumno</td>
-                        <td><a href="#"><img src="#"></a></td>
-                        <td><a href="#"><img src="#"></a></td>
+                        <td><a href="Modificar.html"><img src="../img/write.png"></a></td>
+                        <td><a href="Eliminar.html"><img src="../img/delete.png"></a></td>
                     </tr>
                     <tr>
-                        <td>123467</td>
+                        <td>12345678</td>
                         <td>Luis</td>
                         <td>Masculino</td>
-                        <td>#</td>
+                        <td>351 999 999</td>
                         <td>algo#@accitesz.com</td>
                         <td>Ing. En Sistemas</td>
                         <td>Activo</td>
                         <td>Alumno</td>
-                        <td><a href="#"><img src="#"></a></td>
-                        <td><a href="#"><img src="#"></a></td>
+                        <td><a href="Modificar.html"><img src="../img/write.png"></a></td>
+                        <td><a href="Eliminar.html"><img src="../img/delete.png"></a></td>
                     </tr>
                     <tr>
                 </tbody>
@@ -106,7 +116,12 @@
             </nav>
             <a class="linkButton btn link" href="#">Regresar</a>     
         </section>
-    
+
+        <footer id="copy" class="navbar-expand-sm">
+            ITESZ
+            <p>&copy; Derechos reservados</p>
+            <p><a href="https://www.teczamora.mx/">teczamora.com</a></p>
+        </footer>
 </BODY>
 
 </HTML>
