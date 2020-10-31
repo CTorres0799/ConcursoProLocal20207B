@@ -52,6 +52,8 @@ h1 {
 }
 
 #copy{
+    position: relative;
+    top: auto;
     background: rgb(24, 66, 131);
     color: seashell;
 }
