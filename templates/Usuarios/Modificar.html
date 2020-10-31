@@ -50,6 +50,73 @@
         </ul>
     </nav>
 
+    <main>
+        <section>
+            <h1>Usuarios</h1>
+            <form action="#" method="POST" enctype="text/plain">
+             <div id="datosPersonales">
+                 <fieldset>
+                     <legend>
+                         Datos Personales
+                     </legend>
+                     <label>ID</label>
+                     <input type="number" name="id" value="1" readonly>
+                     <br>
+                     <label>Nombre:</label>
+                     <input type="text" placeholder="Nombre del Docente" name="nombre" maxlength="100" value="Roberto Suárez Zinzun" required>
+                     <br>
+                     <label>Sexo:</label>
+                     <input type="radio"  name="sexo">Femenino
+                     <input type="radio" checked name="sexo">Masculino
+                      <br>
+                      <label>Telefono:</label>
+                      <input type="tel" name="telefono" placeholder="###-###-####" value="351-190-1781" required>
+                      <br>
+                      <label>Email:</label>
+                      <input type="email" name="email" value="rsuarez@accitesz.com" placeholder="algo@algo" required>
+                     <br>
+                     <label>Carrera:</label>
+                     <select name="carrera">
+                         <option>
+                             --Selecciona la carrera--
+                         </option>
+                         <option selected>
+                             Ing. en Sistemas Computacionales
+                         </option>
+                         <option>
+                             Ing. en Tecnologías de la Información
+                         </option>
+                         <option>
+                             Ing. en Electrónica
+                         </option>
+                     </select>
+                    <br>
+                    <label>Estatus:</label>
+                    <select>
+                        <option>Activo</option>
+                        <option>Inactivo</option>
+                    </select>
+                    <br>
+                     <label>Password:</label>
+                     <input type="password" name="password" value="Hola123" required>
+                     <br>
+                     <label>Repite Password:</label>
+                     <input type="password" name="rpassword" required>
+                     <br>
+                     <input type="hidden" name="tipo" value="D">
+                     <input type="hidden" name="estatus" value="I">
+                     <br>
+                 </fieldset>
+             </div>
+                 <fieldset>
+                        <button type="submit">Guardar</button>
+                        <button>Cancelar</button>    
+                 </fieldset>
+             </div>
+            </form>     
+         </section>
+         <a href="Consulta.html" class="btn link">Regresar</a> 
+    </main>
 
     <br>
     <footer id="copy" class="navbar-expand-sm">
