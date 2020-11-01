@@ -1,8 +1,9 @@
 body {
+    background-image: url(../img/gui-Login.PNG);
     transition: 0.2s ease-in;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed
+    background-attachment: fixed;
 }
 
 ul{
@@ -24,31 +25,19 @@ ul{
 }
 
 h1 {
+    position: relative;
     font-size: 25px; 
     font-family: monospace;
     padding: 0px;
 }
 
-.altaAlumnos {
-    background:   rgb(24, 66, 131);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
+hr{
+    background-color: mediumaquamarine;
 }
 
-.aceptar {
-    background: seashell;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: 700!important;
-    color: rgb(24, 66, 131);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
-    transition: 0.2s ease-in;
-}
-
-.aceptar:hover {
-    background: green;
-    color: white;
+#Regresar{
+    position: relative;
+    right: 645px;
 }
 
 #copy{
@@ -56,4 +45,34 @@ h1 {
     top: auto;
     background: rgb(24, 66, 131);
     color: seashell;
+}
+
+.datosPersonales{
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    font-size: 18px;
+    transition: 0.2s ease-in;
+    border-radius: 30px;
+    background-attachment: fixed;
+}
+
+.table{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    color: black;
+    border-radius: 10px;
+}
+
+.pagination{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    color: black;
+    border-radius: 10px;
+}
+
+.Eliminar{
+    /*background: rgb(24, 66, 131);*/
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    font-size: 18px;
+    transition: 0.2s ease-in;
+    border-radius: 30px;
 }

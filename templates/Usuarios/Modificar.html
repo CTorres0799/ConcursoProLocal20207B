@@ -12,7 +12,7 @@
     <title>Modificar</title>
 </HEAD>
 
-<BODY>
+<BODY id="body2">
     <nav class="form-group navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
             <img src="../img/tec-navBar.png" alt="Logo" style="width:40px;">
@@ -54,7 +54,7 @@
         <section>
             <h1>Usuarios</h1>
             <form action="#" method="POST" enctype="text/plain">
-             <div id="datosPersonales">
+             <div class="col-md-4 datosPersonales">
                  <fieldset>
                      <legend>
                          Datos Personales
@@ -63,17 +63,17 @@
                      <input type="number" name="id" value="1" readonly>
                      <br>
                      <label>Nombre:</label>
-                     <input type="text" placeholder="Nombre del Docente" name="nombre" maxlength="100" value="Roberto Suárez Zinzun" required>
+                     <input type="text" placeholder="Nombre del Alumno" name="nombre" maxlength="100" value="Jose" required>
                      <br>
                      <label>Sexo:</label>
                      <input type="radio"  name="sexo">Femenino
                      <input type="radio" checked name="sexo">Masculino
                       <br>
                       <label>Telefono:</label>
-                      <input type="tel" name="telefono" placeholder="###-###-####" value="351-190-1781" required>
+                      <input type="tel" name="telefono" placeholder="###-###-####" value="351-999-9999" required>
                       <br>
                       <label>Email:</label>
-                      <input type="email" name="email" value="rsuarez@accitesz.com" placeholder="algo@algo" required>
+                      <input type="email" name="email" value="algo@accitesz.com" placeholder="algo@algo" required>
                      <br>
                      <label>Carrera:</label>
                      <select name="carrera">
@@ -90,34 +90,41 @@
                              Ing. en Electrónica
                          </option>
                      </select>
-                    <br>
+                     <br>
                     <label>Estatus:</label>
                     <select>
                         <option>Activo</option>
                         <option>Inactivo</option>
                     </select>
                     <br>
+                    <label>Tipo:</label>
+                    <select>
+                        <option>Alumno</option>
+                        <option>Profesor</option>
+                    </select>
+                    <br>
                      <label>Password:</label>
                      <input type="password" name="password" value="Hola123" required>
                      <br>
-                     <label>Repite Password:</label>
+                     <label>Password:</label>
                      <input type="password" name="rpassword" required>
                      <br>
                      <input type="hidden" name="tipo" value="D">
                      <input type="hidden" name="estatus" value="I">
                      <br>
+                     <button type="submit">Guardar</button>
+                     <button>Cancelar</button>  
                  </fieldset>
              </div>
                  <fieldset>
-                        <button type="submit">Guardar</button>
-                        <button>Cancelar</button>    
+  
                  </fieldset>
              </div>
             </form>     
          </section>
          <a href="Consulta.html" class="btn link">Regresar</a> 
     </main>
-
+    <hr>
     <br>
     <footer id="copy" class="navbar-expand-sm">
         ITESZ
