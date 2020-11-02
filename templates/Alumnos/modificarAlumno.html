@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/alumnos.css">
-    <title>Alumnos</title>
+    <title>modificarAlumnos</title>
 </HEAD>
 
 <BODY>
@@ -30,19 +30,19 @@
 
         </ul>
     </nav>
-
     <div class="container">
-        <div class="row justify-content-left pt-2 mt-3 mr-1">
+        <div class="row justify-content-center pt-2 mt-3 mr-1">
             <div class="col-md-4 altaAlumnos">
                 <form action="">
                     <div class="form-group text-center pt-3">
-                        <h1 class="text-light">Registro Alumnos</h1>
+                        <h1 class="text-light">Modificar Alumnos</h1>
                         <div class="form-group mx-sm-5 pt-3 text-sm-center" >
-                            <input type="number" class="form-control" placeholder="No.Control" required>
+                            <input type="number" class="form-control" placeholder="No.Control" 
+                            value="17010340" required>
                         </div>
                         <div class="form-group text-center pt-3">
                             <label class="text-light" for="sel1">Semestre:</label>
-                            <select class="form-control" id="sel1">
+                            <select class="form-control" id="sel1" >
                                 <option>1A</option>
                                 <option>1B</option>
                                 <option>2A</option>
@@ -55,25 +55,31 @@
                                 <option>5B</option>
                                 <option>6A</option>
                                 <option>6B</option>
-                                <option>7A</option>
+                                
+                                <option selected>
+                                        7B
+                                </option>
                                 <option>7B</option>
                                 <option>8A</option>
                                 <option>8B</option>
                             </select>
                         </div>
                         <div class="form-group mx-sm-5 pt-3 text-sm-center">
-                            <input type="number" class="form-control" placeholder="idProblemasResueltos">
+                            <input type="number" class="form-control" placeholder="idProblemasResueltos" 
+                            value="001" required>
                         </div>
                         <div class="form-group mx-sm-5 pb-3">
-                            <input type="number" class="form-control" placeholder="idCarrera">
+                            <input type="number" class="form-control" placeholder="idCarrera" 
+                            value="001" required>
                         </div>
                         <div class="form-group mx-sm-5 pb-3">
-                            <input type="number" class="form-control" placeholder="idUsuario">
+                            <input type="number" class="form-control" placeholder="idUsuario" 
+                            value="001" required>
                         </div>
                         <div class="form-group mx-sm-5 pb-5">
 
                             <!-- <input  type="submit" class="btn btn-block aceptar" value="Aceptar" > -->
-                            <a href="#" class="btn btn-block aceptar" role="button">Aceptar</a>
+                            <a href="#" class="btn btn-block aceptar" role="button">Modificar</a>
 
                         </div>
                     </div>  

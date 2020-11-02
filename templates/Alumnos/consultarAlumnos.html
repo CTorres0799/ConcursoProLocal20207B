@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/consultarAlumnos.css">
+        <title>ConsultarAlumnos</title>
+</head>
+<body>
+    <nav class="form-group navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <img src="../img/tec-navBar.png" alt="Logo" style="width:40px;">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Alumnos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Categorias</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Docentes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#">ProblemasPropuestos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>ConsultarAlumnos</h2>
+        
+    <div>
+        <br>
+        <Label>Buscar:</Label>
+        <input type="text" placeholder="Buscar por NoControl" name="noControl">
+        <button>Buscar</button>
+        <br>
+    </div>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr >
+              <th>No.Control</th>
+              <th>Semestre</th>
+              <th>idProblemasResueltos</th>
+              <th>idCarrera</th>
+              <th>idUsuario</th>
+              <th >Editar</th>
+              <th >Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-success">
+              <td>17010340</td>
+              <td>7B</td>
+              <td>001</td>
+              <td>001</td>
+              <td>001</td>
+              <td><a href="../Alumnos/modificarAlumno.html"><img src="../img/modificar.png"></a></td>
+              <td><a href="../Alumnos/eliminarAlumno.html"><img src="../img/eliminar.png"></a></td>
+            </tr>
+            <tr class="table-success"> 
+                <td>17010340</td>
+                <td>7B</td>
+                <td>001</td>
+                <td>001</td>
+                <td>001</td>
+                <td><a href="../Alumnos/modificarAlumno.html"><img src="../img/modificar.png"></a></td>
+                <td><a href="../Alumnos/eliminarAlumno.html"><img src="../img/eliminar.png"></a></td>
+            </tr>
+            <tr class="table-danger">
+                <td>17010340</td>
+                <td>7B</td>
+                <td>001</td>
+                <td>001</td>
+                <td>001</td>
+                <td><a href="../Alumnos/modificarAlumno.html"><img src="../img/modificar.png"></a></td>
+                <td><a href="../Alumnos/eliminarAlumno.html"><img src="../img/eliminar.png"></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="btn btn-lg justify-content-center ">
+            <a href="../Alumnos/altaAlumnos.html" class="btn btn-block añadirAlumno" role="button">Añadir Alumno</a>
+
+        </div>
+      </div>
+</body>
+
+</html>
