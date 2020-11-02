@@ -21,7 +21,7 @@ ul{
 
 #Cerrar{
     position: relative;
-    left: 58%;
+    left: 650px;
 }
 
 h1 {
@@ -47,8 +47,11 @@ hr{
     color: seashell;
 }
 
+main{
+    height: 90vh;
+}
+
 .datosPersonales{
-    line-height: 5vh;
     padding: 1%;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
     font-size: 18px;
@@ -70,7 +73,6 @@ hr{
 }
 
 .Eliminar{
-    /*background: rgb(24, 66, 131);*/
     padding: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
     font-size: 18px;
