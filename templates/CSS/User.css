@@ -37,7 +37,7 @@ hr{
 
 #Regresar{
     position: relative;
-    right: 645px;
+    right: 600px;
 }
 
 #copy{
@@ -48,7 +48,8 @@ hr{
 }
 
 .datosPersonales{
-    padding: 20px;
+    line-height: 5vh;
+    padding: 1%;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
     font-size: 18px;
     transition: 0.2s ease-in;
