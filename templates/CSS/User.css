@@ -1,0 +1,78 @@
+body {
+    background-image: url(../img/gui-Login.PNG);
+    transition: 0.2s ease-in;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+ul{
+    background: rgb(24, 66, 131);
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
+    transition: 0.2s ease-in;
+}
+
+#texto1{
+    color: wheat;
+}
+
+#Cerrar{
+    position: relative;
+    left: 58%;
+}
+
+h1 {
+    position: relative;
+    font-size: 25px; 
+    font-family: monospace;
+    padding: 0px;
+}
+
+hr{
+    background-color: mediumaquamarine;
+}
+
+#Regresar{
+    position: relative;
+    right: 645px;
+}
+
+#copy{
+    position: relative;
+    top: auto;
+    background: rgb(24, 66, 131);
+    color: seashell;
+}
+
+.datosPersonales{
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    font-size: 18px;
+    transition: 0.2s ease-in;
+    border-radius: 30px;
+    background-attachment: fixed;
+}
+
+.table{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    color: black;
+    border-radius: 10px;
+}
+
+.pagination{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    color: black;
+    border-radius: 10px;
+}
+
+.Eliminar{
+    /*background: rgb(24, 66, 131);*/
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    font-size: 18px;
+    transition: 0.2s ease-in;
+    border-radius: 30px;
+}
