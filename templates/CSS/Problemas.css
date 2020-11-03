@@ -1,4 +1,4 @@
-/*-------Banco--------*/
+/*--------Banco--------*/
 .container2{
     width: 80%;
     height: 50vh;
@@ -17,6 +17,8 @@
 
 .container2{
     height: 60vh;
+    position: relative;
+    left: 10%;
     padding: 10px;
     background:rgba(18, 64, 190, 0.692);
     font-size: 18px;
@@ -24,3 +26,4 @@
     border-radius: 2rem;
     background-attachment: fixed; 
 }
+/*--------Resueltos--------*/
