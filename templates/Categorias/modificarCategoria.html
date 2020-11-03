@@ -1,27 +1,25 @@
-<!DOCTYPE HTML>
-
-<HTML>
-
-<HEAD>
+<!DOCTYPE html>
+<html>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../CSS/alumnos.css">
-    <title>Alumnos</title>
-</HEAD>
-
-<BODY>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../CSS/altaCategorias.css">
+        <title>Modificar-Categorias</title>
+</head>
+<body>
+    
     <nav class="form-group navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
             <img src="../img/tec-navBar.png" alt="Logo" style="width:40px;">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Alumnos</a>
-            </li>
             <li class="nav-item">
+                <a class="nav-link" href="../Alumnos/altaAlumnos.html">Alumnos</a>
+            </li>
+            <li class="nav-item active">
                 <a class="nav-link" href="../Categorias/altaCategorias.html">Categorias</a>
             </li>
             <li class="nav-item">
@@ -51,58 +49,53 @@
 
             <div class="dropdown show">
                 <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Herramientas Alumnos
+                  Herramientas Categorias
                 </a>
               
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="../Alumnos/consultarAlumnos.html">ConsultarAlumno</a>
-                    <a class="dropdown-item" href="../Alumnos/eliminarAlumno.html">EliminarAlumno</a>
-                    <a class="dropdown-item" href="../Alumnos/modificarAlumno.html">ModificarAlumno</a>
+                    <a class="dropdown-item" href="../Categorias/consultarCategorias.html">ConsultarCategorias</a>
+                    <a class="dropdown-item" href="../Categorias/eliminarCategoria.html">EliminarCategorias</a>
+                    <a class="dropdown-item" href="../Categorias/altaCategorias.html">RegistrarCategorias</a>
                 </div>
               </div>
 
 
-        </ul>        
+        </ul>     
     </nav>
 
     <div class="container">
         <div class="row justify-content-left pt-2 mt-3 mr-1">
-            <div class="col-md-4 altaAlumnos">
+            <div class="col-md-4 altaCategorias">
                 <form action="">
                     <div class="form-group text-center pt-3">
-                        <h1 class="text-light">Registro Alumnos</h1>
+                        <h1 class="text-light">Modificar Categorias</h1>
                         <div class="form-group mx-sm-5 pt-3 text-sm-center" >
-                            <input type="number" class="form-control" placeholder="No.Control" required>
+                            <input type="text" class="form-control" placeholder="Nombre Categoria" required
+                            value="Basico">
                         </div>
                         <div class="form-group text-center pt-3">
-                            <label class="text-light" for="sel1">Semestre:</label>
+                            <label class="text-light" for="sel1">Semestre Limite</label>
                             <select class="form-control" id="sel1">
-                                <option>1A</option>
-                                <option>1B</option>
-                                <option>2A</option>
-                                <option>2B</option>
-                                <option>3A</option>
-                                <option>3B</option>
-                                <option>4A</option>
-                                <option>4B</option>
-                                <option>5A</option>
-                                <option>5B</option>
-                                <option>6A</option>
-                                <option>6B</option>
-                                <option>7A</option>
-                                <option>7B</option>
-                                <option>8A</option>
-                                <option>8B</option>
+                                <option>1S</option>                                
+                                <option>2S</option>                      
+                                <option>3S</option>  
+                                <option selected>
+                                    4S                             
+                                <option>4S</option>
+                                <option>5S</option>                        
+                                <option>6S</option>                               
+                                <option>7S</option>                        
+                                <option>8S</option>
+                                <option>9S</option>  
                             </select>
                         </div>
                         <div class="form-group mx-sm-5 pt-3 text-sm-center">
-                            <input type="number" class="form-control" placeholder="idProblemasResueltos">
+                            <input type="number" class="form-control" placeholder="idCategoria"
+                            value="001">
                         </div>
                         <div class="form-group mx-sm-5 pb-3">
-                            <input type="number" class="form-control" placeholder="idCarrera">
-                        </div>
-                        <div class="form-group mx-sm-5 pb-3">
-                            <input type="number" class="form-control" placeholder="idUsuario">
+                            <input type="number" class="form-control" placeholder="idProblemasPropuesto"
+                            value="001">
                         </div>
                         <div class="form-group mx-sm-5 pb-5">
 
@@ -116,13 +109,5 @@
         </div>
     </div>
 
-    <footer id="copy" class="navbar-expand-sm">
-        <center>
-            <br>
-        <a class="btn link itesz" href="https://www.teczamora.mx/">Sitio Web Oficial ITESZ</a>
-        <br>
-            &copy; Derechos reservados 2020
-        </center>
-    </footer>
-</BODY>
-</HTML>
+</body>
+</html>

@@ -1,0 +1,44 @@
+body {
+    background-image: url(../img/gui-Login.PNG);
+    transition: 0.2s ease-in;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed
+}
+
+ul{
+    background: rgb(24, 66, 131);;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
+    transition: 0.2s ease-in;
+}
+
+.altaCategorias {
+    background:   rgba(37, 37, 37, 0.849);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+}
+
+h1 {
+    font-size: 25px; 
+    font-family: monospace;
+    padding: 0px;
+}
+
+.aceptar {
+    background: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700!important;
+    color: rgb(24, 66, 131);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
+    transition: 0.2s ease-in;
+}
+
+.aceptar:hover {
+    background: green;
+    color: white;
+}
