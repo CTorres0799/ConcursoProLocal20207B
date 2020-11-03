@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/User.css">
+    <link rel="stylesheet" href="../CSS/Plantilla.css">
+    <link rel="icon" href="../img/Icono.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Consulta</title>
+</HEAD>
+
+<BODY>
+    <nav class="form-group navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <img src="../img/tec-navBar.png" alt="Logo" style="width:40px;">
+             <!--Usuarios-->
+           <li class="nav-item">
+                <div class="container">                                     
+                    <div class="dropdown">
+                      <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">
+                        Usuarios
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../Usuarios/AltaUsuarios.html">Alta Usuarios</a>
+                        <a class="dropdown-item" href="../Usuarios/ConsultaUsuarios.html">Consultar Alumnos</a>
+                      </div>
+                    </div>
+                </div>
+            </li> 
+            <!--Alumnos-->
+           <li class="nav-item">
+                <div class="container">                                     
+                    <div class="dropdown">
+                      <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">
+                        Alumnos
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../Alumnos/altaAlumnos.html">Alta Alumnos</a>
+                        <a class="dropdown-item" href="../Alumnos/consultarAlumnos.html">Consultar Alumnos</a>
+                      </div>
+                    </div>
+                </div>
+            </li> 
+            <!--Problemas-->
+            <li class="nav-item">
+                <div class="container">                                     
+                    <div class="dropdown">
+                      <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">
+                        Problemas
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../bancoProblemas/BancoProblemas.html">Banco Problemas</a>
+                        <a class="dropdown-item" href="../problemasPropuestos/readme.txt">Propuestos</a>
+                        <a class="dropdown-item" href="../problemasResueltos/Resueltos.html">Resueltos</a>
+                      </div>
+                    </div>
+                </div>
+            </li>
+            <!--Carreras-->
+            <li class="nav-item">
+                <div class="container">                                     
+                    <div class="dropdown">
+                      <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">
+                        Carreras
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../Carreras/AltaCarrera.html">Alta Carreras</a>
+                        <a class="dropdown-item" href="../Carreras/ConsultarCarrera.html">Consultar Carreras</a>
+                      </div>
+                    </div>
+                </div>
+            </li> 
+            <!--Categorias-->
+            <li class="nav-item">
+                <div class="container">                                     
+                    <div class="dropdown">
+                      <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">
+                        Categorias
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../Categorias/altaCategorias.html">Alta Categorias</a>
+                        <a class="dropdown-item" href="../Categorias/consultarCategorias.html">Consultar Carreras</a>
+                      </div>
+                    </div>
+                </div>
+            </li>
+            <!--Docentes-->
+            <li class="nav-item">
+                <div class="container">                                     
+                    <div class="dropdown">
+                      <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">
+                        Docentes
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../Docentes/altaDocentes.html">Alta Docentes</a>
+                        <a class="dropdown-item" href="../Docentes/consultarDocentes.html">Consultar Docentes</a>
+                      </div>
+                    </div>
+                </div>
+            </li>
+            <!--Ediciones-->
+            <li class="nav-item">
+                <div class="container">                                     
+                    <div class="dropdown">
+                      <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">
+                        Ediciones
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../Ediciones/AltaEdiciones.html">Alta Ediciones</a>
+                        <a class="dropdown-item" href="../Ediciones/ConsultarEdiciones.html">Consultar Ediciones</a>
+                      </div>
+                    </div>
+                </div>
+            </li>
+            <!--Equipos-->
+            <li class="nav-item">
+                <div class="container">                                     
+                    <div class="dropdown">
+                      <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">
+                        Equipos
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../Equipos/AltaRegistroEquipos.html">Alta Equipos</a>
+                        <a class="dropdown-item" href="../Equipos/CosultarEquipo.html">Consultar Equipos</a>
+                      </div>
+                    </div>
+                </div>
+            </li>
+            <!--Cerrar-->
+            <!--
+            <li class="nav-item" id="Cerrar">
+            <button type="button" class="close" data-dismiss = "modal" aria-label="close">
+                Cerrar
+                <span aria-hidden="true">
+                    &times; 
+                </span>
+            </button>
+            </li> 
+            -->  
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+           <h1 class="h1x">Consulta</h1>
+                <div class="text-center ">
+                    <br>
+                        <Label>Buscar:</Label>
+                        <input type="text" placeholder="Buscar por nombre" name="nombre">
+                        <button>Buscar</button>
+                    </br>
+                    <br>
+                <table id="table2" class="table table-striped table-bordered table-hover">
+
+                <thead class="thead-dark">
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Carrera</th>
+                    <th scope="col">Estatus</th>
+                    <th scope="col">Tipo</th>
+
+                    <th scope="col">Editar</th>
+                    <th scope="col">Eliminar</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12345678</td>
+                        <td>Jose</td>
+                        <td>Masculino</td>
+                        <td>351 999 999</td>
+                        <td>algo#@accitesz.com</td>
+                        <td>Ing. En Sistemas</td>
+                        <td>Activo</td>
+                        <td>Alumno</td>
+                        <td><a href="ModificarUsuarios.html"><img src="../img/write.png"></a></td>
+                        <td><a href="EliminarUsuario.html"><img src="../img/delete.png"></a></td>
+                    </tr>
+                    <tr>
+                        <td>12345678</td>
+                        <td>Jose</td>
+                        <td>Masculino</td>
+                        <td>351 999 999</td>
+                        <td>algo#@accitesz.com</td>
+                        <td>Ing. En Sistemas</td>
+                        <td>Activo</td>
+                        <td>Alumno</td>
+                        <td><a href="ModificarUsuarios.html"><img src="../img/write.png"></a></td>
+                        <td><a href="EliminarUsuario.html"><img src="../img/delete.png"></a></td>
+                    </tr>
+                </tbody>
+                
+                </table>
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#">Anterior</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Siguiente</a>
+                </li>
+            </ul> 
+    </nav>
+        <a id="Regresar" class="btn link" href="../Alumnos/altaAlumnos.html">Regresar</a>     
+        </section>
+        <br>
+        <footer id="copy" class="navbar-expand-sm">
+            <center>
+                <div>
+                    <br><br><br><br><br><br>
+                    <a class="btn link itesz" href="https://www.teczamora.mx/">Sitio Web Oficial ITESZ</a>
+                    <br>
+                    &copy; Derechos reservados 2020
+                </div>
+            </center>
+        </footer>
+</BODY>
+</HTML>

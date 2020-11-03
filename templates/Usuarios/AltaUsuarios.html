@@ -6,16 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="../CSS/User.css">
   <link rel="stylesheet" href="../CSS/Plantilla.css">
-  <link rel="stylesheet" href="../CSS/Problemas.css">
   <link rel="icon" href="../img/Icono.ico">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <title>Problemas Resueltos</title>
+  <title>Alta Usuarios</title>
 </HEAD>
 
-<BODY>
+<BODY id="body2">
   <nav class="form-group navbar-expand-sm bg-dark navbar-dark">
     <ul class="navbar-nav">
       <img src="../img/tec-navBar.png" alt="Logo" style="width:40px;">
@@ -136,46 +136,85 @@
   </nav>
 
   <main>
-    <h4>Problemas Resueltos</h4>
-    <div class="container2 table-responsive">
-      <table class="table3 table-striped table-hover">
-        <thead class="thead-dark">
-          <th scope="col">ID Resueltos</th>
-          <th scope="col">ID Propuestos</th>
-          <th scope="col">ID Equipo</th>
-          <th scope="col">Tiempo Ejecución</th>
-          <th scope="col">Puntaje</th>
-        </thead>
+    <section id="sect">
+      <h1>Alta Usuarios</h1>
+      <form class="pt-3" action="#" method="POST" enctype="text/plain">
+        <div class="col-md-4 datosPersonales text-center">
+          <fieldset>
+            <legend>
+              Datos Personales
+            </legend>
+            <label>ID</label>
+            <input type="number" name="id" value="1" readonly>
+            <br>
+            <label>Nombre:</label>
+            <input type="text" placeholder="Nombre del Alumno" name="nombre" maxlength="100" value="Jose" required>
+            <br>
+            <label>Sexo:</label>
+            <input type="radio" name="sexo">Femenino
+            <input type="radio" checked name="sexo">Masculino
+            <br>
+            <label>Telefono:</label>
+            <input type="tel" name="telefono" placeholder="###-###-####" value="351-999-9999" required>
+            <br>
+            <label>Email:</label>
+            <input type="email" name="email" value="algo@accitesz.com" placeholder="algo@algo" required>
+            <br>
+            <label>Carrera:</label>
+            <select name="carrera">
+              <option>
+                --Selecciona la carrera--
+              </option>
+              <option selected>
+                Ing. en Sistemas Computacionales
+              </option>
+              <option>
+                Ing. en Tecnologías de la Información
+              </option>
+              <option>
+                Ing. en Electrónica
+              </option>
+            </select>
+            <br>
+            <label>Estatus:</label>
+            <select>
+              <option>Activo</option>
+              <option>Inactivo</option>
+            </select>
+            <br>
+            <label>Tipo:</label>
+            <select>
+              <option>Alumno</option>
+              <option>Profesor</option>
+            </select>
+            <br>
+            <label>Password:</label>
+            <input type="password" name="password" value="Hola123" required>
+            <br>
+            <label>Password:</label>
+            <input type="password" name="rpassword" required>
+            <br>
+            <input type="hidden" name="tipo" value="D">
+            <input type="hidden" name="estatus" value="I">
+            <br>
+            <button type="submit" class="btn link">Guardar</button>
+            <a href="ConsultaUsuarios.html" class="btn link">Cancelar</a>
+          </fieldset>
+        </div>
+        <fieldset>
 
-        <tbody>
-          <tr class="table">
-            <td>170</td>
-            <td>170</td>
-            <td>3</td>
-            <td>30</td>
-            <td>30</td>
-          </tr>
-          <tr class="table">
-            <td>171</td>
-            <td>171</td>
-            <td>5</td>
-            <td>10</td>
-            <td>5</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+        </fieldset>
+        </div>
+      </form>
+    </section>
   </main>
-
   <br>
   <footer id="copy" class="navbar-expand-sm">
     <center>
-      <div>
-        <br><br><br><br><br><br>
-        <a class="btn link itesz" href="https://www.teczamora.mx/">Sitio Web Oficial ITESZ</a>
-        <br>
-        &copy; Derechos reservados 2020
-      </div>
+      <br><br><br><br><br><br>
+      <a class="btn link itesz" href="https://www.teczamora.mx/">Sitio Web Oficial ITESZ</a>
+      <br>
+      &copy; Derechos reservados 2020
     </center>
   </footer>
 

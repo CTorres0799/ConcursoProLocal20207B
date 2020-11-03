@@ -34,14 +34,6 @@ h1 {
 }
 
 .Eliminar{
-    padding: 20px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
-    font-size: 18px;
-    transition: 0.2s ease-in;
-    border-radius: 30px;
-}
-
-.Eliminar{
     height: 20vh;
     position: relative;
     left: 40%;
