@@ -52,7 +52,12 @@ button{
     font-size: 30px;
     color: rgb(9, 156, 204);;
   }
-
+#Guardar{
+    color: white;
+}
+#Cancelar{
+    color: white;
+}
 
 
 
