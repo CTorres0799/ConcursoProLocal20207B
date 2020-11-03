@@ -6,6 +6,14 @@ body{
     background-attachment: fixed;
 
 }
+footer{
+    align-self: flex-end;
+    padding: 3px;  
+    display: block;
+}
+fieldset{
+    color: white;
+}
 ul{
     background: rgb(24, 66, 131);
     color: white;
@@ -13,10 +21,6 @@ ul{
     padding: 10px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
     transition: 0.2s ease-in;
-}
-
-fieldset{
-    color: white;
 }
 #texto1{
     color: wheat;
@@ -27,13 +31,8 @@ fieldset{
     background: rgb(24, 66, 131);
     color: seashell;
 }
-footer{
-    align-self: flex-end;
-    padding: 3px;  
-    display: block;
-}
-.DatosEquipo{
-    height: 90vh; /*sirve para que el footer se vea en la ventana pero en la parte de abajo*/
+.Ediciones{
+    height: 80vh; /*sirve para que el footer se vea en la ventana pero en la parte de abajo*/
     padding: 10px;/*Separacion respecto a la ventana*/
     background:   rgba(37, 37, 37, 0.849);
     font-size: 18px;/*utilizado para el tamaño de letras*/
@@ -42,12 +41,13 @@ footer{
     background-attachment: fixed; 
 }
 #SitioITESZ{
-color: white;
+    color: white;
 }
 #Encabezado{
-  border-bottom-style: groove;
-  border-bottom-color: rgb(24, 66, 131);
-  border-bottom-width: 7px;
-  font-size: 30px;
-  color: darkviolet;
+    border-bottom-style: groove;
+    border-bottom-color: rgb(24, 66, 131);
+    border-bottom-width: 7px;
+    font-size: 30px;
+    color: darkviolet;
 }
+  
