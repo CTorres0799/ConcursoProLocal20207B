@@ -1,29 +1,3 @@
-body {
-    background-image: url(../img/gui-Login.PNG);
-    transition: 0.2s ease-in;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-ul{
-    background: rgb(24, 66, 131);
-    color: white;
-    font-size: 18px;
-    padding: 10px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
-    transition: 0.2s ease-in;
-}
-
-#texto1{
-    color: wheat;
-}
-
-#Cerrar{
-    position: relative;
-    left: 650px;
-}
-
 h1 {
     position: relative;
     font-size: 25px; 
@@ -31,29 +5,15 @@ h1 {
     padding: 0px;
 }
 
-hr{
-    background-color: mediumaquamarine;
-}
-
 #Regresar{
     position: relative;
     right: 600px;
 }
 
-#copy{
-    position: relative;
-    top: auto;
-    background: rgb(24, 66, 131);
-    color: seashell;
-}
-
-main{
-    height: 90vh;
-}
-
 .datosPersonales{
     padding: 1%;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    background-color:rgba(18, 64, 190, 0.692);
     font-size: 18px;
     transition: 0.2s ease-in;
     border-radius: 30px;
@@ -78,8 +38,4 @@ main{
     font-size: 18px;
     transition: 0.2s ease-in;
     border-radius: 30px;
-}
-
-.itesz{
-    color: white;
 }
