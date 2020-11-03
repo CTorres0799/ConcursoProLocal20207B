@@ -36,10 +36,13 @@ ul{
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
     transition: 0.2s ease-in;
 }
-#texto2{
+#texto1{
     color: wheat;
 }
 fieldset{
+    color: white;
+}
+button{
     color: white;
 }
 
