@@ -1,8 +1,6 @@
-<!DOCTYPE HTML>
-
-<HTML>
-
-<HEAD>
+<!DOCTYPE html>
+<html>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -10,16 +8,16 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../CSS/alumnos.css">
-    <title>Alumnos</title>
-</HEAD>
+    <link rel="stylesheet" href="../CSS/altaCategorias.css">
+    <title>Alta-PP</title>
+</head>
+<body>
 
-<BODY>
     <nav class="form-group navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
             <img src="../img/tec-navBar.png" alt="Logo" style="width:40px;">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Alumnos</a>
+            <li class="nav-item">
+                <a class="nav-link" href="../Alumnos/altaAlumnos.html">Alumnos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../Categorias/altaCategorias.html">Categorias</a>
@@ -27,7 +25,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="../Docentes/altaDocentes.html">Docentes</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link " href="../problemasPropuestos/altaProplemasPropuesto.html">ProblemasPropuestos</a>
             </li>
             <li class="nav-item">
@@ -51,60 +49,44 @@
 
             <div class="dropdown show">
                 <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Herramientas Alumnos
+                  Herramientas PP
                 </a>
               
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="../Alumnos/consultarAlumnos.html">ConsultarAlumno</a>
-                    <a class="dropdown-item" href="../Alumnos/eliminarAlumno.html">EliminarAlumno</a>
-                    <a class="dropdown-item" href="../Alumnos/modificarAlumno.html">ModificarAlumno</a>
+                    <a class="dropdown-item" href="../problemasPropuestos/consultarProblemasPropuestos.html">
+                        Consultar PP</a>
+                    <a class="dropdown-item" href="../problemasPropuestos/eliminarProblemasPropuestos.html">Eliminar PP</a>
+                    <a class="dropdown-item" href="../problemasPropuestos/modificarProblemasPropuestos.html">
+                        Modificar PP</a>
                 </div>
               </div>
 
 
-        </ul>        
+        </ul>     
     </nav>
 
     <div class="container">
-        <div class="row justify-content-left pt-2 mt-3 mr-1">
-            <div class="col-md-4 altaAlumnos">
+        <div class="justify-content-center pt-2 mt-3 mr-1">
+            <div class="col-md-4 altaCategorias">
                 <form action="">
                     <div class="form-group text-center pt-3">
-                        <h1 class="text-light">Registro Alumnos</h1>
+                        <h1 class="text-light">Registro PP</h1>
                         <div class="form-group mx-sm-5 pt-3 text-sm-center" >
-                            <input type="number" class="form-control" placeholder="No.Control" required>
-                        </div>
-                        <div class="form-group text-center pt-3">
-                            <label class="text-light" for="sel1">Semestre:</label>
-                            <select class="form-control" id="sel1">
-                                <option>1A</option>
-                                <option>1B</option>
-                                <option>2A</option>
-                                <option>2B</option>
-                                <option>3A</option>
-                                <option>3B</option>
-                                <option>4A</option>
-                                <option>4B</option>
-                                <option>5A</option>
-                                <option>5B</option>
-                                <option>6A</option>
-                                <option>6B</option>
-                                <option>7A</option>
-                                <option>7B</option>
-                                <option>8A</option>
-                                <option>8B</option>
-                            </select>
+                            <input type="text" class="form-control" placeholder="Globo" required>
+                        </div>     
+                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                            <input type="text" class="form-control" placeholder="idProblemaPropuesto">
                         </div>
                         <div class="form-group mx-sm-5 pt-3 text-sm-center">
-                            <input type="number" class="form-control" placeholder="idProblemasResueltos">
+                            <input type="text" class="form-control" placeholder="idEdicion">
                         </div>
-                        <div class="form-group mx-sm-5 pb-3">
-                            <input type="number" class="form-control" placeholder="idCarrera">
+                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                            <input type="text" class="form-control" placeholder="idCategoria">
                         </div>
-                        <div class="form-group mx-sm-5 pb-3">
-                            <input type="number" class="form-control" placeholder="idUsuario">
+                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                            <input type="text" class="form-control" placeholder="idProblema">
                         </div>
-                        <div class="form-group mx-sm-5 pb-5">
+                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
 
                             <!-- <input  type="submit" class="btn btn-block aceptar" value="Aceptar" > -->
                             <a href="#" class="btn btn-block aceptar" role="button">Aceptar</a>
@@ -115,14 +97,6 @@
             </div>
         </div>
     </div>
-
-    <footer id="copy" class="navbar-expand-sm">
-        <center>
-            <br>
-        <a class="btn link itesz" href="https://www.teczamora.mx/">Sitio Web Oficial ITESZ</a>
-        <br>
-            &copy; Derechos reservados 2020
-        </center>
-    </footer>
-</BODY>
-</HTML>
+    
+</body>
+</html>
