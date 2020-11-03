@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+templates/Carreras/Carrera.html
+templates/Carreras/Consultar.html
+templates/Carreras/Eliminar.html
+templates/Carreras/Modificar.html
+templates/Carreras/readme.html
+templates/Ediciones/Consultar.html
+templates/Equipos/RegistroEquipos.html
+templates/Carreras/Carrera.html
