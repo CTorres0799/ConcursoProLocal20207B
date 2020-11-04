@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../CSS/altaCategorias.css">
     <link rel="icon" href="../img/Icono.ico">
     <title>Alta-Docentes</title>
 </head>
+
 <body>
-    
+
     <nav class="form-group navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
             <a href="../Principal.html">
@@ -51,19 +53,20 @@
             </li>
 
             <div class="dropdown show">
-                <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Herramientas Docentes
+                <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Herramientas Docentes
                 </a>
-              
+
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item" href="../Docentes/consultarDocentes.html">ConsultarDocentes</a>
                     <a class="dropdown-item" href="../Docentes/eliminarDocente.html">EliminarDocentes</a>
                     <a class="dropdown-item" href="../Docentes/modificarDocente.html">ModificarDocentes</a>
                 </div>
-              </div>
+            </div>
 
 
-        </ul>     
+        </ul>
     </nav>
 
     <div class="container">
@@ -72,18 +75,18 @@
                 <form action="">
                     <div class="form-group text-center pt-3">
                         <h1 class="text-light">Registro Docentes</h1>
-                        <div class="form-group mx-sm-5 pt-3 text-sm-center" >
+                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
                             <input type="number" class="form-control" placeholder="No.Control" required>
                         </div>
                         <div class="form-group text-center pt-3">
                             <label class="text-light" for="sel1">Escolaridad</label>
                             <select class="form-control" id="sel1">
-                                <option>Licenciatura</option>                                
-                                <option>Maestria</option>                      
-                                <option>Doctorado</option>                               
+                                <option>Licenciatura</option>
+                                <option>Maestria</option>
+                                <option>Doctorado</option>
                                 <option>Post-Doctorado</option>
                             </select>
-                        </div>      
+                        </div>
                         <div class="form-group mx-sm-5 pt-3 text-sm-center">
                             <input type="text" class="form-control" placeholder="Especialidad">
                         </div>
@@ -105,7 +108,7 @@
                             <a href="#" class="btn btn-block aceptar" role="button">Aceptar</a>
 
                         </div>
-                    </div>  
+                    </div>
                 </form>
             </div>
         </div>
@@ -113,4 +116,5 @@
 
 
 </body>
+
 </html>

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../CSS/consultarDocentes.css">
     <link rel="icon" href="../img/Icono.ico">
-        <title>Consultar-PP</title>
+    <title>Consultar-PP</title>
 </head>
+
 <body>
-  
+
     <nav class="form-group navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
             <a href="../Principal.html">
@@ -51,67 +53,76 @@
             </li>
 
             <div class="dropdown show">
-                <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Herramientas PP
+                <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Herramientas PP
                 </a>
-              
+
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item" href="../problemasPropuestos/altaProplemasPropuesto.html">Registrar PP</a>
-                    <a class="dropdown-item" href="../problemasPropuestos/eliminarProblemasPropuestos.html">Eliminar PP</a>
-                    <a class="dropdown-item" href="../problemasPropuestos/modificarProblemasPropuestos.html">Modificar PP</a>
+                    <a class="dropdown-item" href="../problemasPropuestos/eliminarProblemasPropuestos.html">Eliminar
+                        PP</a>
+                    <a class="dropdown-item" href="../problemasPropuestos/modificarProblemasPropuestos.html">Modificar
+                        PP</a>
                 </div>
-              </div>
+            </div>
         </ul>
-    </nav>  
+    </nav>
 
     <div class="container">
         <h2>ConsultarPP</h2>
-        
-    <div>
-        <br>
-        <Label>Buscar:</Label>
-        <input type="text" placeholder="Buscar por idProblemaPropuesto" name="idProPrue">
-        <button>Buscar</button>
-        <br>
-    </div>
+
+        <div>
+            <br>
+            <Label>Buscar:</Label>
+            <input type="text" placeholder="Buscar por idProblemaPropuesto" name="idProPrue">
+            <button>Buscar</button>
+            <br>
+        </div>
         <table class="table">
-          <thead class="thead-dark">
-            <tr >
-              <th>Globo</th>
-              <th>idProblemaPropuesto</th>
-              <th>idEdicion</th>
-              <th>idCategoria</th>
-              <th >idProblema</th>
-              <th >Editar</th>
-              <th >Eliminar</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="table-success">
-              <td>Azul</td>
-              <td>001</td>
-              <td>001</td>
-              <td>001</td>
-              <td>001</td>
-              <td><a href="../problemasPropuestos/modificarProblemasPropuestos.html"><img src="../img/modificar.png"></a></td>
-              <td><a href="../problemasPropuestos/eliminarProblemasPropuestos.html"><img src="../img/eliminar.png"></a></td>
-            </tr>
-            <tr class="table-success"> 
-                <td>Verde</td>
-                <td>002</td>
-                <td>001</td>
-                <td>002</td>
-                <td>002</td>
-                <td><a href="../problemasPropuestos/modificarProblemasPropuestos.html"><img src="../img/modificar.png"></a></td>
-                <td><a href="../problemasPropuestos/eliminarProblemasPropuestos.html"><img src="../img/eliminar.png"></a></td>
-            </tr>
-          </tbody>
+            <thead class="thead-dark">
+                <tr>
+                    <th>Globo</th>
+                    <th>idProblemaPropuesto</th>
+                    <th>idEdicion</th>
+                    <th>idCategoria</th>
+                    <th>idProblema</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-success">
+                    <td>Azul</td>
+                    <td>001</td>
+                    <td>001</td>
+                    <td>001</td>
+                    <td>001</td>
+                    <td><a href="../problemasPropuestos/modificarProblemasPropuestos.html"><img
+                                src="../img/modificar.png"></a></td>
+                    <td><a href="../problemasPropuestos/eliminarProblemasPropuestos.html"><img
+                                src="../img/eliminar.png"></a></td>
+                </tr>
+                <tr class="table-success">
+                    <td>Verde</td>
+                    <td>002</td>
+                    <td>001</td>
+                    <td>002</td>
+                    <td>002</td>
+                    <td><a href="../problemasPropuestos/modificarProblemasPropuestos.html"><img
+                                src="../img/modificar.png"></a></td>
+                    <td><a href="../problemasPropuestos/eliminarProblemasPropuestos.html"><img
+                                src="../img/eliminar.png"></a></td>
+                </tr>
+            </tbody>
         </table>
         <div class="btn btn-lg justify-content-center ">
-            <a href="../problemasPropuestos/altaProplemasPropuesto.html" class="btn btn-block añadirDocente" role="button">Añadir PP</a>
+            <a href="../problemasPropuestos/altaProplemasPropuesto.html" class="btn btn-block añadirDocente"
+                role="button">Añadir PP</a>
 
         </div>
-      </div>
+    </div>
 
 </body>
+
 </html>
