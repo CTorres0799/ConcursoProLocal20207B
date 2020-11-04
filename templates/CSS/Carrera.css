@@ -43,7 +43,7 @@ fieldset{
     color: white;
 }
 button{
-    color: white;
+    color: rgb(31, 241, 217);
 }
 #Encabezado{
     border-bottom-style: groove;
@@ -58,6 +58,7 @@ button{
 #Cancelar{
     color: white;
 }
+
 
 
 
