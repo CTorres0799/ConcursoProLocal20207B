@@ -15,11 +15,14 @@ ul{
     transition: 0.2s ease-in;
 }
 h1{
-    position: static;
+    background:  rgb(24, 66, 131);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.692);
     font-size: 45px; 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 0px;
-    color: rgb(107, 71, 191);
+
+    color: rgb(255, 255, 255);
 }
 #copy{
     position: relative;
@@ -36,11 +39,14 @@ footer{
     color: white;
 }
 #Encabezado{
+    background:   rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.356);
     border-bottom-style: groove;
-    border-bottom-color: rgb(24, 66, 131);
     border-bottom-width: 7px;
     font-size: 30px;
-    color: rgb(9, 156, 204);
+    color: rgb(24, 66, 131);
   }
   #texto1{
     color: wheat;
