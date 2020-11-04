@@ -9,7 +9,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <link rel="stylesheet"  href="../CSS/Carrera.css">
+        <link rel="stylesheet"  href="../CSS/ModificarCarreras.css">
         <link rel="icon" href="../img/Icono.ico">
         <title>Consultar Carrera</title>
     </head>
@@ -135,7 +135,27 @@
             <b><center>INSTITUTO TECNOLOGICO DE ESTUDIO SUPERIOR ZAMORA</center></b>
         </header>
         <form>
-
+            <br>
+            <div class="col-md-4 DatosEquipo">  
+                <fieldset>
+                     <center><legend>Datos de la Carrera:</legend></center>
+                     <label>IdCarrera:</label>
+                     <input type="number" name="IdProRes" value="001" required>
+                     <br><br>
+                     <label>NoControl:</label>
+                     <input type="number" name="NoControl" value="17010316" required>
+                     <br><br>
+                     <label>Carrera:</label>
+                     <input  type="text" name="Carrera" value="Ing. En Sistemas Computacionales" required>
+                     <br><br>
+                     <label>Siglas:</label>
+                     <input type="text" name="NombreEquipo" value="ISC" required>
+                     <br>
+                    <center><button id="Guardar" type="submit" class="btn link">Guardar</button>
+                    <a id="Cancelar" href="../Principal.html" class="btn link">Cancelar</a></center>
+                </fieldset>
+                <br>
+                <a id="Regresar" class="btn-link" href="AltaCarrera.html">Regresar</a>
         </form>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <footer id="copy" class="navbar-expand-sm">

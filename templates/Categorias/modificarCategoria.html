@@ -12,57 +12,123 @@
         <title>Modificar-Categorias</title>
 </head>
 <body>
-    
     <nav class="form-group navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
-            <img src="../img/tec-navBar.png" alt="Logo" style="width:40px;">
+            <a href="../Principal.html"><img src="../img/tec-navBar.png" alt="Logo" style="width: 40px;"></a>
+            <!--Alumnos-->
             <li class="nav-item">
-                <a class="nav-link" href="../Alumnos/altaAlumnos.html">Alumnos</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="../Categorias/altaCategorias.html">Categorias</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Docentes/altaDocentes.html">Docentes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="../problemasPropuestos/">ProblemasPropuestos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="#">ProblemasResueltos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="#">BancoProblemas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="#">Carreras</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="#">Ediciones</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="#">Equipos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="#">Usuarios</a>
-            </li>
-
-            <div class="dropdown show">
-                <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Herramientas Categorias
-                </a>
-              
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="../Categorias/consultarCategorias.html">ConsultarCategorias</a>
-                    <a class="dropdown-item" href="../Categorias/eliminarCategoria.html">EliminarCategorias</a>
-                    <a class="dropdown-item" href="../Categorias/altaCategorias.html">RegistrarCategorias</a>
+                <div class="container">
+                    <div class="dropdown">
+                        <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Alumnos</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../Alumnos/altaAlumnos.html">altaAlumnos</a>
+                            <a class="dropdown-item" href="../Alumnos/consultarAlumnos.html">ConsultarAlumnos</a>
+                            <a class="dropdown-item" href="../Alumnos/modificarAlumno.html">ModificarAlumnos</a>
+                            <a class="dropdown-item" href="../Alumnos/eliminarAlumno.html">EliminarAlumnos</a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-
-
-        </ul>     
+            </li>
+            <!--Categorias-->
+            <li class="nav-item">
+                <div class="container">
+                        <div class="dropdown">
+                            <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Categorias</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../Categorias/altaCategorias.html">altaCategorias</a>
+                                <a class="dropdown-item" href="../Categorias/consultarCategorias.html">ConsultarCategorias</a>
+                                <a class="dropdown-item" href="../Categorias/modificarCategoria.html">ModificarCategorias</a>
+                                <a class="dropdown-item" href="../Categorias/eliminarCategoria.html">EliminarCategorias</a>
+                            </div>
+                        </div>
+                    </div>
+            </li>
+            <!--Docentes-->
+            <li class="nav-item ">
+                <div class="container">
+                    <div class="dropdown">
+                        <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Docentes</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../Docentes/altaDocentes.html">altaDocentes</a>
+                            <a class="dropdown-item" href="../Docentes/consultarDocentes.html">consultarDocentes</a>
+                            <a class="dropdown-item" href="../Docentes/modificarDocente.html">ModificarDocentes</a>
+                            <a class="dropdown-item" href="../Docentes/eliminarDocente.html">EliminarDocentes</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--BancoProblemas-->
+            <li class="nav-item">
+                <div class="container">
+                    <div class="dropdown">
+                        <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Problemas</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../bancoProblemas/BancoProblemas.html">BancoProblemas</a>
+                            <a class="dropdown-item" href="../problemasPropuestos/readme.txt">ProblemasPropuestos</a>
+                            <a class="dropdown-item" href="../problemasResueltos/Resueltos.html">ProblemasResueltos</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--Carreras-->
+            <li class="nav-item active">
+                <div class="container">
+                    <div class="dropdown">
+                        <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Carreras</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../Carrera/AltaCarrera.html">AltaCarrera</a>
+                            <a class="dropdown-item" href="../Carrera/ConsultarCarrera.html">CosultarCarreras</a>
+                            <a class="dropdown-item" href="../Carrera/ModificarCarrera.html">ModificarCarrera</a>
+                            <a class="dropdown-item" href="../Carrera/EliminarCarrera.html">EliminarCarrera</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--Ediciones-->
+            <li class="nav-item">
+                <div class="container">
+                    <div class="dropdown">
+                        <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Ediciones</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../Ediciones/AltaEdiciones.html">AltaEdiciones</a>
+                            <a class="dropdown-item" href="../Ediciones/ConsultarEdiciones.html">CosultarEdiciones</a>
+                            <a class="dropdown-item" href="../Ediciones/ModificarEdiciones.html">ModificarEdiciones</a>
+                            <a class="dropdown-item" href="../Ediciones/EliminarEdiciones.html">EliminarEdiciones</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--Equipos-->
+            <li class="nav-item">
+                <div class="container">
+                    <div class="dropdown">
+                        <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Equipos</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../Equipos/AltaRegistroEquipos.html">AltaEquipos</a>
+                            <a class="dropdown-item" href="../Equipos/CosultarEquipo.html">CosultarEquipos</a>
+                            <a class="dropdown-item" href="../Equipos/ModificarEquipo.html">ModificarEquipos</a>
+                            <a class="dropdown-item" href="../Equipos/EliminarEquipo.html">EliminarEquipos</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--Usuarios-->
+            <li class="nav-item">
+                <div class="container">
+                    <div class="dropdown">
+                        <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Usuarios</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../Usuarios/AltaUsuarios.html">AltaUsuarios</a>
+                            <a class="dropdown-item" href="../Usuarios/ConsultaUsuarios.html">CosultarUsuarios</a>
+                            <a class="dropdown-item" href="../Usuarios/ModificarUsuarios.html">ModificarUsuarios</a>
+                            <a class="dropdown-item" href="../Usuarios/EliminarUsuario.html">EliminarUsuarios</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+   
+        </ul>
     </nav>
-
     <div class="container">
         <div class="row justify-content-left pt-2 mt-3 mr-1">
             <div class="col-md-4 altaCategorias">
