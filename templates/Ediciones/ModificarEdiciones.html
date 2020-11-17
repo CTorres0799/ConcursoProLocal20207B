@@ -10,9 +10,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="../CSS/Ediciones.css">  
+        <link rel="stylesheet" href="../CSS/ModificarEdiciones.css">  
         <link rel="icon" href="../img/Icono.ico">
-        <title>Modificacion Ediciones</title>
+        <title>Modificacion Datos</title>
 
     </head>
     <body>
@@ -136,9 +136,54 @@
         <header id="Encabezado">
             <b><center>INSTITUTO TECNOLOGICO DE ESTUDIO SUPERIOR ZAMORA</center></b>
         </header>
+        <form>
+            <br>
+            <div class="col-md-4 DatosEdiciones">  
+                <fieldset>
+                     <center><legend>Datos de las Ediciones</legend></center>
+                     <label>IdEdicion:</label>
+                     <input type="number" name="IdProRes" value="030" required>
+                     <br><br>
+                     <label>IdProPues:</label>
+                     <input type="number" name="IdProPues" value="001" required>
+                     <br><br>
+                     <label>IdProRes:</label>
+                     <input type="number" name="IdProRes" value="014" required>
+                     <br><br>
+                     <label>Nombre:</label>
+                     <input type="Nombre" name="Nombre" value="Quinta Edicón 2020" required>
+                     <br><br>
+                     <label>FechaRegistro:</label>
+                     <input type="text" name="FechaEdición" value="21/05/2021" required>
+                     <br><br>
+                     <label>FechaEvento:</label>
+                     <input type="text" name="FechaEvento" value="21/08/2021" required>
+                     <br><br>
+                     <center><button id="Guardar" type="submit" class="btn link">Guardar</button>
+                     <a id="Cancelar" href="../Principal.html" class="btn link">Cancelar</a></center>
+                </fieldset>
+                <br>
+                <a id="Regresar" class="btn-link" href="ConsultarEdiciones.html">Regresar</a>
+
+            </div>
+       
+        </form>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <footer id="copy" class="navbar-expand-sm">
+            <center>
+            <img src="../img/logoACC.png">
+            <img src="../img/ISC.png">
+            <img src="../img/ITIC.png">
+            <img src="../img/INGE E.png">
+
+            </center>
+            <br>
+            <center><p><a id="SitioITESZ" class="btn link" href="https://www.teczamora.mx/">Sitio web del ITESZ</a>
+            <br>&copy; Derechos Reservados 2020</p></center>
+            
+        </footer>
+
     </body>
-
-
 
 
 </html>
