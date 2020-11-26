@@ -12,6 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="../JS/Usuarios.js"></script>
   <title>Alta Usuarios</title>
 </HEAD>
 
@@ -159,27 +160,27 @@
               Datos Personales
             </legend>
             <label>ID</label>
-            <input type="number" name="id" value="1" readonly>
+            <input type="id" placeholder="id" name="id">
             <br>
             <label>Nombre:</label>
-            <input type="text" placeholder="Nombre del Alumno" name="nombre" maxlength="100" value="Jose" required>
+            <input type="text" placeholder="Nombre del Alumno" name="nombre" maxlength="100" required>
             <br>
             <label>Sexo:</label>
-            <input type="radio" name="sexo">Femenino
-            <input type="radio" checked name="sexo">Masculino
+            <input type="radio" name="sexoF">Femenino
+            <input type="radio" checked name="sexoM">Masculino
             <br>
             <label>Telefono:</label>
-            <input type="tel" name="telefono" placeholder="###-###-####" value="351-999-9999" required>
+            <input type="tel" placeholder="###-###-####" name="tel" required>
             <br>
             <label>Email:</label>
-            <input type="email" name="email" value="algo@accitesz.com" placeholder="algo@algo" required>
+            <input type="email" placeholder="algo@algo.com" name="email" required>
             <br>
             <label>Carrera:</label>
             <select name="carrera">
-              <option>
+              <option selected>
                 --Selecciona la carrera--
               </option>
-              <option selected>
+              <option>
                 Ing. en Sistemas Computacionales
               </option>
               <option>
@@ -192,18 +193,26 @@
             <br>
             <label>Estatus:</label>
             <select>
-              <option>Activo</option>
-              <option>Inactivo</option>
+              <option selected>
+                --Seleccion--
+              </option>
+              <option>
+                Activo
+              </option>
+              <option>
+                Inactivo
+              </option>
             </select>
             <br>
             <label>Tipo:</label>
             <select>
+              <option selected>--Seleccion--</option>
               <option>Alumno</option>
               <option>Profesor</option>
             </select>
             <br>
             <label>Password:</label>
-            <input type="password" name="password" value="Hola123" required>
+            <input type="password" name="password" required>
             <br>
             <label>Password:</label>
             <input type="password" name="rpassword" required>
