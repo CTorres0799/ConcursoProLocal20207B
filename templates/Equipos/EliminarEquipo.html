@@ -9,7 +9,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="../CSS/Equipo.css">
+        <link rel="stylesheet" href="../CSS/EliminarEquipo.css">
         <link rel="icon" href="../img/Icono.ico">
         <title>Eliminar Datos</title>
     </head>
@@ -78,10 +78,10 @@
                         <div class="dropdown">
                             <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Carreras</button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="../Carrera/AltaCarrera.html">AltaCarrera</a>
-                                <a class="dropdown-item" href="../Carrera/ConsultarCarrera.html">CosultarCarreras</a>
-                                <a class="dropdown-item" href="../Carrera/ModificarCarrera.html">ModificarCarrera</a>
-                                <a class="dropdown-item" href="../Carrera/EliminarCarrera.html">EliminarCarrera</a>
+                                <a class="dropdown-item" href="AltaCarrera.html">AltaCarrera</a>
+                                <a class="dropdown-item" href="ConsultarCarrera.html">CosultarCarreras</a>
+                                <a class="dropdown-item" href="ModificarCarrera.html">ModificarCarrera</a>
+                                <a class="dropdown-item" href="EliminarCarrera.html">EliminarCarrera</a>
                             </div>
                         </div>
                     </div>
@@ -134,10 +134,19 @@
         <header id="Encabezado">
             <b><center>INSTITUTO TECNOLOGICO DE ESTUDIO SUPERIOR ZAMORA</center></b>
         </header>
-        <form>
+        <div class="container">
+            <div class="row justify-content-center pt-md-2 mt-md-5 mr-auto EliminarEquipo">
+                <section>
+                    <h1 class="row justify-content-center pt-2 mt-3 mr-1">Eliminacion de Equipo</h1>
+                    <form action="#" method="POST" enctype="text/plain">
+                        <p >¿Quiere eliminar el Equipo?:</p>
+                        <button type="submit"  class="btn-info">Aceptar</button>
+                        <a href="CosultarEquipo.html" class="btn-danger  Cancelar" role="button">Cancelar</a>
 
-
-        </form>
+                    </form>
+                </section>
+            </div>
+        </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <footer id="copy" class="navbar-expand-sm">
             <center>

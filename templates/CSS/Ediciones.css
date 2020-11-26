@@ -60,8 +60,9 @@ button{
     color: rgb(31, 241, 217);
 }
 #Guardar{
+    position: relative;
     color: lightcoral;
-    right: 35cm;
+    right: 5rem;
 }
 #Cancelar{
     color: rgb(155, 148, 148);
