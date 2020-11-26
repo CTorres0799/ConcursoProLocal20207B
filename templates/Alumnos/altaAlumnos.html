@@ -12,6 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../CSS/alumnos.css">
     <link rel="icon" href="../img/Icono.ico">
+    <script src="../JS/altaAlumnos.js"></script>
     <title>Alumnos</title>
 </HEAD>
 
@@ -67,57 +68,83 @@
 
 
         </ul>
+        <table class="list" id="altaAlumno" border="1" align="right">
+            <thead>
+                <tr>
+                    <th>NoControl</th>
+                    <th>Semestre</th>
+                    <th>idProblemasResueltos</th>
+                    <th>idCarrera</th>
+                    <th>idUsuario</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
     </nav>
 
     <div class="container">
-        <div class="row justify-content-left pt-2 mt-3 mr-1">
-            <div class="col-md-4 altaAlumnos">
-                <form action="">
-                    <div class="form-group text-center pt-3">
-                        <h1 class="text-light">Registro Alumnos</h1>
-                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
-                            <input type="number" class="form-control" placeholder="No.Control" required>
-                        </div>
+        <td id="formulario">
+            <form onsubmit="event.preventDefault();metodosJS();" autocomplete="off"></form>
+            <div class="row justify-content-right pt-0 mt-0 mr-0">
+                <div class="col-md-7 altaAlumnos">
+                    <form action="">
                         <div class="form-group text-center pt-3">
-                            <label class="text-light" for="sel1">Semestre:</label>
-                            <select class="form-control" id="sel1">
-                                <option>1A</option>
-                                <option>1B</option>
-                                <option>2A</option>
-                                <option>2B</option>
-                                <option>3A</option>
-                                <option>3B</option>
-                                <option>4A</option>
-                                <option>4B</option>
-                                <option>5A</option>
-                                <option>5B</option>
-                                <option>6A</option>
-                                <option>6B</option>
-                                <option>7A</option>
-                                <option>7B</option>
-                                <option>8A</option>
-                                <option>8B</option>
-                            </select>
-                        </div>
-                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
-                            <input type="number" class="form-control" placeholder="idProblemasResueltos">
-                        </div>
-                        <div class="form-group mx-sm-5 pb-3">
-                            <input type="number" class="form-control" placeholder="idCarrera">
-                        </div>
-                        <div class="form-group mx-sm-5 pb-3">
-                            <input type="number" class="form-control" placeholder="idUsuario">
-                        </div>
-                        <div class="form-group mx-sm-5 pb-5">
+                            <h1 class="text-light">Registro Alumnos</h1>
 
-                            <!-- <input  type="submit" class="btn btn-block aceptar" value="Aceptar" > -->
-                            <a href="#" class="btn btn-block aceptar" role="button">Aceptar</a>
+                            <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                <!--NOCONTROL-LISTO-->
+                                <label class="validation-error hide" id="fullNameValidationError">Campo requerido**</label>
+                                <input type="number" name="noControl" id="noControl" placeholder="No.Control" required>
+                                <!--<input type="number" class="form-control" placeholder="No.Control" required>-->
+                            </div>
+                            <div class="form-group text-center pt-3">
+                                <label class="text-light" for="sel1">Semestre:</label>
+                                <select class="form-control" name="sel1" id="sel1" required>
+                                    <option selected>------------Seleccionar------------</option>
+                                    <option>1A</option>
+                                    <option>1B</option>
+                                    <option>2A</option>
+                                    <option>2B</option>
+                                    <option>3A</option>
+                                    <option>3B</option>
+                                    <option>4A</option>
+                                    <option>4B</option>
+                                    <option>5A</option>
+                                    <option>5B</option>
+                                    <option>6A</option>
+                                    <option>6B</option>
+                                    <option>7A</option>
+                                    <option>7B</option>
+                                    <option>8A</option>
+                                    <option>8B</option>
+                                </select>
+                            </div>
+                            <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                <input type="number" name="idProblemasResueltos" id="idProblemasResueltos"
+                                    class="form-control" placeholder="idProblemasResueltos" required>
+                            </div>
+                            <div class="form-group mx-sm-5 pb-3">
+                                <input type="number" name="idCarrera" id="idCarrera" class="form-control"
+                                    placeholder="idCarrera" required>
+                            </div>
+                            <div class="form-group mx-sm-5 pb-3">
+                                <input type="number" name="idUsuario" id="idUsuario" class="form-control"
+                                    placeholder="idUsuario" required>
+                            </div>
+                            <div class="form-group mx-sm-5 pb-5">
 
+                                <!-- <input  type="submit" class="btn btn-block aceptar" value="Aceptar" > -->
+                                <a type="submit" id="aceptar" class="btn btn-block aceptar" onclick="metodosJS()" role="button">Aceptar</a>
+
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
+        </td>
     </div>
 
     <footer id="copy" class="navbar-expand-sm">
