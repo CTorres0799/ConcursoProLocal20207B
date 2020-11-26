@@ -43,3 +43,32 @@ h1 {
     color: white;
 }
 
+table {
+    border-collapse: separate;
+    text-align: center;
+    background-color:rgba(24, 67, 131, 0.329);
+    color: rgb(2, 2, 2);
+    text-shadow: black;
+    
+}
+
+table.list{
+    width:50%;
+}
+
+a {
+    cursor: pointer;
+}
+
+tr:nth-child(even),table.list thead>tr {
+    background-color: rgb(24, 66, 131);
+    color: rgb(255, 255, 255);
+}
+
+label.validation-error{
+    color:   rgb(9, 255, 0);
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+
