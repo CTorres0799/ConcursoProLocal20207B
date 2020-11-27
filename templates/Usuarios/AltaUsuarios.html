@@ -12,8 +12,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="../JS/Usuarios.js"></script>
-  <title>Alta Usuarios</title>
+  <script src="../JS/AltaUsuarios.js"></script>
+  <title>Usuarios</title>
 </HEAD>
 
 <BODY id="body2">
@@ -149,50 +149,87 @@
         </button>
       </li>
     </ul>
+
   </nav>
+
+  <table class="list table-hover" id="altaUsuarios" border="1" align="right">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>nombre</th>
+        <th>Sexo</th>
+        <th>Telefono</th>
+        <th>email</th>
+        <th>Carrera</th>
+        <th>estatus</th>
+        <th>Tipo</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+
   <main>
-    <section id="sect">
+    <section id="altaUsuarios">
       <h1>Alta Usuarios</h1>
-      <form class="pt-3" action="#" method="POST" enctype="text/plain">
+      <form onsubmit="event.preventDefault();metodosJS();" autocomplete="off"></form>
+      <form class="pt-3" action="" method="POST" enctype="text/plain">
         <div class="col-md-4 datosPersonales text-center">
           <fieldset>
             <legend>
               Datos Personales
             </legend>
-            <label>ID</label>
-            <input type="id" placeholder="id" name="id">
-            <br>
+
+            <div class="form-group mx-sm-5 pt-3 text-sm-center">
+              <!--NOCONTROL-LISTO-->
+              <label class="validation-error hide" id="fullNameValidationError">Campo requerido**</label>
+              <input type="number" name="id" id="id" placeholder="ID" required>
+            </div>
+
             <label>Nombre:</label>
-            <input type="text" placeholder="Nombre del Alumno" name="nombre" maxlength="100" required>
+            <input type="text" placeholder="Nombre del Alumno" name="nombre" id="nombre" maxlength="100" required>
             <br>
             <label>Sexo:</label>
-            <input type="radio" name="sexoF">Femenino
-            <input type="radio" checked name="sexoM">Masculino
-            <br>
-            <label>Telefono:</label>
-            <input type="tel" placeholder="###-###-####" name="tel" required>
-            <br>
-            <label>Email:</label>
-            <input type="email" placeholder="algo@algo.com" name="email" required>
-            <br>
-            <label>Carrera:</label>
-            <select name="carrera">
-              <option selected>
-                --Selecciona la carrera--
+            <select name="sexo" id="sexo">
+              <option>
+                --Seleccionar--
               </option>
               <option>
-                Ing. en Sistemas Computacionales
+                Femenino
               </option>
               <option>
-                Ing. en Tecnologías de la Información
-              </option>
-              <option>
-                Ing. en Electrónica
+                Masculino
               </option>
             </select>
             <br>
-            <label>Estatus:</label>
-            <select>
+            <label>Telefono:</label>
+            <input type="tel" placeholder="###-###-####" name="tel" id="tel" required>
+            <br>
+            <label>Email:</label>
+            <input type="email" placeholder="algo@algo.com" name="email" id="email" required>
+            <br>
+            <label>Carrera:</label>
+            <select name="carrera" id="carrera">
+              <option selected>
+                --------------Seleccionar--------------
+              </option>
+              <option>
+                ISC
+              </option>
+              <option>
+                ITICS
+              </option>
+              <option>
+                IE
+              </option>
+            </select>
+            <br>
+            <label>
+              Estatus:
+            </label>
+            <select name="status" id="status">
               <option selected>
                 --Seleccion--
               </option>
@@ -205,25 +242,14 @@
             </select>
             <br>
             <label>Tipo:</label>
-            <select>
+            <select name="tipo" id="tipo">
               <option selected>--Seleccion--</option>
               <option>Alumno</option>
               <option>Profesor</option>
             </select>
             <br>
-            <label>Password:</label>
-            <input type="password" name="password" required>
-            <br>
-            <label>Password:</label>
-            <input type="password" name="rpassword" required>
-            <br>
-            <input type="hidden" name="tipo" value="D">
-            <input type="hidden" name="estatus" value="I">
-            <br>
-            <button type="submit" class="btn link">Guardar</button>
-            <a href="../Principal.html" class="btn link">Cancelar</a>
+            <a type="submit" id="aceptar" class="btn btn-block aceptar" onclick="metodosJS()" role="button">Guardar</a>
           </fieldset>
-        </div>
         </div>
       </form>
     </section>
