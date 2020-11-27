@@ -11,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../CSS/altaCategorias.css">
     <link rel="icon" href="../img/Icono.ico">
+    <script src="../JS/altaDocente.js"></script>
     <title>Alta-Docentes</title>
 </head>
 
@@ -52,7 +53,7 @@
                 <a class="nav-link " href="../Usuarios/AltaUsuarios.html">Usuarios</a>
             </li>
 
-            <div class="dropdown show">
+            <!--<div class="dropdown show">
                 <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Herramientas Docentes
@@ -60,58 +61,82 @@
 
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item" href="../Docentes/consultarDocentes.html">ConsultarDocentes</a>
-                    <a class="dropdown-item" href="../Docentes/eliminarDocente.html">EliminarDocentes</a>
+                   <a class="dropdown-item" href="../Docentes/eliminarDocente.html">EliminarDocentes</a>
                     <a class="dropdown-item" href="../Docentes/modificarDocente.html">ModificarDocentes</a>
-                </div>
+                </div> -->
             </div>
-
-
         </ul>
+
+        <table class="list" id="altaDocentes" border="1" align="right">
+            <thead>
+                <tr>
+                    <th>NoControl</th>
+                    <th>Escolaridad</th>
+                    <th>Especialidad</th>
+                    <th>Cedula</th>
+                    <th>idDocente</th>
+                    <th>idCarrera</th>
+                    <th>idUsuario</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
     </nav>
 
     <div class="container">
-        <div class="justify-content-center pt-2 mt-3 mr-1">
-            <div class="col-md-4 altaCategorias">
-                <form action="">
-                    <div class="form-group text-center pt-3">
-                        <h1 class="text-light">Registro Docentes</h1>
-                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
-                            <input type="number" class="form-control" placeholder="No.Control" required>
-                        </div>
+        <td id="formulario">
+            <form onsubmit="event.preventDefault();metodosJS();" autocomplete="off"></form>
+            <div class="row justify-content-right pt-0 mt-0 mr-0">
+                <div class="col-md-7 altaDocentes">
+                    <form action="">
                         <div class="form-group text-center pt-3">
-                            <label class="text-light" for="sel1">Escolaridad</label>
-                            <select class="form-control" id="sel1">
-                                <option>Licenciatura</option>
-                                <option>Maestria</option>
-                                <option>Doctorado</option>
-                                <option>Post-Doctorado</option>
-                            </select>
-                        </div>
-                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
-                            <input type="text" class="form-control" placeholder="Especialidad">
-                        </div>
-                        <div class="form-group mx-sm-5 pb-3">
-                            <input type="text" class="form-control" placeholder="Cedula">
-                        </div>
-                        <div class="form-group mx-sm-5 pb-3">
-                            <input type="text" class="form-control" placeholder="idDocente">
-                        </div>
-                        <div class="form-group mx-sm-5 pb-3">
-                            <input type="text" class="form-control" placeholder="idCarrera">
-                        </div>
-                        <div class="form-group mx-sm-5 pb-3">
-                            <input type="text" class="form-control" placeholder="idUsuario">
-                        </div>
-                        <div class="form-group mx-sm-5 pb-5">
+                            <h1 class="text-light">Registro Docentes</h1>
+                            <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                <label class="validation-error hide" id="fullNameValidationError">Campo
+                                    requerido**</label>
+                                <input type="number" name="noControl" id="noControl" placeholder="No.Control" required>
+                            </div>
+                            <div class="form-group text-center pt-3">
+                                <label class="text-light" for="sel3">Escolaridad</label>
+                                <select class="form-control" id="sel3">
+                                    <option>------------Seleccionar------------</option>
+                                    <option>Licenciatura</option>
+                                    <option>Maestria</option>
+                                    <option>Doctorado</option>
+                                    <option>Post-Doctorado</option>
+                                </select>
+                            </div>
+                            <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                <input type="text" name="especialidad" id="especialidad" placeholder="Especialidad">
+                            </div>
+                            <div class="form-group mx-sm-5 pb-3">
+                                <input type="text" name="cedula" id="cedula" placeholder="Cedula">
+                            </div>
+                            <div class="form-group mx-sm-5 pb-3">
+                                <input type="text" name="idDocente" id="idDocente" placeholder="idDocente">
+                            </div>
+                            <div class="form-group mx-sm-5 pb-3">
+                                <input type="text" name="idCarrera" id="idCarrera" placeholder="idCarrera">
+                            </div>
+                            <div class="form-group mx-sm-5 pb-3">
+                                <input type="text" name="idUsuario" id="idUsuario" placeholder="idUsuario">
+                            </div>
+                            <div class="form-group mx-sm-5 pb-5">
 
-                            <!-- <input  type="submit" class="btn btn-block aceptar" value="Aceptar" > -->
-                            <a href="#" class="btn btn-block aceptar" role="button">Aceptar</a>
+                                <!-- <input  type="submit" class="btn btn-block aceptar" value="Aceptar" > -->
+                                <a type="submit" id="aceptar" class="btn btn-block aceptar" onclick="metodosJS()"
+                                    role="button">Aceptar</a>
 
+
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
+        </td>
     </div>
 
 

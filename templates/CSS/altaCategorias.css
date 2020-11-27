@@ -22,6 +22,20 @@ ul{
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
 }
 
+.altaDocentes {
+    background:   rgba(37, 37, 37, 0.849);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+}
+
+.altaPP {
+    background:   rgba(37, 37, 37, 0.849);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+}
+
 h1 {
     font-size: 25px; 
     font-family: monospace;
@@ -70,3 +84,5 @@ label.validation-error{
     margin-left: 5px;
     font-weight: bold;
 }
+
+
