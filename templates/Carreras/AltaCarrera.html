@@ -10,6 +10,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <link rel="stylesheet"  href="../CSS/Carrera.css">
+        <script src="../JS/Carrera.js"></script>
         <link rel="icon" href="../img/Icono.ico">
         <title>Carrera</title>
     </head>
@@ -126,6 +127,7 @@
             <br>
             <div class="col-md-4 Carrera">
                 <fieldset>
+                    <form onsubmit="event.preventDefault();metodosJS();" autocomplete="off"></form>
                     <center><legend>Datos de la Carrera:</legend> </center>
                     <label>IdCarrera</label>
                     <input type="number" name="IdCarrera" placeholder="123" required>
@@ -136,6 +138,7 @@
                     <div class="form-group pt-3">
                         <label class="text-light" for="sel1">Carrera:</label>
                         <select class="form-control" id="sel1">
+                            <option selected>-----Selecciona la Carrera------</option>
                             <option>Ing. En Sistemas Computacionales</option>
                             <option>Ing. En Tecnologías de la Información y Comunicaciones</option>
                             <option>Ing. En Electrónica</option>
@@ -144,6 +147,7 @@
                         <div class="form-group pt-3">
                             <label class="text-light" for="sel2">Siglas:</label>
                             <select class="form-control" id="sel2">
+                                <option selected>-----Selecciona las Siglas de su Carrera-----</option>
                                 <option>ISC</option>
                                 <option>ITIC</option>
                                 <option>IE</option>
@@ -151,13 +155,27 @@
                         </div>
                     </div>
                     <br>
-                    <center><button id="Guardar"  class="btn btn-block Guardar" role="button">Guardar</button>
+                    <center><button id="Guardar"  class="btn btn-block Guardar" onclick="metodosJS()" role="button">Guardar</button>
                     <a id="Cancelar" href="../Principal.html" class="btn link">Cancelar</a></center>
 
                     
                 </fieldset>
 
             </div>
+            <table cclass="list table-hover" id="altaCarrera" border="1" align="right">
+                <thead>
+                    <tr>
+                        <th>IdCarrera</th>
+                        <th>NoControl</th>
+                        <th>Carrera</th>
+                        <th>Siglas</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+                </tbody>
+            </table>
 
         </form>
 

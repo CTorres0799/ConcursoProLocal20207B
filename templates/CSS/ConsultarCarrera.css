@@ -24,6 +24,9 @@ ul{
     background: rgb(24, 66, 131);
     color: seashell;
 }
+table.list{
+    width:35%;
+}
 
 
 
