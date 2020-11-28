@@ -188,13 +188,15 @@
               <input type="number" name="id" id="id" placeholder="ID" required>
             </div>
 
-            <label>Nombre:</label>
             <input type="text" placeholder="Nombre del Alumno" name="nombre" id="nombre" maxlength="100" required>
             <br>
-            <label>Sexo:</label>
+            <input type="tel" placeholder="Telefono" name="tel" id="tel" required>
+            <br>
+            <input type="email" placeholder="email" name="email" id="email" required>
+            <br>
             <select name="sexo" id="sexo">
               <option>
-                --Seleccionar--
+                ---Sexo---
               </option>
               <option>
                 Femenino
@@ -204,16 +206,9 @@
               </option>
             </select>
             <br>
-            <label>Telefono:</label>
-            <input type="tel" placeholder="###-###-####" name="tel" id="tel" required>
-            <br>
-            <label>Email:</label>
-            <input type="email" placeholder="algo@algo.com" name="email" id="email" required>
-            <br>
-            <label>Carrera:</label>
             <select name="carrera" id="carrera">
               <option selected>
-                --------------Seleccionar--------------
+                ---Carrera---
               </option>
               <option>
                 ISC
@@ -226,12 +221,9 @@
               </option>
             </select>
             <br>
-            <label>
-              Estatus:
-            </label>
             <select name="status" id="status">
               <option selected>
-                --Seleccion--
+                --Status--
               </option>
               <option>
                 Activo
@@ -241,9 +233,8 @@
               </option>
             </select>
             <br>
-            <label>Tipo:</label>
             <select name="tipo" id="tipo">
-              <option selected>--Seleccion--</option>
+              <option selected>--Tipo--</option>
               <option>Alumno</option>
               <option>Profesor</option>
             </select>

@@ -11,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../CSS/altaCategorias.css">
     <link rel="icon" href="../img/Icono.ico">
+    <script src="../JS/altaProplemasPropuestos.js"></script>
     <title>Alta-PP</title>
 </head>
 
@@ -51,7 +52,7 @@
             <li class="nav-item">
                 <a class="nav-link " href="../Usuarios/AltaUsuarios.html">Usuarios</a>
             </li>
-            <div class="dropdown show">
+            <!--<div class="dropdown show">
                 <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Herramientas PP
@@ -65,41 +66,63 @@
                     <a class="dropdown-item" href="../problemasPropuestos/modificarProblemasPropuestos.html">
                         Modificar PP</a>
                 </div>
-            </div>
-
-
+            </div>-->
         </ul>
+        <table class="list" id="altaPP" border="1" align="right">
+            <thead>
+                <tr>
+                    <th>Globo</th>
+                    <th>idProblemaPropuesto</th>
+                    <th>idEdicion</th>
+                    <th>idCategoria</th>
+                    <th>idProblema</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
     </nav>
 
     <div class="container">
-        <div class="justify-content-center pt-2 mt-3 mr-1">
-            <div class="col-md-4 altaCategorias">
-                <form action="">
-                    <div class="form-group text-center pt-3">
-                        <h1 class="text-light">Registro PP</h1>
-                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
-                            <input type="text" class="form-control" placeholder="Globo" required>
-                        </div>
-                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
-                            <input type="text" class="form-control" placeholder="idProblemaPropuesto">
-                        </div>
-                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
-                            <input type="text" class="form-control" placeholder="idEdicion">
-                        </div>
-                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
-                            <input type="text" class="form-control" placeholder="idCategoria">
-                        </div>
-                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
-                            <input type="text" class="form-control" placeholder="idProblema">
-                        </div>
-                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
+        <div id="formulario">
+            <form onsubmit="event.preventDefault();metodosJS();" autocomplete="off"></form>
+            <div class="justify-content-center pt-2 mt-3 mr-1">
+                <div class="col-md-4 altaPP">
+                    <form action="">
+                        <div class="form-group text-center pt-3">
+                            <h1 class="text-light">Registro PP</h1>
+                            <label class="validation-error hide" id="fullNameValidationError">Campo
+                                requerido**</label>
+                            <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                <input type="text" name="globo" id="globo" placeholder="Globo" required>
+                            </div>
+                            <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                <input type="number" name="idProblemaPropuesto" id="idProblemaPropuesto"
+                                    placeholder="idProblemaPropuesto" required>
+                            </div>
+                            <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                <input type="number" name="idEdicion" id="idEdicion" placeholder="idEdicion" required>
+                            </div>
+                            <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                <input type="number" name="idCategoria" id="idCategoria" placeholder="idCategoria"
+                                    required>
+                            </div>
+                            <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                <input type="number" name="idProblema" id="idProblema" placeholder="idProblema"
+                                    required>
+                            </div>
+                            <div class="form-group mx-sm-5 pt-3 text-sm-center">
 
-                            <!-- <input  type="submit" class="btn btn-block aceptar" value="Aceptar" > -->
-                            <a href="#" class="btn btn-block aceptar" role="button">Aceptar</a>
+                                <!-- <input  type="submit" class="btn btn-block aceptar" value="Aceptar" > -->
+                                <a type="submit" id="aceptar" class="btn btn-block aceptar" onclick="metodosJS()" role="button">Aceptar</a>
+                                   
 
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

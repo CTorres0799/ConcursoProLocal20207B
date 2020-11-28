@@ -12,6 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../JS/BancoProblemas.js"></script>
     <title>Banco Problemas</title>
 </HEAD>
 
@@ -153,52 +154,52 @@
         </ul>
     </nav>
 
-    <main>
-        <div class="container2 table-responsive">
-            <table class="table3 table-striped table-hover">
-                <thead class="thead-dark">
+    <div class="container2 table-responsive">
+        <table class="table3 table-striped table-hover" id="BancoProblemas">
+            <thead class="thead-dark">
+                <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Puntos</th>
                     <th scope="col">Tiempo Maximo</th>
                     <th scope="col">Descripción</th>
-                </thead>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
 
-                <tbody>
-                    <tr class="table">
-                        <td>170</td>
-                        <td>Quinela</td>
-                        <td>30</td>
-                        <td>30 min</td>
-                        <td>
-                            <p>#</p>
-                        </td>
-                    </tr>
-                    <tr class="table">
-                        <td>171</td>
-                        <td>Suma</td>
-                        <td>5</td>
-                        <td>10 min</td>
-                        <td>
-                            <p>Hacer la suma de 5 digitos.</p>
-                            <p>
-                                los cuales deben ser ingreados por el usuario y
-                                Mostar el resultado.
-                            </p>
-                        </td>
-                    </tr>
-                    <tr class="table">
-                        <td>172</td>
-                        <td>Quinela</td>
-                        <td>30</td>
-                        <td>30 min</td>
-                        <td>
-                            <p>#</p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            </tbody>
+        </table>
+    </div>
+
+    <main>
+        <section class="container3" id="BancoProblemas">
+            <form onsubmit="event.preventDefault();metodosJS();" autocomplete="off"></form>
+            <form class="pt-3" action="" method="POST" enctype="text/plain">
+                <div class="col-md-4 datosPersonales text-center">
+                    <fieldset>
+                        <legend>
+                            Problemas
+                        </legend>
+
+                        <div class="requiredid form-group mx-sm-5 pt-3 text-sm-center">
+                            <!--NOCONTROL-LISTO-->
+                            <label class="validation-error hide" id="fullNameValidationError">Campo requerido**</label>
+                            <input type="number" placeholder="ID" name="id" id="id" required>
+                        </div>
+
+                        <input type="text" placeholder="Nombre del problema" name="nombre" id="nombre" maxlength="30" required>
+                        <br>
+                        <input type="number" placeholder="Puntos" name="Punto" id="Punto" required>
+                        <br>
+                        <input type="number" placeholder="Tiempo" name="Tiempo" id="Tiempo" required>
+                        <br>
+                        <input type="text" placeholder="Descripcion" name="Descripcion" id="Descripcion" maxlength="50" required>
+                        <a type="submit" id="aceptar" class="btn btn-block aceptar" onclick="metodosJS()" role="button">Guardar</a>
+                    </fieldset>
+                </div>
+            </form>
+        </section>
     </main>
 
     <br>

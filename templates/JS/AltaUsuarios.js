@@ -91,7 +91,7 @@ function Eliminar(td) {
     }
 }
 
-function validar() { //SCRIPT ANTI (GESTION,CONTA,INDUSTRIAL,ETC) 
+function validar() { 
     isValid = true;
     if (document.getElementById("id").value == "") {
         isValid = false;

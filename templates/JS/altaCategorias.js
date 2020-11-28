@@ -74,6 +74,19 @@ function metodosJS() {
             alert('Error: (Categoria) vacia, por favor intentalo de nuevo :)');
             document.getElementById("fullNameValidationError").classList.remove("hide");
         }
+
+        if (document.getElementById("idCategoria").value == "") {
+            isValid = false;
+            alert('Error: (idCategoria) vacio, por favor intentalo de nuevo :)');
+            document.getElementById("fullNameValidationError").classList.remove("hide");
+        }
+
+        if (document.getElementById("idProblemasPropuesto").value == "") {
+            isValid = false;
+            alert('Error: (idProblemasPropuesto) vacio, por favor intentalo de nuevo :)');
+            document.getElementById("fullNameValidationError").classList.remove("hide");
+        }
+
         else {
             isValid = true;
             if (!document.getElementById("fullNameValidationError").classList.contains("hide"))
