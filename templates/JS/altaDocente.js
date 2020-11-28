@@ -1,5 +1,50 @@
 var selectedRow = null
 
+//VALIDACIONES
+function validarNoControl(cad) {
+    var patron = /\d{8}/;
+    if (cad.length < 5) {
+        return "El No.Control es de al menos 8 digitos";
+    }
+    else {
+        if (cad.length <= 10) {
+            if (!patron.test(cad)) {
+                return 'La cedula solo debe incluir digitos <br>'
+            }
+            else {
+                return "";
+            }
+        }
+        else {
+            return "La cedula excede de 10 digitos <br>"
+        }
+    }
+    return '';
+}
+
+function validarCedula(cad) {
+    var patron = /\d{5,10}/;
+    if (cad.length < 5) {
+        return "La cedula es de al menos 5 digitos";
+    }
+    else {
+        if (cad.length <= 10) {
+            if (!patron.test(cad)) {
+                return 'La cedula solo debe incluir digitos <br>'
+            }
+            else {
+                return "";
+            }
+        }
+        else {
+            return "La cedula excede de 10 digitos <br>"
+        }
+    }
+    return '';
+}
+
+
+
 function metodosJS() {
     if (validar()) {
         var formData = obtenerDatos();
@@ -85,13 +130,63 @@ function Eliminar(td) {
     }
 }
 
+function validacion(form) {
+    var noCl = form.noControl.value;
+    var mensaje = validarNoControl(noCl);
+
+    if (mensaje != '') {
+        var div = document.getElementById("notificaciones");
+        div.innerHTML = '<p>' + mensaje + '</p>';;
+        div.style.color = "red";
+        return false;
+    } else {
+        return true;
+    }
+
+}
+
 function validar() { //SCRIPT ANTI (GESTION,CONTA,INDUSTRIAL,ETC) 
-    isValid = true;
+    //isValid = true;
     if (document.getElementById("noControl").value == "") {
         isValid = false;
-        alert('Error: (No.Control) vacio, porfavor intentalo de nuevo :)');
+        alert('Error: (No.Control) vacio, porfavor intentalo de nuevo :/');
+        document.getElementById("fullNameValidationError").classList.remove("hide");
+    }
+
+    if (document.getElementById("especialidad").value == "") {
+        isValid = false;
+        alert('Error: (Especialidad) vacia, porfavor intentalo de nuevo :/');
+        document.getElementById("fullNameValidationError").classList.remove("hide");
+    }
+
+
+    if (document.getElementById("cedula").value == "") {
+        isValid = false;
+        //console.alert("CEDULA CORRECTA")
+        alert('Error: Formato de cedula incorrectos :(');
+        document.getElementById("fullNameValidationError").classList.remove("hide");
+    }
 
     
+
+    if (document.getElementById("idDocente").value == "") {
+        isValid = false;
+        //console.alert("CEDULA CORRECTA")
+        alert('Error: (idDocente) vacio, intentalo de nuevo :(');
+        document.getElementById("fullNameValidationError").classList.remove("hide");
+    }
+
+    if (document.getElementById("idCarrera").value == "") {
+        isValid = false;
+        //console.alert("CEDULA CORRECTA")
+        alert('Error: (idCarrera) vacio, intentalo de nuevo :(');
+        document.getElementById("fullNameValidationError").classList.remove("hide");
+    }
+
+    if (document.getElementById("idUsuario").value == "") {
+        isValid = false;
+        //console.alert("CEDULA CORRECTA")
+        alert('Error: (idUsuario) vacio, intentalo de nuevo :(');
         document.getElementById("fullNameValidationError").classList.remove("hide");
     }
 

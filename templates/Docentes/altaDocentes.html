@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../CSS/altaCategorias.css">
     <link rel="icon" href="../img/Icono.ico">
     <script src="../JS/altaDocente.js"></script>
+    <script src="../JS/ajaxDocentes.js"></script>
     <title>Alta-Docentes</title>
 </head>
 
@@ -98,6 +99,7 @@
                                 <label class="validation-error hide" id="fullNameValidationError">Campo
                                     requerido**</label>
                                 <input type="number" name="noControl" id="noControl" placeholder="No.Control" required>
+                                <small>Error message</small>
                             </div>
                             <div class="form-group text-center pt-3">
                                 <label class="text-light" for="sel3">Escolaridad</label>
@@ -108,28 +110,35 @@
                                     <option>Doctorado</option>
                                     <option>Post-Doctorado</option>
                                 </select>
+                                <br>
                             </div>
                             <div class="form-group mx-sm-5 pt-3 text-sm-center">
-                                <input type="text" name="especialidad" id="especialidad" placeholder="Especialidad">
+                                <input type="text" name="especialidad" id="especialidad" placeholder="Especialidad" required>
+                                <br>
                             </div>
                             <div class="form-group mx-sm-5 pb-3">
-                                <input type="text" name="cedula" id="cedula" placeholder="Cedula">
+                                <input type="text" name="cedula" id="cedula" placeholder="Cedula" required>
+                                <br>
                             </div>
                             <div class="form-group mx-sm-5 pb-3">
-                                <input type="text" name="idDocente" id="idDocente" placeholder="idDocente">
+                                <input type="text" name="idDocente" id="idDocente" placeholder="idDocente" required>
+                                <br>
                             </div>
                             <div class="form-group mx-sm-5 pb-3">
-                                <input type="text" name="idCarrera" id="idCarrera" placeholder="idCarrera">
+                                <input type="text" name="idCarrera" id="idCarrera" placeholder="idCarrera" required>
+                                <br>
                             </div>
                             <div class="form-group mx-sm-5 pb-3">
-                                <input type="text" name="idUsuario" id="idUsuario" placeholder="idUsuario">
+                                <input type="text" name="idUsuario" id="idUsuario" placeholder="idUsuario" required>
+                                <br>
                             </div>
                             <div class="form-group mx-sm-5 pb-5">
 
                                 <!-- <input  type="submit" class="btn btn-block aceptar" value="Aceptar" > -->
-                                <a type="submit" id="aceptar" class="btn btn-block aceptar" onclick="metodosJS()"
-                                    role="button">Aceptar</a>
+                                <button type="submit" id="aceptar" class="btn btn-block aceptar" onclick="metodosJS()"
+                                    role="button">Aceptar</button>
 
+                                    
 
                             </div>
                         </div>
@@ -137,6 +146,10 @@
                 </div>
             </div>
         </td>
+        <button id="ajaxButton">AJAX</button>
+        <div id="notificaciones">
+
+        </div>
     </div>
 
 

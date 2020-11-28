@@ -82,6 +82,24 @@ function validar() { //SCRIPT ANTI (GESTION,CONTA,INDUSTRIAL,ETC)
         document.getElementById("fullNameValidationError").classList.remove("hide");
     }
 
+    if (document.getElementById("idProblemasResueltos").value == "") {
+        isValid = false;
+        alert('Error: (idProblemasResueltos) vacio, porfavor intentalo de nuevo :)');
+        document.getElementById("fullNameValidationError").classList.remove("hide");
+    }
+
+    
+    if (document.getElementById("idCarrera").value == "") {
+        isValid = false;
+        alert('Error: (idCarrera) vacio, porfavor intentalo de nuevo :)');
+        document.getElementById("fullNameValidationError").classList.remove("hide");
+    }
+
+    if (document.getElementById("idUsuario").value == "") {
+        isValid = false;
+        alert('Error: (idUsuario) vacio, porfavor intentalo de nuevo :)');
+        document.getElementById("fullNameValidationError").classList.remove("hide");
+    }
 
     else {
         isValid = true;

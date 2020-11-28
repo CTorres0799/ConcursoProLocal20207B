@@ -86,3 +86,10 @@ label.validation-error{
 }
 
 
+.form-group small{
+color: red;
+position: absolute;
+bottom: 0;
+left: 0;
+visibility: hidden;
+}
