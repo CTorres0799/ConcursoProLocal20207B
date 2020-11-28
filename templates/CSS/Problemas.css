@@ -15,18 +15,62 @@
     color: white;
 }
 
-.container2{
-    height: 60vh;
+legend{
     position: relative;
-    left: 10%;
+    left: 15vh;
+}
+
+#fullNameValidationError{
+    position: relative;
+    left: 8vh;
+}
+
+#aceptar{
+    position: relative;
+    left: 16vh;
+}
+
+#nombre{
+    position: relative;
+    left: 7vh;
+}
+
+#Punto{
+    position: relative;
+    left: 7vh;
+}
+
+#Tiempo{
+    position: relative;
+    left: 7vh;
+}
+
+#Descripcion{
+    position: relative;
+    left: 7vh;
+}
+
+.container2{
+    height: 50vh;
+    position: relative;
+    left: 38vh;
     padding: 10px;
     background:rgba(18, 64, 190, 0.692);
-    font-size: 18px;
+    font-size: 3vh;
     transition: 0.2s ease-in;
     border-radius: 2rem;
     background-attachment: fixed; 
 }
-/*--------Resueltos--------*/
 
-
-/*--------Banco--------*/
+.container3{
+    height: 60vh;
+    width: 55vh;
+    position: relative;
+    left: 1vh;
+    padding: 2vh;
+    background:rgba(18, 64, 190, 0.692);
+    font-size: 3vh;
+    transition: 0.2s ease-in;
+    border-radius: 2vh;
+    background-attachment: fixed; 
+}
