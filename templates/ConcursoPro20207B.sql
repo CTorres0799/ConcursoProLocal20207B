@@ -71,11 +71,17 @@ noControl int not null,
 /*==============================================================*/
 /* Table: Equipos                                               */
 /*==============================================================*/
-
+create table Equipos(
+idProRes int not null,
+idProPue int not null,
+idEquipo int auto_increment not null
+);
 /*==============================================================*/
 /* Table: Ediciones                                             */
 /*==============================================================*/
-
+create table Ediciones(
+idEdicion int auto_increment not null
+);
 /*------------------- ØJoseLuisØ -------------------  */
 /*==============================================================*/
 /* Table: Usuarios                                               */
