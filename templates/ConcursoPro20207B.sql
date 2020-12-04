@@ -109,11 +109,43 @@ FechaEvento date,
 /*==============================================================*/
 /* Table: Usuarios                                               */
 /*==============================================================*/
-
+create table Usuarios
+(
+idUsuario int auto_increment not null,
+nombre varchar(50),
+sexo varchar(8),
+telefono int not null,
+email varchar (30),
+estatus varchar (8),
+tipo varchar (8),
+password varchar (20),
+	constraint pk_Usuarios primary key (idUsuario),
+    constraint uk_nombre_usuarios unique(nombre)
+);
 /*==============================================================*/
 /* Table: ProblemasResueltos                                    */
 /*==============================================================*/
-
+create table problemasResueltos
+(
+idProRes int auto_increment not null,
+idProPue int not null,
+idEquipo int not null,
+tiempo int not null,
+TiempoEjecucion int not null,
+puntaje int not null,
+	constraint pk_problemasResueltos primary key (idProRes),
+    constraint uk_idProPue_problemasResueltos unique(idProPue)
+);
 /*==============================================================*/
 /* Table: BancoProblemas                                        */
 /*==============================================================*/
+create table bancoProblemas
+(
+idProblema int auto_increment not null,
+nombre varchar(50),
+puntos varchar(8),
+tiempoMaximo int not null,
+descripcion varchar (30),
+	constraint pk_bancoProblemas primary key (idProblema),
+    constraint uk_nombre_bancoProblemas unique(nombre)
+);
