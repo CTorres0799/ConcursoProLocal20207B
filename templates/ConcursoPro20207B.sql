@@ -67,24 +67,85 @@ noControl int not null,
 /*==============================================================*/
 /* Table: Carreras                                               */
 /*==============================================================*/
-
+create table Carreras (
+idCarrera int auto_increment not null,
+noControl int (8),
+Nombre varchar (50),
+Siglas varchar (6),
+    constraint pk_carreras primary key (idCarrera),
+    constraint uk_nombre_carrera unique (nombre)
+);
 /*==============================================================*/
 /* Table: Equipos                                               */
 /*==============================================================*/
-
+create table Equipos(
+idProRes int not null,
+idProPue int not null,
+idEquipo int auto_increment not null,
+Nombre varchar (40),
+noControl1 int (8),
+noControl2 int (8),
+noContro3 int (8),
+idDocentes int not null,
+idCategorias int not null,
+Puntos int (2),
+    constraint pk_equipos primary key(idEquipo),
+    constraint uk_nombre_equipo unique (nombre)
+);
 /*==============================================================*/
 /* Table: Ediciones                                             */
 /*==============================================================*/
-
+create table Ediciones(
+idEdicion int auto_increment not null,
+idProPue int not null,
+idProRes int not null,
+Nombre varchar (40),
+FechaRegistro date,
+FechaEvento date,
+	constraint pk_ediciones primary key (idEdicion),
+    constraint uk_nombre_ediciones unique (nombre)
+);
 /*------------------- ØJoseLuisØ -------------------  */
 /*==============================================================*/
 /* Table: Usuarios                                               */
 /*==============================================================*/
-
+create table Usuarios
+(
+idUsuario int auto_increment not null,
+nombre varchar(50),
+sexo varchar(8),
+telefono int not null,
+email varchar (30),
+estatus varchar (8),
+tipo varchar (8),
+password varchar (20),
+	constraint pk_Usuarios primary key (idUsuario),
+    constraint uk_nombre_usuarios unique(nombre)
+);
 /*==============================================================*/
 /* Table: ProblemasResueltos                                    */
 /*==============================================================*/
-
+create table problemasResueltos
+(
+idProRes int auto_increment not null,
+idProPue int not null,
+idEquipo int not null,
+tiempo int not null,
+TiempoEjecucion int not null,
+puntaje int not null,
+	constraint pk_problemasResueltos primary key (idProRes),
+    constraint uk_idProPue_problemasResueltos unique(idProPue)
+);
 /*==============================================================*/
 /* Table: BancoProblemas                                        */
 /*==============================================================*/
+create table bancoProblemas
+(
+idProblema int auto_increment not null,
+nombre varchar(50),
+puntos varchar(8),
+tiempoMaximo int not null,
+descripcion varchar (30),
+	constraint pk_bancoProblemas primary key (idProblema),
+    constraint uk_nombre_bancoProblemas unique(nombre)
+);
