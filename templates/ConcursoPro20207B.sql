@@ -13,7 +13,7 @@ nombre varchar(30),
 semestreLimite char(2),
 idProPue int,
    constraint pk_categorias primary key (idCategoria),
-   constraint uk_idProPue_categorias unique(idProPue) 
+   constraint uk_idProPue_categorias unique(nombre) 
 );
 
 /*==============================================================*/
@@ -28,7 +28,7 @@ idUsuario int not null,
 idCarrera int not null,
 idProRes int not null,
 	constraint pk_alumnos primary key (NoControl),
-    constraint uk_idCarrera_alumnos unique(idCarrera)
+    constraint uk_idCarrera_alumnos unique (idCarrera,idUsuario)
 );
 
 /*==============================================================*/
@@ -43,7 +43,7 @@ idProblema int not null,
 idEdicion int not null,
 idCategoria int not null,
 	constraint pk_problemaspropuestos primary key (idProPue),
-    constraint uk_idCarrera_problemaspropuestos unique(idProblema)
+    constraint uk_idCarrera_problemaspropuestos unique(idEdicion,idProblema,idCategoria)
 );
 
 /*==============================================================*/
@@ -53,15 +53,16 @@ idCategoria int not null,
 create table Docentes
 (
 idDocente int auto_increment not null,
-escolaridad varchar(4),
-especialidad varchar(40),
+escolaridad varchar(50),
+especialidad varchar(50),
 cedula int (8),
 idCarrera int not null,
 idUsuario int not null,
 noControl int not null,
 	constraint pk_docentes primary key (idDocente),
-    constraint uk_cedula_docentes unique(cedula)
+    constraint uk_cedula_docentes unique(cedula,noControl,idCarrera)
 );
+drop table Docentes;
 
 /* -------------------------♠Pedro♠-----------------------------  */
 /*==============================================================*/
@@ -70,27 +71,27 @@ noControl int not null,
 create table Carreras (
 idCarrera int auto_increment not null,
 noControl int (8),
-Nombre varchar (50),
-Siglas varchar (6),
+nombre varchar (50),
+siglas varchar (6),
     constraint pk_carreras primary key (idCarrera),
-    constraint uk_nombre_carrera unique (nombre)
+    constraint uk_nombre_carrera unique (nombre,siglas)
 );
 /*==============================================================*/
 /* Table: Equipos                                               */
 /*==============================================================*/
 create table Equipos(
+idEquipo int auto_increment not null,
 idProRes int not null,
 idProPue int not null,
-idEquipo int auto_increment not null,
-Nombre varchar (40),
+nombre varchar (40),
 noControl1 int (8),
 noControl2 int (8),
-noContro3 int (8),
+noControl3 int (8),
 idDocentes int not null,
 idCategorias int not null,
-Puntos int (2),
+puntos int (2),
     constraint pk_equipos primary key(idEquipo),
-    constraint uk_nombre_equipo unique (nombre)
+    constraint uk_nombre_equipo unique (nombre,idCategorias,idProRes)
 );
 /*==============================================================*/
 /* Table: Ediciones                                             */
@@ -99,11 +100,11 @@ create table Ediciones(
 idEdicion int auto_increment not null,
 idProPue int not null,
 idProRes int not null,
-Nombre varchar (40),
-FechaRegistro date,
-FechaEvento date,
+nombre varchar (40),
+fechaRegistro date,
+fechaEvento date,
 	constraint pk_ediciones primary key (idEdicion),
-    constraint uk_nombre_ediciones unique (nombre)
+    constraint uk_nombre_ediciones unique (nombre,fechaEvento)
 );
 /*------------------- ØJoseLuisØ -------------------  */
 /*==============================================================*/
@@ -120,7 +121,7 @@ estatus varchar (8),
 tipo varchar (8),
 password varchar (20),
 	constraint pk_Usuarios primary key (idUsuario),
-    constraint uk_nombre_usuarios unique(nombre)
+    constraint uk_nombre_usuarios unique(nombre,estatus,tipo)
 );
 /*==============================================================*/
 /* Table: ProblemasResueltos                                    */
@@ -131,10 +132,10 @@ idProRes int auto_increment not null,
 idProPue int not null,
 idEquipo int not null,
 tiempo int not null,
-TiempoEjecucion int not null,
+tiempoEjecucion int not null,
 puntaje int not null,
 	constraint pk_problemasResueltos primary key (idProRes),
-    constraint uk_idProPue_problemasResueltos unique(idProPue)
+    constraint uk_idProPue_problemasResueltos unique(idProPue,idEquipo)
 );
 /*==============================================================*/
 /* Table: BancoProblemas                                        */
@@ -145,15 +146,15 @@ idProblema int auto_increment not null,
 nombre varchar(50),
 puntos varchar(8),
 tiempoMaximo int not null,
-descripcion varchar (30),
+descripcion varchar (120),
 	constraint pk_bancoProblemas primary key (idProblema),
     constraint uk_nombre_bancoProblemas unique(nombre)
 );
 /*==============================================================*/
 /* Restricciones FK	alter													                                             */
 /*==============================================================*/
-alter table Actos add constraint Actos_Aulas_FK foreign key (idSala)
-      references Salas (idSala);
+alter table docentes add constraint docentes_usuarios_FK foreign key (idUsuario)
+      references usuarios (idUsuario);
 
 
 /*==============================================================*/
