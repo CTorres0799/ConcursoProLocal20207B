@@ -67,20 +67,43 @@ noControl int not null,
 /*==============================================================*/
 /* Table: Carreras                                               */
 /*==============================================================*/
-
+create table Carreras (
+idCarrera int auto_increment not null,
+noControl int (8),
+Nombre varchar (50),
+Siglas varchar (6),
+    constraint pk_carreras primary key (idCarrera),
+    constraint uk_nombre_carrera unique (nombre)
+);
 /*==============================================================*/
 /* Table: Equipos                                               */
 /*==============================================================*/
 create table Equipos(
 idProRes int not null,
 idProPue int not null,
-idEquipo int auto_increment not null
+idEquipo int auto_increment not null,
+Nombre varchar (40),
+noControl1 int (8),
+noControl2 int (8),
+noContro3 int (8),
+idDocentes int not null,
+idCategorias int not null,
+Puntos int (2),
+    constraint pk_equipos primary key(idEquipo),
+    constraint uk_nombre_equipo unique (nombre)
 );
 /*==============================================================*/
 /* Table: Ediciones                                             */
 /*==============================================================*/
 create table Ediciones(
-idEdicion int auto_increment not null
+idEdicion int auto_increment not null,
+idProPue int not null,
+idProRes int not null,
+Nombre varchar (40),
+FechaRegistro date,
+FechaEvento date,
+	constraint pk_ediciones primary key (idEdicion),
+    constraint uk_nombre_ediciones unique (nombre)
 );
 /*------------------- ØJoseLuisØ -------------------  */
 /*==============================================================*/
