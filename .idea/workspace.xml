@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d08dfa21-d839-43d5-b444-881d01323655" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ConcursoProLocal20207B/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ConcursoProLocal20207B.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ConcursoProLocal20207B.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Alumnos/altaAlumnos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Alumnos/consultarAlumnos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Alumnos/eliminarAlumno.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Alumnos/modificarAlumno.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Alumnos/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/Carrera.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/ConsultarCarrera.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/Ediciones.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/EliminarCarrera.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/EliminarEdiciones.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/EliminarEquipo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/Equipo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/ModificarCarreras.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/ModificarEdiciones.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/Plantilla.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/Principal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/Problemas.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/User.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/altaCategorias.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/alumnos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/consultarAlumnos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/consultarCategorias.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/consultarDocentes.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/eliminarAlumnos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/eliminarCategoria.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/CSS/estilo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Carreras/AltaCarrera.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Carreras/ConsultarCarrera.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Carreras/EliminarCarrera.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Carreras/ModificarCarrera.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Categorias/altaCategorias.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Categorias/consultarCategorias.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Categorias/eliminarCategoria.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Categorias/modificarCategoria.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Categorias/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/ConcursoPro20207B.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Docentes/altaDocentes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Docentes/consultarDocentes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Docentes/eliminarDocente.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Docentes/modificarDocente.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Docentes/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Ediciones/AltaEdiciones.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Ediciones/ConsultarEdiciones.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Ediciones/EliminarEdiciones.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Ediciones/ModificarEdiciones.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Ediciones/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Equipos/AltaRegistroEquipos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Equipos/CosultarEquipo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Equipos/EliminarEquipo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Equipos/ModificarEquipo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Equipos/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/JS/AltaEquipos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/JS/AltaUsuarios.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/JS/BancoProblemas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/JS/Carrera.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/JS/Ediciones.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/JS/ajaxDocentes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/JS/altaAlumnos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/JS/altaCategorias.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/JS/altaDocente.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/JS/altaProplemasPropuestos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/JS/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/JS/validacionesDocentes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Principal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Usuarios/AltaUsuarios.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Usuarios/ConsultaUsuarios.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Usuarios/EliminarUsuario.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Usuarios/ModificarUsuarios.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/Usuarios/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/ajaxkalis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/bancoProblemas/BancoProblemas.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/bancoProblemas/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/C++_Logo.svg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/INGE E.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/ISC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/ITIC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/Icono.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/ZorroITESZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/alumnos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/eliminar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/gui-Login.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/java.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/logoACC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/logo_educacion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/logo_gob.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/logo_itesz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/logo_tecnm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/modificar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/mysql.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/portada.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/python.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/sql-server.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/img/tec-navBar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/problemasPropuestos/altaProplemasPropuesto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/problemasPropuestos/consultarProblemasPropuestos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/problemasPropuestos/eliminarProblemasPropuestos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/problemasPropuestos/modificarProblemasPropuestos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/problemasPropuestos/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/problemasResueltos/Resueltos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/templates/problemasResueltos/readme.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lAtjXc3GVjSAWnCc4uB3cpKNAM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ConcursoProLocal20207B" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ConcursoProLocal20207B" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ConcursoProLocal20207B" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ConcursoProLocal20207B/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d08dfa21-d839-43d5-b444-881d01323655" name="Default Changelist" comment="" />
+      <created>1607051860013</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607051860013</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="164" y="53" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607052523305">
+      <screen x="0" y="0" width="1418" height="798" />
+    </state>
+    <state x="164" y="53" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1418.798@0.0.1418.798" timestamp="1607052523305" />
+    <state x="488" y="153" key="FileChooserDialogImpl" timestamp="1607051913098">
+      <screen x="0" y="0" width="1418" height="798" />
+    </state>
+    <state x="488" y="153" key="FileChooserDialogImpl/0.0.1418.798@0.0.1418.798" timestamp="1607051913098" />
+    <state width="1396" height="202" key="GridCell.Tab.0.bottom" timestamp="1607052855486">
+      <screen x="0" y="0" width="1418" height="798" />
+    </state>
+    <state width="1396" height="202" key="GridCell.Tab.0.bottom/0.0.1418.798@0.0.1418.798" timestamp="1607052855486" />
+    <state width="1396" height="202" key="GridCell.Tab.0.center" timestamp="1607052855486">
+      <screen x="0" y="0" width="1418" height="798" />
+    </state>
+    <state width="1396" height="202" key="GridCell.Tab.0.center/0.0.1418.798@0.0.1418.798" timestamp="1607052855486" />
+    <state width="1396" height="202" key="GridCell.Tab.0.left" timestamp="1607052855486">
+      <screen x="0" y="0" width="1418" height="798" />
+    </state>
+    <state width="1396" height="202" key="GridCell.Tab.0.left/0.0.1418.798@0.0.1418.798" timestamp="1607052855486" />
+    <state width="1396" height="202" key="GridCell.Tab.0.right" timestamp="1607052855486">
+      <screen x="0" y="0" width="1418" height="798" />
+    </state>
+    <state width="1396" height="202" key="GridCell.Tab.0.right/0.0.1418.798@0.0.1418.798" timestamp="1607052855486" />
+    <state x="218" y="43" key="SettingsEditor" timestamp="1607052265065">
+      <screen x="0" y="0" width="1418" height="798" />
+    </state>
+    <state x="218" y="43" key="SettingsEditor/0.0.1418.798@0.0.1418.798" timestamp="1607052265065" />
+  </component>
+</project>
