@@ -1,0 +1,54 @@
+body {
+    background-image: url(../img/gui-Login.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.formulario {
+    background:  rgba(24, 67, 131, 0.753);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
+    color: white;
+}
+
+.form-control{
+background: rgba(94, 94, 94, 0.294);
+border-style: none;
+transition: 0.2s ease-in;
+outline: none;
+}
+
+.form-control:focus {
+    background-color: white
+}
+
+.form-control::placeholder {
+    color: gray
+}
+
+.aceptar {
+    background: seashell;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700!important;
+    color: rgb(24, 66, 131);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
+    transition: 0.2s ease-in;
+}
+
+.aceptar:hover {
+    background: red;
+    color: white;
+}
+
+.olvide {
+    color: white;
+    transition: 0.2s ease-in;;
+}
+
+.olvide:hover {
+    color: yellow;
+}

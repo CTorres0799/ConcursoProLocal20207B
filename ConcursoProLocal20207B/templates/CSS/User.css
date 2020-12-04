@@ -1,0 +1,56 @@
+h1 {
+    position: relative;
+    font-size: 25px; 
+    font-family: monospace;
+    padding: 0px;
+}
+
+#Regresar{
+    position: relative;
+    right: 600px;
+}
+
+.datosPersonales{
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    background-color:rgba(18, 64, 190, 0.692);
+    font-size: 18px;
+    transition: 0.2s ease-in;
+    border-radius: 30px;
+    background-attachment: fixed;
+}
+
+.table{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    background-color:rgba(18, 64, 190, 0.692);
+    color: white;
+    border-radius: 10px;
+}
+
+.pagination{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    color: black;
+    border-radius: 10px;
+}
+
+.Eliminar{
+    height: 20vh;
+    position: relative;
+    left: 40%;
+    padding: 2%;
+    background:rgba(18, 64, 190, 0.692);
+    font-size: 18px;
+    transition: 0.2s ease-in;
+    border-radius: 2rem;
+    background-attachment: fixed; 
+}
+
+#boton{
+    position: relative;
+    left: 20%;
+}
+
+#sect{
+    position: relative;
+    left: 30%;
+}

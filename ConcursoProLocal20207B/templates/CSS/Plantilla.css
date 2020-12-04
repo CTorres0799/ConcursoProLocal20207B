@@ -1,0 +1,43 @@
+/*Plantilla*/
+body {
+    background-image: url(../img/gui-Login.PNG);
+    transition: 0.2s ease-in;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+ul{
+    background: rgb(24, 66, 131);
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
+    transition: 0.2s ease-in;
+}
+
+#texto1{
+    color: white;
+}
+
+#Cerrar{
+    position: relative;
+    left: 4%;
+}
+
+.itesz{
+    color: white;
+}
+
+#copy{
+    position: relative;
+    top: auto;
+    background: rgb(24, 66, 131);
+    color: seashell;
+}
+
+footer{
+    align-self: flex-end;
+    display: block;
+    height: 33vh;
+}

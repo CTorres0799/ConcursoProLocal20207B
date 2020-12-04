@@ -1,0 +1,62 @@
+body {
+    background-image: url(../img/gui-Login.PNG);
+    transition: 0.2s ease-in;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed
+}
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    font-family: monospace;
+}
+p {
+    color:  wheat;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+ul{
+    background: rgb(24, 66, 131);
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
+    transition: 0.2s ease-in;
+}
+#texto1{
+    color: wheat;
+}
+#copy{
+    position: relative;
+    top: auto;
+    background: rgb(24, 66, 131);
+    color: seashell;
+}
+footer{
+    align-self: flex-end;
+    padding: 3px;  
+    display: block;
+}
+.EliminarCarrera {/*las que tienen esto asi son clases*/
+    text-align: center;
+    background:   rgba(37, 37, 37, 0.849);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
+}
+#SitioITESZ{
+    color: white;
+}
+#Encabezado{
+    border-bottom-style: groove;
+    border-bottom-color: rgb(24, 66, 131);
+    border-bottom-width: 0.5rem;
+    font-size: 2rem;
+    color: rgb(9, 156, 204);
+  }
+button{
+    color: rgb(31, 241, 217);
+}

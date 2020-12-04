@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../CSS/Equipo.css">
+        <link rel="icon" href="../img/Icono.ico">
+        <script src="../JS/AltaEquipos.js"></script>
+        <title>Registro de Equipos</title>
+        
+    </head>
+    <body>
+        <nav class="form-group navbar-expand-sm bg-dark navbar-dark">
+            <ul class="navbar-nav">
+                <a href="../Principal.html"><img src="../img/tec-navBar.png" alt="Logo" style="width: 40px;"></a>
+                <!--Alumnos-->
+                <li class="nav-item">
+                    <div class="container">
+                        <div class="dropdown">
+                            <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Alumnos</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../Alumnos/altaAlumnos.html">altaAlumnos</a>
+                                <a class="dropdown-item" href="../Alumnos/consultarAlumnos.html">ConsultarAlumnos</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--Categorias-->
+                <li class="nav-item">
+                    <div class="container">
+                            <div class="dropdown">
+                                <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Categorias</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="../Categorias/altaCategorias.html">altaCategorias</a>
+                                    <a class="dropdown-item" href="../Categorias/consultarCategorias.html">ConsultarCategorias</a>
+                                </div>
+                            </div>
+                        </div>
+                </li>
+                <!--Docentes-->
+                <li class="nav-item ">
+                    <div class="container">
+                        <div class="dropdown">
+                            <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Docentes</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../Docentes/altaDocentes.html">altaDocentes</a>
+                                <a class="dropdown-item" href="../Docentes/consultarDocentes.html">consultarDocentes</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--BancoProblemas-->
+                <li class="nav-item">
+                    <div class="container">
+                        <div class="dropdown">
+                            <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Problemas</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../bancoProblemas/BancoProblemas.html">BancoProblemas</a>
+                                <a class="dropdown-item" href="../problemasPropuestos/readme.txt">ProblemasPropuestos</a>
+                                <a class="dropdown-item" href="../problemasResueltos/Resueltos.html">ProblemasResueltos</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--Carreras-->
+                <li class="nav-item active">
+                    <div class="container">
+                        <div class="dropdown">
+                            <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Carreras</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../Carreras/AltaCarrera.html">AltaCarrera</a>
+                                <a class="dropdown-item" href="../Carreras/ConsultarCarrera.html">CosultarCarreras</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--Ediciones-->
+                <li class="nav-item">
+                    <div class="container">
+                        <div class="dropdown">
+                            <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Ediciones</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../Ediciones/AltaEdiciones.html">AltaEdiciones</a>
+                                <a class="dropdown-item" href="../Ediciones/ConsultarEdiciones.html">CosultarEdiciones</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--Equipos-->
+                <li class="nav-item">
+                    <div class="container">
+                        <div class="dropdown">
+                            <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Equipos</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../Equipos/AltaRegistroEquipos.html">AltaEquipos</a>
+                                <a class="dropdown-item" href="../Equipos/CosultarEquipo.html">CosultarEquipos</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--Usuarios-->
+                <li class="nav-item">
+                    <div class="container">
+                        <div class="dropdown">
+                            <button id="texto1" type="button" class="btn link dropdown-toggle" data-toggle="dropdown">Usuarios</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../Usuarios/AltaUsuarios.html">AltaUsuarios</a>
+                                <a class="dropdown-item" href="../Usuarios/ConsultaUsuarios.html">CosultarUsuarios</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+       
+            </ul>
+        </nav>
+        <header id="Encabezado">
+            <b><center>INSTITUTO TECNOLOGICO DE ESTUDIO SUPERIOR ZAMORA</center></b>
+        </header>
+        <br>
+        <table class="list" id="altaEquipos" border="1" align="right">
+            <thead>
+                <tr>
+                    <th>IdProRes</th>
+                    <th>IdProPues</th>
+                    <th>IdEquipos</th>
+                    <th>Nombre</th>
+                    <th>NoContro1</th>
+                    <th>NoContro2</th>
+                    <th>NoContro3</th>
+                    <th>IdDocente</th>
+                    <th>IdCategoria</th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+        <form>
+            <div class="container">
+                <td id="formulario">
+                    <form onsubmit="event.preventDefault();metodosJS();" autocomplete="off"></form>
+                    <div class="row justify-content-right pt-0 mt-0 mr-0">
+                        <div class="col-md-7 altaEquipos">
+                            <form action="">
+                                <div class="form-group text-center pt-3">
+                                    <fieldset>
+                                        <center><legend>Datos del Equipo</legend></center>
+                                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                            <input type="IdProRes" name="IdProRes" id="IdProRes" placeholder="IdProRes" required>
+                                        </div>
+                                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                            <input type="number" name="IdProPues" id="IdProPues" placeholder="IdProPues" required>
+                                        </div>
+                                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                            <label class="validation-error hide" id="fullNameValidationError">Campo requerido**</label>
+                                            <input type="number" name="IdEquipo" id="IdEquipo" placeholder="IdEquipos" required>
+                                        </div>
+                                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                            <input type="text" name="NombreEquipo" id="NombreEquipo" placeholder="Ingrese a su equipo" required>
+                                        </div>
+                                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                            <input  type="number" name="NoContro1"  id="NoContro1" placeholder="NoContro1" required>
+                                        </div>
+                                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                            <input  type="number" name="NoContro2" id="NoContro2" placeholder="NoContro2" required>
+                                        </div>
+                                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                            <input  type="number" name="NoContro3" id="NoContro3" placeholder="NoContro3" required>
+                                        </div>
+                                        <div class="form-group mx-sm-5 pt-3 text-sm-center"> 
+                                            <input  type="number" name="IdDocente" id="IdDocente" placeholder="IdDocente" required>
+                                        </div>
+                                        <div class="form-group mx-sm-5 pt-3 text-sm-center">
+                                            <input type="number" name="IdCategoria" id="IdCategoria" placeholder="IdCategoria" required>
+                                        </div>
+                                        <a type="submit" id="Guardar" class="btn btn-block aceptar" onclick="metodosJS()" role="button">Guardar</a>
+                                        <!--<a href="CosultarEquipo.html" class="btn link">Cancelar</a>-->
+                                    </fieldset>
+                                </div>
+                            </form>
+                        </div>
+                    </div>   
+                </td>
+            </div>     
+        </form> 
+        <br><br><br><br>
+        <footer id="copy" class="navbar-expand-sm">
+            <center>
+            <img src="../img/logoACC.png">
+            <img src="../img/ISC.png">
+            <img src="../img/ITIC.png">
+            <img src="../img/INGE E.png">
+
+            </center>
+            <br>
+            <center><p><a id="SitioITESZ" class="btn link" href="https://www.teczamora.mx/">Sitio web del ITESZ</a>
+            <br>&copy; Derechos Reservados 2020</p></center>
+            
+        </footer>
+
+    </body>
+
+</html>
