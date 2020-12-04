@@ -149,3 +149,24 @@ descripcion varchar (30),
 	constraint pk_bancoProblemas primary key (idProblema),
     constraint uk_nombre_bancoProblemas unique(nombre)
 );
+/*==============================================================*/
+/* Restricciones FK	alter													                                             */
+/*==============================================================*/
+alter table Actos add constraint Actos_Aulas_FK foreign key (idSala)
+      references Salas (idSala);
+
+
+/*==============================================================*/
+/* Creacion del Usuario para la conexion   y permisos           */
+/*==============================================================*/
+CREATE USER 'concursoprog_user'@'localhost' IDENTIFIED BY 'hola.123';
+GRANT ALL PRIVILEGES ON concursopro20207b.Categorias TO 'concursoprog_user'@'localhost';
+GRANT ALL PRIVILEGES ON concursopro20207b.Alumnos TO 'concursoprog_user'@'localhost';
+GRANT ALL PRIVILEGES ON concursopro20207b.ProblemasPropuestos TO 'concursoprog_user'@'localhost';
+GRANT ALL PRIVILEGES ON concursopro20207b.Docentes TO 'concursoprog_user'@'localhost';
+GRANT ALL PRIVILEGES ON concursopro20207b.Carreras TO 'concursoprog_user'@'localhost';
+GRANT ALL PRIVILEGES ON concursopro20207b.Equipos TO 'concursoprog_user'@'localhost';
+GRANT ALL PRIVILEGES ON concursopro20207b.Ediciones TO 'concursoprog_user'@'localhost';
+GRANT ALL PRIVILEGES ON concursopro20207b.Usuarios TO 'concursoprog_user'@'localhost';
+GRANT ALL PRIVILEGES ON concursopro20207b.problemasResueltos TO 'concursoprog_user'@'localhost';
+GRANT ALL PRIVILEGES ON concursopro20207b.bancoProblemas TO 'concursoprog_user'@'localhost';
