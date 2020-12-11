@@ -155,6 +155,9 @@ descripcion varchar (120),
 /*==============================================================*/
 alter table docentes add constraint docentes_usuarios_FK foreign key (idUsuario)
       references usuarios (idUsuario);
+      
+alter table problemasResueltos add constraint problemasResueltos_ProblemasPropuestos_FK foreign key (idProPue)
+      references ProblemasPropuestos (idProPue);
 
 
 /*==============================================================*/
