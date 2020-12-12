@@ -159,6 +159,17 @@ alter table docentes add constraint docentes_usuarios_FK foreign key (idUsuario)
 alter table problemasResueltos add constraint problemasResueltos_ProblemasPropuestos_FK foreign key (idProPue)
       references ProblemasPropuestos (idProPue);
 
+alter table Carreras add constraint carreras_alumnos_FK foreign key (NoControl)
+	  references Alumnos (NoControl);
+
+alter table Equipos add constraint equipos_problemasResueltos_FK foreign key (idProRes)
+      references problemasResueltos (idProRes);
+
+alter table Equipos add  constraint equipos_categorias_fk foreign key (idCategoria)
+      references Categorias (idCategoria);
+      
+alter table Ediciones add constraint ediciones_problemaspropuestos_FK foreign key (idProPue)
+      references ProblemasPropuestos (idProPue);
 
 /*==============================================================*/
 /* Creacion del Usuario para la conexion   y permisos           */
