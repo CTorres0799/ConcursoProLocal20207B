@@ -1,7 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d08dfa21-d839-43d5-b444-881d01323655" name="Default Changelist" comment="" />
+    <list default="true" id="d08dfa21-d839-43d5-b444-881d01323655" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcursoProLocal20207B/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/ConcursoProLocal20207B/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Alumnos/altaAlumnos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Alumnos/consultarAlumnos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Alumnos/eliminarAlumno.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Alumnos/modificarAlumno.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Alumnos/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/Carrera.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/ConsultarCarrera.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/Ediciones.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/EliminarCarrera.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/EliminarEdiciones.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/EliminarEquipo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/Equipo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/ModificarCarreras.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/ModificarEdiciones.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/Plantilla.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/Principal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/Problemas.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/User.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/altaCategorias.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/alumnos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/consultarAlumnos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/consultarCategorias.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/consultarDocentes.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/eliminarAlumnos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/eliminarCategoria.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CSS/estilo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Carreras/AltaCarrera.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Carreras/ConsultarCarrera.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Carreras/EliminarCarrera.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Carreras/ModificarCarrera.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Categorias/altaCategorias.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Categorias/consultarCategorias.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Categorias/eliminarCategoria.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Categorias/modificarCategoria.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Categorias/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ConcursoPro20207B.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Docentes/altaDocentes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Docentes/consultarDocentes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Docentes/eliminarDocente.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Docentes/modificarDocente.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Docentes/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Ediciones/AltaEdiciones.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Ediciones/ConsultarEdiciones.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Ediciones/EliminarEdiciones.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Ediciones/ModificarEdiciones.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Ediciones/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Equipos/AltaRegistroEquipos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Equipos/CosultarEquipo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Equipos/EliminarEquipo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Equipos/ModificarEquipo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Equipos/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/JS/AltaEquipos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/JS/AltaUsuarios.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/JS/BancoProblemas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/JS/Carrera.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/JS/Ediciones.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/JS/ajaxDocentes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/JS/altaAlumnos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/JS/altaCategorias.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/JS/altaDocente.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/JS/altaProplemasPropuestos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/JS/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/JS/validacionesDocentes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Principal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Usuarios/AltaUsuarios.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Usuarios/ConsultaUsuarios.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Usuarios/EliminarUsuario.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Usuarios/ModificarUsuarios.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Usuarios/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ajaxkalis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bancoProblemas/BancoProblemas.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bancoProblemas/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/C++_Logo.svg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/INGE E.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/ISC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/ITIC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/Icono.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/ZorroITESZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/alumnos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/eliminar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/gui-Login.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/java.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/logoACC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/logo_educacion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/logo_gob.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/logo_itesz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/logo_tecnm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/modificar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/mysql.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/portada.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/python.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/sql-server.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/img/tec-navBar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/problemasPropuestos/altaProplemasPropuesto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/problemasPropuestos/consultarProblemasPropuestos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/problemasPropuestos/eliminarProblemasPropuestos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/problemasPropuestos/modificarProblemasPropuestos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/problemasPropuestos/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/problemasResueltos/Resueltos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/problemasResueltos/readme.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +116,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -23,6 +129,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Docentes" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -66,4 +173,65 @@
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="WindowStateProjectService">
+    <state x="164" y="53" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607052523305">
+      <screen x="0" y="0" width="1418" height="798" />
+    </state>
+    <state x="164" y="53" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1418.798@0.0.1418.798" timestamp="1607052523305" />
+    <state x="488" y="153" key="FileChooserDialogImpl" timestamp="1607117718370">
+      <screen x="0" y="0" width="1418" height="798" />
+    </state>
+    <state x="488" y="153" key="FileChooserDialogImpl/0.0.1418.798@0.0.1418.798" timestamp="1607117718370" />
+    <state width="1500" height="156" key="GridCell.Tab.0.bottom" timestamp="1607988931910">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1396" height="202" key="GridCell.Tab.0.bottom/0.0.1418.798@0.0.1418.798" timestamp="1607119872196" />
+    <state width="1515" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1607968094464" />
+    <state width="1500" height="156" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1607988931910" />
+    <state width="1500" height="156" key="GridCell.Tab.0.center" timestamp="1607988931910">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1396" height="202" key="GridCell.Tab.0.center/0.0.1418.798@0.0.1418.798" timestamp="1607119872195" />
+    <state width="1515" height="223" key="GridCell.Tab.0.center/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1607968094464" />
+    <state width="1500" height="156" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1607988931910" />
+    <state width="1500" height="156" key="GridCell.Tab.0.left" timestamp="1607988931909">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1396" height="202" key="GridCell.Tab.0.left/0.0.1418.798@0.0.1418.798" timestamp="1607119872195" />
+    <state width="1515" height="223" key="GridCell.Tab.0.left/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1607968094464" />
+    <state width="1500" height="156" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1607988931909" />
+    <state width="1500" height="156" key="GridCell.Tab.0.right" timestamp="1607988931910">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1396" height="202" key="GridCell.Tab.0.right/0.0.1418.798@0.0.1418.798" timestamp="1607119872195" />
+    <state width="1515" height="223" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1607968094464" />
+    <state width="1500" height="156" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1607988931910" />
+    <state width="1396" height="250" key="GridCell.Tab.1.bottom" timestamp="1607113607440">
+      <screen x="0" y="0" width="1418" height="798" />
+    </state>
+    <state width="1396" height="250" key="GridCell.Tab.1.bottom/0.0.1418.798@0.0.1418.798" timestamp="1607113607440" />
+    <state width="1396" height="250" key="GridCell.Tab.1.center" timestamp="1607113607440">
+      <screen x="0" y="0" width="1418" height="798" />
+    </state>
+    <state width="1396" height="250" key="GridCell.Tab.1.center/0.0.1418.798@0.0.1418.798" timestamp="1607113607440" />
+    <state width="1396" height="250" key="GridCell.Tab.1.left" timestamp="1607113607440">
+      <screen x="0" y="0" width="1418" height="798" />
+    </state>
+    <state width="1396" height="250" key="GridCell.Tab.1.left/0.0.1418.798@0.0.1418.798" timestamp="1607113607440" />
+    <state width="1396" height="250" key="GridCell.Tab.1.right" timestamp="1607113607440">
+      <screen x="0" y="0" width="1418" height="798" />
+    </state>
+    <state width="1396" height="250" key="GridCell.Tab.1.right/0.0.1418.798@0.0.1418.798" timestamp="1607113607440" />
+    <state x="218" y="43" key="SettingsEditor" timestamp="1607117728847">
+      <screen x="0" y="0" width="1418" height="798" />
+    </state>
+    <state x="218" y="43" key="SettingsEditor/0.0.1418.798@0.0.1418.798" timestamp="1607117728847" />
+    <state x="248" y="119" width="672" height="678" key="search.everywhere.popup" timestamp="1607053651041">
+      <screen x="0" y="0" width="1418" height="798" />
+    </state>
+    <state x="248" y="119" width="672" height="678" key="search.everywhere.popup/0.0.1418.798@0.0.1418.798" timestamp="1607053651041" />
+  </component>
+>>>>>>> 5fcc2af13c585a1a87338e1dfc7fbaceed24afd6
 </project>
