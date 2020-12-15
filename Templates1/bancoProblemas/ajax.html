@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud Ajax</title>
+</HEAD>
+
+<body>
+    <button id="boton">Cargar</button>
+    <div id="response">
+
+    </div>
+
+    <script>
+        function ajax(){
+            const http = new XMLHttpRequest();
+            const url = 'http://localhost:63342/ConcursoProLocal20207B/Templates1/bancoProblemas/bancoProblemas.html?_ijt=qmgus8uu688c1bu3ek2vpsemi0';
+
+            http.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    console.log(this.responseText);
+                    document.getElementById("response").innerHTML = this.responseText;
+                }
+            }
+            http.open("GET", url);
+            http.send();
+        }
+        document.getElementById("boton").addEventListener("click", function(){
+            ajax();
+        });
+    </script>
+</body>
+
+</HTML>
