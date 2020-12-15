@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="../CSS/User.css">
   <link rel="stylesheet" href="../CSS/Plantilla.css">
+  <link rel="stylesheet" href="../CSS/Problemas.css">
   <link rel="icon" href="../img/Icono.ico">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="../JS/AltaUsuarios.js"></script>
-  <title>Usuarios</title>
+  <script src="../JS/Ajax.js"></script>
+  <title>Problemas Resueltos</title>
 </HEAD>
 
-<BODY id="body2">
+<BODY>
   <nav class="form-group navbar-expand-sm bg-dark navbar-dark">
     <ul class="navbar-nav">
       <a href="../Principal.html"><img src="../img/tec-navBar.png" alt="Logo" style="width:40px;"></a>
@@ -149,111 +149,41 @@
         </button>
       </li>
     </ul>
-
   </nav>
 
-  <table class="list table-hover" id="altaUsuarios" border="1" align="right">
-    <thead>
-      <tr>
-        <th>id</th>
-        <th>nombre</th>
-        <th>Sexo</th>
-        <th>Telefono</th>
-        <th>email</th>
-        <th>Carrera</th>
-        <th>estatus</th>
-        <th>Tipo</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
+  <h4>Problemas Resueltos</h4>
+  <div class="container2 " id="contenido">
+    <div>
+      <table class="table3 table-striped table-hover">
+        <thead class="thead-dark">
 
-    </tbody>
-  </table>
+        </thead>
+        <tr>
+          <th>ID Resuelto</th>
+          <th>Id Propuestos</th>
+          <th>ID Equipo</th>
+          <th>Tiempo Ejecucion</th>
+          <th>Puntaje</th>
+        </tr>
+        <tbody id="res">
 
-  <main>
-    <section id="altaUsuarios">
-      <h1>Alta Usuarios</h1>
-      <form onsubmit="event.preventDefault();metodosJS();" autocomplete="off"></form>
-      <form class="pt-3" action="" method="POST" enctype="text/plain">
-        <div class="col-md-4 datosPersonales text-center">
-          <fieldset>
-            <legend>
-              Datos Personales
-            </legend>
-
-            <div class="form-group mx-sm-5 pt-3 text-sm-center">
-              <!--NOCONTROL-LISTO-->
-              <label class="validation-error hide" id="fullNameValidationError">Campo requerido**</label>
-              <input type="number" name="id" id="id" placeholder="ID" required>
-            </div>
-
-            <input type="text" placeholder="Nombre del Alumno" name="nombre" id="nombre" maxlength="100" required>
-            <br>
-            <input type="tel" placeholder="Telefono" name="tel" id="tel" required>
-            <br>
-            <input type="email" placeholder="email" name="email" id="email" required>
-            <br>
-            <select name="sexo" id="sexo">
-              <option>
-                ---Sexo---
-              </option>
-              <option>
-                Femenino
-              </option>
-              <option>
-                Masculino
-              </option>
-            </select>
-            <br>
-            <select name="carrera" id="carrera">
-              <option selected>
-                ---Carrera---
-              </option>
-              <option>
-                ISC
-              </option>
-              <option>
-                ITICS
-              </option>
-              <option>
-                IE
-              </option>
-            </select>
-            <br>
-            <select name="status" id="status">
-              <option selected>
-                --Status--
-              </option>
-              <option>
-                Activo
-              </option>
-              <option>
-                Inactivo
-              </option>
-            </select>
-            <br>
-            <select name="tipo" id="tipo">
-              <option selected>--Tipo--</option>
-              <option>Alumno</option>
-              <option>Profesor</option>
-            </select>
-            <br>
-            <a type="submit" id="aceptar" class="btn btn-block aceptar" onclick="metodosJS()" role="button">Guardar</a>
-          </fieldset>
-        </div>
-      </form>
-    </section>
-  </main>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <button class="btn" id="btncargar">Cargar</button>
   <br>
   <footer id="copy" class="navbar-expand-sm">
     <center>
-      <br><br><br><br><br><br>
-      <a class="btn link itesz" href="https://www.teczamora.mx/">Sitio Web Oficial ITESZ</a>
-      <br>
-      &copy; Derechos reservados 2020
+      <div>
+        <br><br><br><br><br><br>
+        <a class="btn link itesz" href="https://www.teczamora.mx/">Sitio Web Oficial ITESZ</a>
+        <br>
+        &copy; Derechos reservados 2020
+      </div>
     </center>
   </footer>
+
 </BODY>
 
 </HTML>
