@@ -135,3 +135,4 @@ templates/Carreras/readme.html
 templates/Ediciones/Consultar.html
 templates/Equipos/RegistroEquipos.html
 templates/Carreras/Carrera.html
+*.xml

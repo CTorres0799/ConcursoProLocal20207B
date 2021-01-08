@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ConcursoPRO20207B</title>
+</head>
+<body>
+    <h1>Registro Docentes</h1>
+    <form action="/docentes/guardar" method="POST">
+        <label>No.Control</label>
+        <input type="number" required name="idDocente" maxlength="8" >
+        <br>
+        <label>Semestre:</label>
+        <input type="text" required name="escolaridad" maxlength="2" >
+        <br>
+        <label>idUsuario:</label>
+        <input type="number" required name="especialidad" >
+        <br>
+        <label>idCarrera:</label>
+        <input type="number" required name="cedula" >
+        <br>
+        <label>idProblemaPuesta:</label>
+        <input type="number" required name="idCarrera">
+        <br>
+        <br>
+        <label>idUsuario:</label>
+        <input type="text" required name="idUsuario">
+        <br>
+        <label>noControl:</label>
+        <input type="text" required name="noControl">
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+<head>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ConcursoPRO20207B</title>
+</head>
+<a href="/Alumnos"> Regresar </a>
+<body>
+    <h1>Registro Alumnos</h1>
+    <form action="/alumnos/guardar" method="POST">
+        <label>No.Control</label>
+        <input type="number" required name="noControl" maxlength="8" >
+        <br>
+        <label>Semestre:</label>
+        <input type="text" required name="semestre" maxlength="2" >
+        <br>
+        <label>idUsuario:</label>
+        <input type="number" required name="idUsuario" >
+        <br>
+        <label>idCarrera:</label>
+        <input type="number" required name="idCarrera" >
+        <br>
+        <label>idProblemaResuelto:</label>
+        <input type="number" required name="idProRes">
+        <br>
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+</html>
