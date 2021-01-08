@@ -150,7 +150,6 @@ descripcion varchar (120),
 	constraint pk_bancoProblemas primary key (idProblema),
     constraint uk_nombre_bancoProblemas unique(nombre)
 );
-select * from Usuarios;
 /*==============================================================*/
 /* Restricciones FK	alter													                                             */
 /*==============================================================*/

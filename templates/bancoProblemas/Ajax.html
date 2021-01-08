@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud Ajax</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</HEAD>
+
+<body>
+    <h2><center>Banco Problemas</center></h2>
+
+    <center><table class="table">
+        <thead>
+            <th>idProblema</th>
+            <th>nombre</th>
+            <th>puntos</th>
+            <th>tiempo</th>
+            <th>descripcion</th>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table></center>
+
+<button id="boton">Agregar</button>
+        <div class="container" id="response">
+
+        </div>
+
+    <script>
+        function ajax(){
+            const http = new XMLHttpRequest();
+            const url = 'bancoProblemas.html';
+
+            http.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    console.log(this.responseText);
+                    document.getElementById("response").innerHTML = this.responseText;
+                }
+            }
+            http.open("GET", url);
+            http.send();
+        }
+        document.getElementById("boton").addEventListener("click", function(){
+            ajax();
+
+        });
+    </script>
+</body>
+
+</HTML>

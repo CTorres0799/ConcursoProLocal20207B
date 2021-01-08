@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Problemas</title>
+    </head>
+
+<body>
+
+    <div class="container" id="response">
+        <div align="center" style="margin-bottom: 5vh;">
+            <!--<button type="button" name="add" id="add" class="btn btn-success btn-xs">
+                Agregar
+            </button>-->
+        </div>
+        <div class="table-responsive" id="pro_data"></div>
+    </div>
+
+        <div id="user_dialog" title="Agregar Problema">
+        <form method="post" id="pro_form">
+            <div class="form-group">
+                <input type="text" name="nombrePro" id="nombrePro" placeholder="nombre Problema" class="form-control">
+                <span id="error_nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="number" name="puntos" placeholder="puntos" class="form-control">
+                <span id="error_puntos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="number" name="tiempoMax" placeholder="tiempo Maximo" class="form-control">
+                <span id="error_tiempoMax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="text" name="descripcion" id="descripcion" placeholder="descripcion" class="form-control">
+                <span id="error_descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="hidden" name="action" id="action" value="insert">
+                <input type="hidden" name="hidden_id" id="hidden_id">
+                <input type="submit" name="form_action" id="form_action" class="btn btn-info" value="Insertar">
+            </div>
+        </form>
+    </div>
+    <div id="action_alert" title="Action"></div>
+
+    <script>
+        $(document.ready(function(){
+            load_data();
+            function load_data(){
+                $.ajax({
+                    url: 'bancoProblemas.html',
+                    method:"POST",
+                    success:function(data){
+                        $('#user_data').html(data);
+                    }
+                });
+            }
+            $('#user_dialog').dialog({
+                autoOpen:false,
+                width:400
+            });
+            $('#add').click(function({
+                $('#user_dialog').attr('title','Agregar Problema');
+                $('#action').val('insertar');
+                $('#form_action').val('Insertar');
+                $('#user_form')[0].reset();
+                $('#form_action').attr('diable', false);
+                $('#user_dialog').dialog('open');
+            });
+        })
+    </script>
+</body>
+</html>
