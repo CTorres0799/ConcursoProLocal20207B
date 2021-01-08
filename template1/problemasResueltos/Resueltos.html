@@ -12,6 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="../JS/Ajax.js"></script>
   <title>Problemas Resueltos</title>
 </HEAD>
 
@@ -150,38 +151,27 @@
     </ul>
   </nav>
 
-  <main>
-    <h4>Problemas Resueltos</h4>
-    <div class="container2 table-responsive">
+  <h4>Problemas Resueltos</h4>
+  <div class="container2 " id="contenido">
+    <div>
       <table class="table3 table-striped table-hover">
         <thead class="thead-dark">
-          <th scope="col">ID Resueltos</th>
-          <th scope="col">ID Propuestos</th>
-          <th scope="col">ID Equipo</th>
-          <th scope="col">Tiempo Ejecución</th>
-          <th scope="col">Puntaje</th>
-        </thead>
 
-        <tbody>
-          <tr class="table">
-            <td>170</td>
-            <td>170</td>
-            <td>3</td>
-            <td>30</td>
-            <td>30</td>
-          </tr>
-          <tr class="table">
-            <td>171</td>
-            <td>171</td>
-            <td>5</td>
-            <td>10</td>
-            <td>5</td>
-          </tr>
+        </thead>
+        <tr>
+          <th>ID Resuelto</th>
+          <th>Id Propuestos</th>
+          <th>ID Equipo</th>
+          <th>Tiempo Ejecucion</th>
+          <th>Puntaje</th>
+        </tr>
+        <tbody id="res">
+
         </tbody>
       </table>
     </div>
-  </main>
-
+  </div>
+  <button class="btn" id="btncargar">Cargar</button>
   <br>
   <footer id="copy" class="navbar-expand-sm">
     <center>

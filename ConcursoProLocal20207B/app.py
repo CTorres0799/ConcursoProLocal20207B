@@ -1,23 +1,60 @@
+
 from _ast import alias
 from symbol import return_stmt
 #from typing import red
 from flask import request
 from Tools.scripts.make_ctype import method
 from flask import Flask, render_template,redirect,url_for
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from modelo.models import db
 from modelo.models import Categorias,Alumnos,PPropuestos,Docentes
 from setuptools.command.alias import alias
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:@cf0709-1415@localhost/ConcursoPro20207B'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 #db = SQLAlchemy(app)
 
+#mysql = MYSQL(app)
+#app.secret_key = '123'
+
 @app.route('/')
 def Index():
     return  'Hello World'
 #crud categorias
+def index():
+    return  render_template('index.html')
+
+#@app.route('/add contact', method=['POST'])
+#def add_contact():
+    #if request.method == 'POST':
+     #   Usuario = request.form['Usuario']
+      #  password = request.form['password']
+     
+
+#@app.route('/login', methods =['GET','POST'])
+#def login():
+ #   login_form = forms.LoginForm()
+  #  if request.method == 'POST' and login_form.validate():
+   #     pass
+    #return render_template('Index.html', form = login_form)
+
+@app.route('/add_alumno')
+def add_alumno():
+    return 'Añadir Contacto'
+
+@app.route('/editar')
+def editar_alumno():
+    return 'Editando Alumno'
+
+@app.route('/eliminar')
+def eliminar_alumno():
+    return 'Alumno Eliminado'
+
+#Inicio CRUD tabla Categorias
+
 @app.route('/categorias/new')
 def nuevaCategoria():
     return render_template('Categorias/nuevaCategoria.html')
