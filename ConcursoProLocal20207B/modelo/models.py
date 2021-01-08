@@ -8,18 +8,19 @@ from werkzeug.security import generate_password_hash, check_password_hash
 db = SQLAlchemy()
 
 #KITIAN
-class Categoria  (db.Model):
+class Categorias(db.Model):
     __tablename__='Categorias'
-    idCategoria = Column(Integer,primary_key=True)
-    nombre = Column(String,unique=True)
-    semestreLimite = Column(Integer)
-    idProPue = Column(Integer)
+    id = Column(Integer,primary_key=True)
+    Nombre = Column(String(30),unique=True)
+    SemestreLimite = Column(Integer)
+    IdProPue = Column(Integer)
     def insertar(self):
         db.session.add(self)
         db.session.commit()
     def consultaGeneral(self):
         categorias = self.query.all()
         return  categorias
+
     def consultaIndividual(self):
         categorias = self.query.all()
         return  categorias
@@ -36,12 +37,27 @@ class Usuario(UserMixin, db.Model):
     tipo = Column(String, nullable = False)
     password_hash= Column(String(16), nullable = False)
 
+
+#INICIO ALUMNOS
+class Alumnos(db.Model):
+    __tablename__='Alumnos'
+    noControl = Column(Integer,primary_key=True)
+    semestre = Column(String(2))
+    idUsuario = Column(Integer)
+    idCarrera = Column(Integer)
+    idProRes = Column(Integer)
+
     def insertar(self):
         db.session.add(self)
         db.session.commit()
     def consultaGeneral(self):
+
         categorias = self.query.all()
         return categorias
+
+        Alumnos = self.query.all()
+        return  Alumnos
+
     def actualizar(self):
         db.session.merge(self)
         db.session.commit()
@@ -100,3 +116,42 @@ class Usuario(UserMixin, db.Model):
 
 
     
+
+        Alumnos = self.consultaIndividual()
+        db.session.delete(Alumnos)
+        db.session.commit()
+    def consultaIndividual(self):
+       Alumnos = self.query.get(self.noControl)
+       return Alumnos
+#FIN ALUMNOS
+
+class PPropuestos (db.Model):
+    __tablename__='ProblemasPropuestos'
+    idProPue = Column(Integer,primary_key=True)
+    globo = Column(String(15))
+    idProblema = Column(Integer)
+    idEdicion = Column(Integer)
+    idCategoria = Column(Integer)
+    def insertar(self):
+        db.session.add(self)
+        db.session.commit()
+    def consultaGeneral(self):
+        PP = self.query.all()
+        return PP
+class Docentes (db.Model):
+    __tablename__='Docentes'
+    idDocente = Column(Integer,primary_key=True)
+    escolaridad = Column(String(50))
+    especialidad = Column(String(50))
+    cedula = Column(Integer)
+    idCarrera = Column(Integer)
+    idUsuario = Column(Integer)
+    noControl = Column(Integer)
+    def insert(self):
+        db.session.add(self)
+        db.session.add()
+    def consultarGeneral(self):
+        docentes = self.query.all()
+        return docentes
+
+
