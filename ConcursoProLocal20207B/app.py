@@ -6,10 +6,6 @@ from flask_sqlalchemy import SQLAlchemy
 from modelo.models import db, Categorias, Usuario, Alumnos,PPropuestos,Docentes
 import json
 
-app = Flask(__name__)
-app.secret_key='ConcursoProg'
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:CruzYPedro523@localhost/ConcursoPro20207B'
-
 from _ast import alias
 from symbol import return_stmt
 #from typing import red
@@ -22,9 +18,10 @@ from modelo.models import db
 from modelo.models import Categorias,Alumnos,PPropuestos,Docentes
 from setuptools.command.alias import alias
 
-
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:@cf0709-1415@localhost/ConcursoPro20207B'
+app.secret_key='ConcursoProg'
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:CruzYPedro523@localhost/ConcursoPro20207B'
+app.config['SQLALCHEMY_COMMIT_TEARDOWN'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 
 #db = SQLAlchemy(app)
@@ -50,7 +47,7 @@ def login():
     if u!=None:
         print(u.getTipo())
         login_user(u)
-        return render_template('Comun/Principal.html')
+        return render_template('Alumnos/consultaGeneral.html')
     else:
         return 'Usuario invalido'
     #login_form = forms.LoginForm()
@@ -218,10 +215,9 @@ def error_404(e):
 @app.errorhandler(500)
 def error_500(e):
     return render_template('Comun/Error.html',mensaje='Estamos resolviendo el problema'),500
+
 if __name__ == '__main__':
  db.init_app(app)
-
-with app.app_context():
+ app.run(port=3000, debug=True)
+#with app.app_context():
  #db.create_all()
-
- app.run(port = 3000, debug=True)
