@@ -6,6 +6,12 @@ from flask_sqlalchemy import SQLAlchemy
 from modelo.models import db, Categorias, Usuario, Alumnos,PPropuestos,Docentes
 import json
 
+
+app = Flask(__name__)
+app.secret_key='ConcursoProg'
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:@localhost/ConcursoPro20207B'
+
+
 from _ast import alias
 from symbol import return_stmt
 #from typing import red
