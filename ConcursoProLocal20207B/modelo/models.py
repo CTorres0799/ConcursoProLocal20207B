@@ -35,7 +35,20 @@ class Usuario(UserMixin, db.Model):
     email = Column(String, nullable = False)
     estatus = Column(String, nullable = False)
     tipo = Column(String, nullable = False)
-    password_hash= Column(String(16), nullable = False)
+    password_hash= Column(String(128), nullable = False)
+
+    def insertar(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def actualizar(self):
+        db.session.merge(self)
+        db.session.commit()
+
+    def eliminar(self):
+        usuario = self.consultaIndividual()
+        db.session.delete(usuario)
+        db.session.commit()
 
     @property
     def password(self):
@@ -51,7 +64,7 @@ class Usuario(UserMixin, db.Model):
     def is_authenticated(self):
         return True
     def is_active(self):
-        if self.estatus == 'Al':
+        if self.estatus == 'A':
             return True
         else:
             return False

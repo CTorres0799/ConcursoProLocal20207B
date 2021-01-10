@@ -6,24 +6,6 @@ from flask_sqlalchemy import SQLAlchemy
 from modelo.models import db, Categorias, Usuario, Alumnos,PPropuestos,Docentes
 import json
 
-
-app = Flask(__name__)
-app.secret_key='ConcursoProg'
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:@localhost/ConcursoPro20207B'
-
-
-from _ast import alias
-from symbol import return_stmt
-#from typing import red
-from flask import request
-from Tools.scripts.make_ctype import method
-from flask import Flask, render_template,redirect,url_for
-from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
-from modelo.models import db
-from modelo.models import Categorias,Alumnos,PPropuestos,Docentes
-from setuptools.command.alias import alias
-
 app = Flask(__name__)
 app.secret_key='ConcursoProg'
 app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:CruzYPedro523@localhost/ConcursoPro20207B'
