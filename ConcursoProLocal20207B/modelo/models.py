@@ -19,7 +19,23 @@ class Usuario(UserMixin, db.Model):
     email = Column(String, nullable = False)
     estatus = Column(String, nullable = False)
     tipo = Column(String, nullable = False)
+
     password_hash= Column(String(16), nullable = False)
+
+    password_hash= Column(String(128), nullable = False)
+
+    def insertar(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def actualizar(self):
+        db.session.merge(self)
+        db.session.commit()
+
+    def eliminar(self):
+        usuario = self.consultaIndividual()
+        db.session.delete(usuario)
+        db.session.commit()
 
     @property
     def password(self):
@@ -44,14 +60,14 @@ class Usuario(UserMixin, db.Model):
     def get_id(self):
         return self.idUsuario
     def is_admin(self):
-        if self.tipo =='A':
+        if self.tipo =='Ad':
             return True
         else:
             return False
     def getTipo(self):
         return self.tipo
     def validar(self, email, password):
-        user = Usuario.query.filter_by(email='email', estatus='A').first()
+        user = Usuario.query.filter_by(email='email', estatus='Al').first()
         if user!= None:
             if user.validarPassword(password):
                 return user
@@ -59,6 +75,7 @@ class Usuario(UserMixin, db.Model):
             return None
 
 #CRISTIAN DEVELOPED
+
 #INICIO ALUMNOS
 class Alumnos(db.Model):
     __tablename__='Alumnos'
@@ -72,14 +89,36 @@ class Alumnos(db.Model):
         db.session.add(self)
         db.session.commit()
     def consultaGeneral(self):
+
         Alumnos = self.query.all()
         return  Alumnos
+
+
+        categorias = self.query.all()
+        return categorias
+
+        Alumnos = self.query.all()
+        return  Alumnos
+
+
     def actualizar(self):
         db.session.merge(self)
         db.session.commit()
     def eliminar(self):
+
         noControl = self.consultaIndividual()
         db.session.delete(noControl)
+
+        usuario = self.consultaInduvidual()
+        db.session.delete(usuario)
+        db.session.commit()
+    def consultaIndividual(self):
+        usuario = self.query.get(self.idUsuario)
+        return usuario
+
+        Alumnos = self.consultaIndividual()
+        db.session.delete(Alumnos)
+
         db.session.commit()
     def consultaIndividual(self):
        Alumnos = self.query.get(self.noControl)

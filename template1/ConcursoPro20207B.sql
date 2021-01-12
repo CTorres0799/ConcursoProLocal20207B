@@ -116,13 +116,14 @@ idUsuario int auto_increment not null,
 nombre varchar(50),
 sexo varchar(8),
 telefono int not null,
-email varchar (30),
+email varchar (50),
 estatus varchar (8),
 tipo varchar (8),
-password varchar (20),
+password_hash varchar (20),
 	constraint pk_Usuarios primary key (idUsuario),
     constraint uk_nombre_usuarios unique(nombre,estatus,tipo)
 );
+drop table Usuarios;
 /*==============================================================*/
 /* Table: ProblemasResueltos                                    */
 /*==============================================================*/
@@ -150,6 +151,8 @@ descripcion varchar (120),
 	constraint pk_bancoProblemas primary key (idProblema),
     constraint uk_nombre_bancoProblemas unique(nombre)
 );
+/*select * from Usuarios;
+select * from alumnos;*/
 /*==============================================================*/
 /* Restricciones FK	alter													                                             */
 /*==============================================================*/
@@ -175,13 +178,13 @@ alter table Ediciones add constraint ediciones_problemaspropuestos_FK foreign ke
 /* Creacion del Usuario para la conexion   y permisos           */
 /*==============================================================*/
 CREATE USER 'concursoprog_user'@'localhost' IDENTIFIED BY 'hola.123';
-GRANT ALL PRIVILEGES ON concursopro20207b.Categorias TO 'concursoprog_user'@'localhost';
-GRANT ALL PRIVILEGES ON concursopro20207b.Alumnos TO 'concursoprog_user'@'localhost';
-GRANT ALL PRIVILEGES ON concursopro20207b.ProblemasPropuestos TO 'concursoprog_user'@'localhost';
-GRANT ALL PRIVILEGES ON concursopro20207b.Docentes TO 'concursoprog_user'@'localhost';
-GRANT ALL PRIVILEGES ON concursopro20207b.Carreras TO 'concursoprog_user'@'localhost';
-GRANT ALL PRIVILEGES ON concursopro20207b.Equipos TO 'concursoprog_user'@'localhost';
-GRANT ALL PRIVILEGES ON concursopro20207b.Ediciones TO 'concursoprog_user'@'localhost';
-GRANT ALL PRIVILEGES ON concursopro20207b.Usuarios TO 'concursoprog_user'@'localhost';
-GRANT ALL PRIVILEGES ON concursopro20207b.problemasResueltos TO 'concursoprog_user'@'localhost';
-GRANT ALL PRIVILEGES ON concursopro20207b.bancoProblemas TO 'concursoprog_user'@'localhost';
+GRANT ALL PRIVILEGES ON concursopro20207b.Categorias TO 'concursoprog_user'@'root';
+GRANT ALL PRIVILEGES ON concursopro20207b.Alumnos TO 'concursoprog_user'@'root';
+GRANT ALL PRIVILEGES ON concursopro20207b.ProblemasPropuestos TO 'concursoprog_user'@'root';
+GRANT ALL PRIVILEGES ON concursopro20207b.Docentes TO 'concursoprog_user'@'root';
+GRANT ALL PRIVILEGES ON concursopro20207b.Carreras TO 'concursoprog_user'@'root';
+GRANT ALL PRIVILEGES ON concursopro20207b.Equipos TO 'concursoprog_user'@'root';
+GRANT ALL PRIVILEGES ON concursopro20207b.Ediciones TO 'concursoprog_user'@'root';
+GRANT ALL PRIVILEGES ON concursopro20207b.Usuarios TO 'concursoprog_user'@'root';
+GRANT ALL PRIVILEGES ON concursopro20207b.problemasResueltos TO 'concursoprog_user'@'root';
+GRANT ALL PRIVILEGES ON concursopro20207b.bancoProblemas TO 'concursoprog_user'@'root';
