@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar Alumnos</title>
+</head>
+<body>
+    <h1>Consulta General: Alumnos</h1>
+    <table border="1">
+        <thead>
+        <th>No.Control</th>
+        <th>Semestre</th>
+        <th>idUsuario</th>
+        <th>idCarrera</th>
+        <th>idProblemaResuelto</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+        </thead>
+        {% for a in alucnosGeneral %}
+         <tr>
+             <td>{{a.noControl}}</td>
+             <td>{{a.semestre}}</td>
+             <td>{{a.idUsuario}}</td>
+             <td>{{a.idCarrera}}</td>
+             <td>{{a.idProRes}}</td>
+             <td><a href="/alumnos/{{a.noControl}}"><img src="{{url_for('static',filename='IMG/modificar.png')}}"></a></td>
+             <td><a href="/alumnos/eliminar/{{a.noControl}}"><img src="{{url_for('static',filename='IMG/eliminar.png')}}"></a></td>
+         </tr>
+        {% endfor %}
+    </table>
+<a href="alumnos/new">Añadir Alumno</a>
+</body>
+</html>

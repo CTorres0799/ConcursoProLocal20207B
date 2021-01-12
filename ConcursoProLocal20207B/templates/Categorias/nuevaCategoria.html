@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <title>ConcursoPRO20207B</title>
 </head>
+<a href="/Categorias"> Regresar </a>
 <body>
     <h1>Registro Categorias</h1>
-    <form action="/Categorias/save" method="post">
+    <form action="/categorias/guardar" method="POST">
+        <label>idCategoria:</label>
+        <input type="number" required name="idCategoria">
+        <br>
         <label>Nombre Categoria:</label>
-        <input type="text" required name="nombreCAT" maxlength="30" >
+        <input type="text" required name="nombre" maxlength="30" >
         <br>
         <label>Semestre Limite:</label>
-        <input type="text" required name="sLimite" maxlength="2">
+        <input type="text" required name="semestreLimite" maxlength="2">
         <br>
-        <label>idCategoria:</label>
+        <label>idProblemaPropuesto:</label>
         <input type="number" required name="idProPue">
         <br>
         <input type="submit" value="Guardar">

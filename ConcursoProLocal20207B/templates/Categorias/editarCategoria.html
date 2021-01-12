@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Categoria</title>
+</head>
+<body>
+    <h1>Edicion: Categoria</h1>
+    <form action="/categorias/modificar" method="post">
+        <label>idCategoria:</label>
+        <input type="number" name="idCategoria" value="{{category.idCategoria}}">
+        <br>
+        <label>Nombre Categoria:</label>
+        <input type="text" name="nombre" value="{{category.nombre}}">
+        <br>
+        <label>Semestre Limite:</label>
+        <input type="text" name="semestreLimite" value="{{category.semestreLimite}}">
+        <br>
+        <label>idProblemaPropuesto:</label>
+        <input type="number" name="idProPue" value="{{category.idProPue}}">
+        <br>
+        <input type="submit" value="Guardar Cambios">
+        <button>Cancelar</button>
+    </form>
+
+</body>
+</html>

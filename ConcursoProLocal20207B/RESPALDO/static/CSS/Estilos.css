@@ -1,0 +1,14 @@
+body {
+    background-image: url(../img/gui-Login.PNG);
+    transition: 0.2s ease-in;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    position: relative;
+    font-size: 25px;
+    font-family: monospace;
+    padding: 0px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Alumno</title>
+</head>
+<body>
+    <h1>Edicion: Alumnos</h1>
+    <form action="/alumnos/modificar" method="post">
+        <label>NoControl:</label>
+        <input type="number" name="noControl" value="{{alucnos.noControl}}">
+        <br>
+        <label>Semestre:</label>
+        <input type="number" name="semestre" value="{{alucnos.semestre}}">
+        <br>
+        <label>idUsuario:</label>
+        <input type="number" name="idUsuario" value="{{alucnos.idUsuario}}">
+        <br>
+        <label>idCarrera:</label>
+        <input type="number" name="idCarrera" value="{{alucnos.idCarrera}}">
+        <br>
+        <label>idProblemaResuelto:</label>
+        <input type="number" name="idProRes" value="{{alucnos.idProRes}}">
+        <br>
+        <input type="submit" value="Guardar Cambios">
+        <button>Cancelar</button>
+    </form>
+
+</body>
+</html>

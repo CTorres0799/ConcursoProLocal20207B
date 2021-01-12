@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Docente</title>
+</head>
+<body>
+    <h1>Edicion: Docente</h1>
+    <form action="/docentes/modificar" method="post">
+        <label>idDocente</label>
+        <input type="number" required name="idDocente"  value="{{docentis.idDocente}}" >
+        <br>
+        <label>Escolaridad:</label>
+        <input type="text" required name="escolaridad" value="{{docentis.escolaridad}}" >
+        <br>
+        <label>Especialidad:</label>
+        <input type="text" required name="especialidad" value="{{docentis.especialidad}}" >
+        <br>
+        <label>Cedula:</label>
+        <input type="number" required name="cedula" value="{{docentis.cedula}}">
+        <br>
+        <label>idCarrera:</label>
+        <input type="number" required name="idCarrera" value="{{docentis.idCarrera}}">
+        <br>
+        <br>
+        <label>idUsuario:</label>
+        <input type="number" required name="idUsuario" value="{{docentis.idUsuario}}">
+        <br>
+        <label>noControl:</label>
+        <input type="number" required name="noControl" value="{{docentis.noControl}}">
+        <input type="submit" value="Guardar">
+        <button>Cancelar</button>
+    </form>
+
+</body>
+</html>
