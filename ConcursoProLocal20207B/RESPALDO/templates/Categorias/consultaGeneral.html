@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar Categorias</title>
+</head>
+<body>
+    <h1>Consulta General: Categorias</h1>
+    <table border="1">
+        <thead>
+        <th>idProPue</th>
+        <th>nombre</th>
+        <th>semestreLimite</th>
+        <th>idCategoria</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+        </thead>
+        {% for a in categoryGeneral %}
+         <tr>
+             <td>{{a.idProPue}}</td>
+             <td>{{a.nombre}}</td>
+             <td>{{a.semestreLimite}}</td>
+             <td>{{a.idCategoria}}</td>
+             <td><a href="/categorias/{{a.idCategoria}}"><img src="{{url_for('static',filename='IMG/modificar.png')}}"></a></td>
+             <td><a href="/categorias/eliminar/{{a.idCategoria}}"><img src="{{url_for('static',filename='IMG/eliminar.png')}}"></a></td>
+         </tr>
+        {% endfor %}
+    </table>
+<a href="/categorias/new">Añadir Categoria</a>
+</body>
+</html>

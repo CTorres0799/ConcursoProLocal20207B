@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar Docentes</title>
+</head>
+<body>
+    <h1>Consulta General: Docentes</h1>
+    <table border="1">
+        <thead>
+        <th>idDocente</th>
+        <th>escolaridad</th>
+        <th>Especialidad</th>
+        <th>Cedula</th>
+        <th>idCarrera</th>
+        <th>idUsuario</th>
+        <th>noControl</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+        </thead>
+        {% for a in docentisyGeneral %}
+         <tr>
+             <td>{{a.idDocente}}</td>
+             <td>{{a.escolaridad}}</td>
+             <td>{{a.especialidad}}</td>
+             <td>{{a.cedula}}</td>
+             <td>{{a.idCarrera}}</td>
+             <td>{{a.idUsuario}}</td>
+             <td>{{a.noControl}}</td>
+             <td><a href="/docentes/{{a.idDocente}}"><img src="{{url_for('static',filename='IMG/modificar.png')}}"></a></td>
+             <td><a href="/docentes/eliminar/{{a.idDocente}}"><img src="{{url_for('static',filename='IMG/eliminar.png')}}"></a></td>
+         </tr>
+        {% endfor %}
+    </table>
+<a href="/docentes/new">Añadir Docente</a>
+</body>
+</html>
