@@ -1,23 +1,24 @@
 #from urllib import request
 #from Tools.scripts.make_ctype import method
-from flask import Flask, render_template, request, abort, redirect, url_for
+from functools import partial
+from flask import Flask, render_template,abort,request, redirect,url_for
 from flask_login import LoginManager, login_user, current_user, logout_user, login_required
 from flask_sqlalchemy import SQLAlchemy
-from modelo.models import db, Categorias, Usuario, Alumnos,PPropuestos,Docentes
+from modelo.models import db, Categorias, Usuario, Alumnos,PPropuestos,Docentes #Carrera
 import json
 
 app = Flask(__name__)
 app.secret_key='ConcursoProg'
 app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:CruzYPedro523@localhost/ConcursoPro20207B'
-app.config['SQLALCHEMY_COMMIT_TEARDOWN'] = True
+#app.config['SQLALCHEMY_COMMIT_TEARDOWN'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 
 #db = SQLAlchemy(app)
-LoginManager = LoginManager()
-LoginManager.init_app(app)
-LoginManager.login_view='inicio'
+loginManager=LoginManager()
+loginManager.init_app(app)
+loginManager.login_view='inicio'
 
-@LoginManager.user_loader
+@loginManager.user_loader
 def load_user(id):
     return Usuario.query.get(int(id))
 
@@ -31,15 +32,13 @@ def inicio():
 @app.route('/login',methods=['POST'])
 def login():
     u=Usuario()
-    u=u.validar(request.form['email'],request.form['password'])
+    u=u.validar(request.form['email'],request.form['password_hash'])
     if u!=None:
         print(u.getTipo())
         login_user(u)
-        return render_template('Alumnos/consultaGeneral.html')
+        return render_template('/Comun/Principal.html')
     else:
         return 'Usuario invalido'
-    #login_form = forms.LoginForm()
-    #if request.method == 'POST' and login_form.validate():
 
 @app.route('/cerrarSesion')
 @login_required
@@ -53,7 +52,7 @@ def cerrarSesion():
 #mysql = MYSQL(app)
 #app.secret_key = '123'
 
-@app.route('/')
+@app.route('/Comun/Principal.html')
 def Index():
     return  'Hello World'
 #crud categorias
@@ -123,6 +122,7 @@ def guardarAlumno():
     alucnos.insertar()
     return redirect(url_for('consultaGeneralAlumnos'))
 @app.route('/Alumnos')
+@login_required
 def consultaGeneralAlumnos():
     alucnos = Alumnos()
     alucnosGeneral = alucnos.consultaGeneral()
@@ -178,12 +178,10 @@ def guardarDocente():
     return 'Docentes agregado con exito'
 #final
 
-
 #crud de registro de usuarios
 @app.route('/usuarios/registro')
 def registroUsuarios():
     return render_template('Usuarios/RegistroUsuarios.html')
-
 @app.route('/usuarios/guardar',methods=['post'])
 def guardarUsuario():
     u=Usuario()
@@ -191,6 +189,7 @@ def guardarUsuario():
     u.sexo = request.form['sexo']
     u.telefono = request.form['telefono']
     u.email = request.form['email']
+    u.tipo = request.form['tipo']
     u.password = request.form['password']
     u.estatus = request.form['estatus']
     u.insertar()
@@ -206,6 +205,6 @@ def error_500(e):
 
 if __name__ == '__main__':
  db.init_app(app)
- app.run(port=3000, debug=True)
+ app.run(debug=True)
 #with app.app_context():
  #db.create_all()

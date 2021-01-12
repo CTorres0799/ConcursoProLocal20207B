@@ -2,14 +2,121 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="{{url_for('static',filename='CSS/Carrera.css')}}">
         <title>TecZamora</title>
     </head>
     <body>
+       <nav class="form-group navbar-expand-sm bg-dark navbar-dark">
+           <img class="navBar-brand" href="">
+           <ul class="navBar-nav">
+               <li class="nav-item">
+                    <a class="nav-link" href="/alumnos">Alumnos</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="/categorias">Categorias</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="/cerrarSesion">CerrarSesion</a>
+               </li>
+           </ul>
+        <!--<ul class="navbar-nav">
+            <img src="img/tec-navBar.png" alt="Logo" style="width: 40px;">
+            <!--Categorias-->
+            <!--<li class="nav-item">
+                <div class="container">
+                    <div class="dropdown">
+                        <button id="texto1" type="button" class="btn link dropdown-toggle"
+                            data-toggle="dropdown">Categorias</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="Categorias/altaCategorias.html">altaCategorias</a>
+                            <a class="dropdown-item" href="Categorias/consultarCategorias.html">ConsultarCategorias</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--Docentes-->
+            <!--<li class="nav-item ">
+                <div class="container">
+                    <div class="dropdown">
+                        <button id="texto1" type="button" class="btn link dropdown-toggle"
+                            data-toggle="dropdown">Docentes</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="Docentes/altaDocentes.html">altaDocentes</a>
+                            <a class="dropdown-item" href="Docentes/consultarDocentes.html">consultarDocentes</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--BancoProblemas-->
+            <!--<li class="nav-item">
+                <div class="container">
+                    <div class="dropdown">
+                        <button id="texto1" type="button" class="btn link dropdown-toggle"
+                            data-toggle="dropdown">Problemas</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="bancoProblemas/BancoProblemas.html">BancoProblemas</a>
+                            <a class="dropdown-item"
+                                href="problemasPropuestos/consultarProblemasPropuestos.html">ProblemasPropuestos</a>
+                            <a class="dropdown-item" href="problemasResueltos/Resueltos.html">ProblemasResueltos</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--Carreras-->
+            <!--<li class="nav-item active">
+                <div class="container">
+                    <div class="dropdown">
+                        <button id="texto1" type="button" class="btn link dropdown-toggle"
+                            data-toggle="dropdown">Carreras</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="Carreras/AltaCarrera.html">AltaCarrera</a>
+                            <a class="dropdown-item" href="Carreras/ConsultarCarrera.html">CosultarCarreras</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--Ediciones-->
+            <!--<li class="nav-item">
+                <div class="container">
+                    <div class="dropdown">
+                        <button id="texto1" type="button" class="btn link dropdown-toggle"
+                            data-toggle="dropdown">Ediciones</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="Ediciones/AltaEdiciones.html">AltaEdiciones</a>
+                            <a class="dropdown-item" href="Ediciones/ConsultarEdiciones.html">CosultarEdiciones</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--Equipos-->
+            <!--<li class="nav-item">
+                <div class="container">
+                    <div class="dropdown">
+                        <button id="texto1" type="button" class="btn link dropdown-toggle"
+                            data-toggle="dropdown">Equipos</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="Equipos/AltaRegistroEquipos.html">AltaEquipos</a>
+                            <a class="dropdown-item" href="Equipos/CosultarEquipo.html">CosultarEquipos</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--Usuarios-->
+            <!--<li class="nav-item">
+                <div class="container">
+                    <div class="dropdown">
+                        <button id="texto1" type="button" class="btn link dropdown-toggle"
+                            data-toggle="dropdown">Usuarios</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="Usuarios/AltaUsuarios.html">AltaUsuarios</a>
+                            <a class="dropdown-item" href="Usuarios/ConsultaUsuarios.html">CosultarUsuarios</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>-->
+        </nav>
         <header>
             <b>
                 <center>INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA</center>
@@ -19,28 +126,27 @@
             <div class="row justify-content-center pt-lg-2 mt-3 mr-1">
                 <div class="form-group text-dark pt-lg-3">
                     <strong>
-                        <h1>Bienvenido <b>{{current_user.nombre}}</b> al Concurso de Programación del ITESZ</h1>
+                        <h1>Bienvenido(a) <b>{{current_user.nombre}}</b> al Concurso de Programación del ITESZ</h1>
                     </strong>
-                    <img src="img/java.png" alt="logoJava" width="200" height="200">
-                    <img src="img/C++_Logo.svg.png" alt="logoC" width="170" height="170">
-                    <img src="img/tec-navBar.png" alt="logoTECZ" width="200" height="200">
-                    <img src="img/mysql.png" alt="logoMySQL" width="200" height="200">
-                    <img src="img/sql-server.png" alt="logoSQLS" width="200" height="200">
+                    <img width="170" height="170" src={{url_for('static',filename='img/java.png')}} >
+                    <img width="170" height="170" src={{url_for('static',filename='img/C++_Logo.svg.png')}}>
+                    <img width="200" height="200" src={{url_for('static',filename='img/tec-navBar.png')}}>
+                    <img width="200" height="200" src={{url_for('static',filename='img/mysql.png')}}>
+                    <img width="200" height="200" src={{url_for('static',filename='img/sql-server.png')}}>
                 </div>
             </div>
         </form>
-        <br><br>
-        <img src="{{url_for('static',filename='img/ZorroITESZ.png' alt='Mascota de la escuela)' width= '500' height='300'}}">
-        <footer class="navBar-expand-sm">
+       <br><br><br><br><br><br><br><br><br><br><br>
+        <footer id="copy" class="navBar-expand-sm">
             <center>
                 <img src="{{url_for('static',filename='img/logoACC.png')}}">
                 <img src="{{url_for('static',filename='img/ISC.png')}}">
                 <img src="{{url_for('static',filename='img/ITIC.png')}}">
-                <img src="{{url_for('static',filename='img/INGE.png')}}">
+                <img src="{{url_for('static',filename='img/INGE E.png')}}">
             </center>
             <br>
             <center>
-                <p><a class="btn link" href="https://www.teczamora.mx/">Sitio web del ITESZ</a>
+                <p><a id="SitioITESZ" class="btn link" href="https://www.teczamora.mx/">Sitio web del ITESZ</a>
                    <br>&copy; Derechos Reservados 2020</p>
             </center>
 

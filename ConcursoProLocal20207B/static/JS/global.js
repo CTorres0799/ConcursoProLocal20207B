@@ -4,6 +4,6 @@ function regresar(url){
 function verPassword(){
     if(document.getElementById("check").checked)
         document.getElementById("password").setAttribute("type","text")
-   else
+    else
         document.getElementById("password").setAttribute("type","password")
 }

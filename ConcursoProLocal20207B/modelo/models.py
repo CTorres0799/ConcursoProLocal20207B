@@ -1,5 +1,5 @@
 from flask_sqlalchemy import  SQLAlchemy
-from sqlalchemy import Column,Integer,String, ForeignKey
+from sqlalchemy import Column,Integer,String,ForeignKey
 from flask_login import UserMixin
 #from app import db
 from sqlalchemy.orm import relationship
@@ -26,45 +26,46 @@ class Categorias(db.Model):
         return  categorias
 
 #PedriñoGames
-class Usuario(UserMixin, db.Model):
+class Usuario(UserMixin,db.Model):
     __tablename__='Usuarios'
-    idUsuario = Column(Integer, primary_key=True)
-    nombre = Column(String, nullable= False)
-    sexo = Column(String, nullable = False)
-    telefono = Column(String, nullable = False)
-    email = Column(String, nullable = False)
-    estatus = Column(String, nullable = False)
-    tipo = Column(String, nullable = False)
-    password_hash= Column(String(128), nullable = False)
+    idUsuario=Column(Integer,primary_key=True)
+    nombre=Column(String,nullable= False)
+    sexo=Column(String,nullable = False)
+    telefono=Column(String,nullable = False)
+    email=Column(String,nullable = False)
+    estatus=Column(String,nullable = False)
+    tipo=Column(String,nullable = False)
+    password_hash=Column(String(128),nullable = False)
 
     def insertar(self):
         db.session.add(self)
         db.session.commit()
-
+    def consultaGeneral(self):
+        categorias=self.query.all()
+        return categorias
     def actualizar(self):
         db.session.merge(self)
         db.session.commit()
-
     def eliminar(self):
-        usuario = self.consultaIndividual()
+        usuario=self.consultaIndividual()
         db.session.delete(usuario)
         db.session.commit()
-
+    def consultaIndividual(self):
+        usuario=self.query.get(self.idUsuario)
+        return usuario
     @property
     def password(self):
         raise AttributeError('El atributo password no es de lectura')
-
     @password.setter
     def password(self,password):
-        self.password_hash = generate_password_hash(password)
-
-    def validarPassword(self, password):
-        return check_password_hash(self.password_hash, password)
+        self.password_hash=generate_password_hash(password)
+    def validarPassword(self,password):
+        return check_password_hash(self.password_hash,password)
 
     def is_authenticated(self):
         return True
     def is_active(self):
-        if self.estatus == 'A':
+        if self.estatus=='A':
             return True
         else:
             return False
@@ -73,19 +74,43 @@ class Usuario(UserMixin, db.Model):
     def get_id(self):
         return self.idUsuario
     def is_admin(self):
-        if self.tipo =='Ad':
+        if self.tipo=='Ad':
             return True
         else:
             return False
     def getTipo(self):
         return self.tipo
     def validar(self, email, password):
-        user = Usuario.query.filter_by(email='email', estatus='Al').first()
-        if user!= None:
+        user = Usuario.query.filter_by(email=email, estatus='A').first()
+        if user != None:
             if user.validarPassword(password):
                 return user
         else:
             return None
+
+#FIN Usuarios
+
+#inicio Carrera
+class Carreras(db.Model):
+    __tablename='Carreras'
+    idCarrera = Column(Integer,primary_key=True)
+    noControl = Column(Integer)
+    nombre = Column(String(50))
+    siglas = Column(String(6))
+
+    def insertar(self):
+        db.session.add(self)
+        db.session.commit()
+    def consultaGeneral(self):
+        return self.query.all()
+    def actualizar(self):
+        db.session.merge(self)
+        db.session.commit()
+    def eliminar(self):
+        db.session.delete(self.consultaIndividual)
+        db.session.commit()
+    def consultaIndividual(self):
+        return self.query.get(self.idCarrera)
 
 #INICIO ALUMNOS
 class Alumnos(db.Model):
@@ -117,7 +142,6 @@ class Alumnos(db.Model):
     def consultaIndividual(self):
         usuario = self.query.get(self.idUsuario)
         return usuario
-
         Alumnos = self.consultaIndividual()
         db.session.delete(Alumnos)
         db.session.commit()

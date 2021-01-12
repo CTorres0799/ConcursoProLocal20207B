@@ -5,6 +5,7 @@
         <title>TecZamora</title>
         <script>
             function ocultarDivs(){
+                document.getElementById("admin").style.display='none';
                 document.getElementById("alumnos").style.display='none';
                 document.getElementById("docentes").style.display='none';
             }
@@ -12,12 +13,14 @@
                 var tipo=document.getElementById("tipo").options[document.getElementById("tipo").options.selectedIndex].value;
                 alert(tipo);
                 switch(tipo){
-                    case 'Al':
-                        document.getElementById("alumnos").style.display='block';
+                    case 'Ad':
+                        document.getElementById("admin").style.display='block';
                         break;
+                    case 'Al':
+                         document.getElementById("alumnos").style.display='block';
+                         break;
                     case 'Do':
                          document.getElementById("docentes").style.display='block';
-                         break;
                 }
             }
         </script>
@@ -52,16 +55,22 @@
             <label>Estatus:</label>
             <input type="checkbox" name="estatus" value="A" checked>
             <br><br>
-            <div id="docentes">
-                <h1>Datos del Docente</h1>
-                <label>NoControlDocente:</label>
-                <input type="number" name="noControlDocente">
+            <div id="admin">
+                <h1>Datos del Administrador</h1>
+                <label>noAdmin</label>
+                <input type="number" name="noAdmin">
             </div>
             <div id="alumnos">
                 <h1>Datos del Alumno</h1>
                 <label>NoControl:</label>
                 <input type="number" name="noControl">
             </div>
+            <div id="docentes">
+                <h1>Datos del Docente</h1>
+                <label>NoControlDocente:</label>
+                <input type="number" name="noControlDocente">
+            </div>
+
             <input type="submit" value="Registrar">
             <a href="/">Regresar</a>
         </form>
