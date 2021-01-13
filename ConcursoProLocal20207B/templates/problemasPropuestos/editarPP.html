@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Editar PP</title>
+</head>
+<body>
+    <h1>Edicion: ProblemasPropuestos</h1>
+    <form action="/ppropuestos/modificar" method="post">
+
+        <label>idProPue:</label>
+        <input type="number" name="idProPue" value="{{pp.idProPue}}">
+        <br>
+        <label>globo:</label>
+        <input type="number" name="globo" value="{{pp.globo}}">
+        <br>
+        <label>idProblema:</label>
+        <input type="number" name="idProblema" value="{{pp.idProblema}}">
+        <br>
+        <label>idEdicion:</label>
+        <input type="number" name="idEdicion" value="{{pp.idEdicion}}">
+        <br>
+        <label>idCategoria:</label>
+        <input type="number" name="idCategoria" value="{{pp.idCategoria}}">
+        <br>
+        <button type="sumbit" class="btn btn-success">Guardar Cambios</button>
+        <!--<a type="sumbit" class="btn btn-success" >Guardar Cambios</a>-->
+        <!--<input type="submit" value="Guardar Cambios">-->
+        <button class="btn btn-danger">Cancelar</button>
+    </form>
+
+</body>
+</html>

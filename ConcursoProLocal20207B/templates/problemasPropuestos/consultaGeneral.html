@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="{{url_for('static',filename='JS/global.js')}}"></script>
     <meta charset="UTF-8">
-    <title>Consultar Alumnos</title>
+    <title>Consultar PPropuestos</title>
 </head>
 <body>
 <ul class="nav nav-tabs">
@@ -12,7 +12,7 @@
     <a class="nav-link" href="/">Inicio</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="/Alumnos">Alumnos</a>
+    <a class="nav-link" href="/Alumnos">Alumnos</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="/Categorias">Categorias</a>
@@ -24,35 +24,35 @@
     <a class="nav-link" href="/Problemas">BancoProblemas</a>
   </li>
       <li class="nav-item">
-    <a class="nav-link" href="/PPropue">PPropuestos</a>
+    <a class="nav-link active" href="/PPropue">PPropuestos</a>
   </li>
 
 </ul>
-    <h1>Consulta General: Alumnos</h1>
+    <h1>Consulta General: PP</h1>
     <table class="table table-striped" border="1">
         <thead>
-        <th>No.Control</th>
-        <th>Semestre</th>
-        <th>idUsuario</th>
-        <th>idCarrera</th>
-        <th>idProblemaResuelto</th>
+        <th>idProPue</th>
+        <th>globo</th>
+        <th>idProblema</th>
+        <th>idEdicion</th>
+        <th>idCategoria</th>
         <th>Editar</th>
         <th>Eliminar</th>
         </thead>
-        {% for a in alucnosGeneral %}
+        {% for a in ppGeneral %}
          <tr>
-             <td>{{a.noControl}}</td>
-             <td>{{a.semestre}}</td>
-             <td>{{a.idUsuario}}</td>
-             <td>{{a.idCarrera}}</td>
-             <td>{{a.idProRes}}</td>
-             <td><a href="/alumnos/{{a.noControl}}"><img src="{{url_for('static',filename='IMG/modificar.png')}}"></a></td>
-             <td><a href="/alumnos/eliminar/{{a.noControl}}"><img src="{{url_for('static',filename='IMG/eliminar.png')}}"></a></td>
+             <td>{{a.idProPue}}</td>
+             <td>{{a.globo}}</td>
+             <td>{{a.idProblema}}</td>
+             <td>{{a.idEdicion}}</td>
+             <td>{{a.idCategoria}}</td>
+             <td><a href="/ppropuestos/{{a.idProPuel}}"><img src="{{url_for('static',filename='IMG/modificar.png')}}"></a></td>
+             <td><a href="/ppropuestos/eliminar/{{a.idProPue}}"><img src="{{url_for('static',filename='IMG/eliminar.png')}}"></a></td>
 
          </tr>
         {% endfor %}
     </table>
 <!--<a href="alumnos/new">Añadir Alumno</a>-->
-<a href="alumnos/new" class="btn btn-info" role="button">Añadir Alumno</a>
+<a href="ppropuestos/new" class="btn btn-info" role="button">Añadir PP</a>
 </body>
 </html>

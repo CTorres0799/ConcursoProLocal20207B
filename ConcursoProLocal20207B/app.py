@@ -7,12 +7,14 @@ from operator import eq
 from flask import Flask, render_template,abort,request, redirect,url_for
 from flask_login import LoginManager, login_user, current_user, logout_user, login_required
 from flask_sqlalchemy import SQLAlchemy
+
 from modelo.models import db, Categorias, Usuario, Alumnos,PPropuestos,Docentes,Carreras, Equipos, Ediciones, problemasResueltos
+from modelo.models import db, Categorias, Usuario, Alumnos,Docentes,BancoProblemas,ProblemasPropuestos
 import json
 
 app = Flask(__name__)
 app.secret_key='ConcursoProg'
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:CruzYPedro523@localhost/ConcursoPro20207B'
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:@cf0709-1415@localhost/ConcursoPro20207B'
 #app.config['SQLALCHEMY_COMMIT_TEARDOWN'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 
@@ -99,7 +101,11 @@ def guardarAlumno():
     alucnos.idProRes=request.form ['idProRes']
     alucnos.insertar()
     return redirect(url_for('consultaGeneralAlumnos'))
+
 @app.route('/Alumnos')
+
+#@app.route('/Alumnos')
+#@login_required
 @app.route('/Alumnos') #CONSULTA GENERAL
 @login_required
 def consultaGeneralAlumnos():
@@ -125,6 +131,92 @@ def actualizarAlumno(): #ACTUALIZAR ALUMNOS
     alucnos.actualizar()
     return redirect(url_for('consultaGeneralAlumnos'))
 #FIN CRUD ALUMNOS FUNCIONANDO
+
+#INICIO CRUD PROBLEMASPROPUESTOS
+@app.route('/ppropuestos/new') #AÑADIR ALUMNO
+def nuevoPP():
+    return render_template('problemasPropuestos/nuevoProblemaP.html')
+@app.route('/ppropuestos/eliminar/<int:idProPue>') #ELIMINAR ALUMNO
+def eliminarPP(idProPue):
+    pp = ProblemasPropuestos()
+    pp.idProPue = idProPue
+    pp.eliminar()
+    return redirect(url_for('consultaGeneralPPropuestos'))
+@app.route('/ppropuestos/guardar', methods=['POST']) #GUARDAR ALUMNO
+def guardarPP():
+    pp = ProblemasPropuestos()
+    pp.idProPue=request.form ['idProPue']
+    pp.globo=request.form ['globo']
+    pp.idProblema=request.form ['idProblema']
+    pp.idEdicion=request.form ['idEdicion']
+    pp.idCategoria=request.form ['idCategoria']
+    pp.insertar()
+    return redirect(url_for('consultaGeneralPPropuestos'))
+@app.route('/PPropue') #CONSULTA GENERAL
+def consultaGeneralPPropuestos():
+    pp = ProblemasPropuestos()
+    ppGeneral = pp.consultaGeneral()
+    return render_template('problemasPropuestos/consultaGeneral.html',ppGeneral=ppGeneral)
+@app.route('/ppropuestos/<int:idProPue>')
+def consultarPP(idProPue): #CONSULTA INDIVIDUAL
+    pp = ProblemasPropuestos()
+    pp.idProPue=idProPue
+    pp = pp.consultaIndividual()
+    return render_template('problemasPropuestos/editarPP.html',pp=pp)
+@app.route('/ppropuestos/modificar', methods = ['POST'])
+def actualizarPP(): #ACTUALIZAR ALUMNOS
+    pp = ProblemasPropuestos()
+    pp.idProPue=request.form ['idProPue']
+    pp.globo=request.form ['globo']
+    pp.idProblema=request.form ['idProblema']
+    pp.idEdicion=request.form ['idEdicion']
+    pp.idCategoria=request.form ['idCategoria']
+    pp.actualizar()
+    return redirect(url_for('consultaGeneralPPropuestos'))
+#FIN CRUD PROBLEMASPROPUESTOS
+
+#INICIO CRUD BANCO PROBLEMAS
+@app.route('/bproblemas/new') #AÑADIR ALUMNO
+def nuevoProblema():
+    return render_template('bancoProblemas/nuevoProblema.html')
+@app.route('/bproblemas/eliminar/<int:idProblema>') #ELIMINAR ALUMNO
+def eliminarProblema(idProblema):
+    problemas = BancoProblemas()
+    problemas.idProblema = idProblema
+    problemas.eliminar()
+    return redirect(url_for('consultaGeneralProblemas'))
+@app.route('/bproblemas/guardar', methods=['POST']) #GUARDAR ALUMNO
+def guardarProblemas():
+    problemas = BancoProblemas()
+    problemas.idProblema=request.form ['idProblema']
+    problemas.nombre=request.form ['nombre']
+    problemas.puntos=request.form ['puntos']
+    problemas.tiempoMaximo=request.form ['tiempoMaximo']
+    problemas.descripcion=request.form ['descripcion']
+    problemas.insertar()
+    return redirect(url_for('consultaGeneralProblemas'))
+@app.route('/Problemas') #CONSULTA GENERAL
+def consultaGeneralProblemas():
+    problemas = BancoProblemas()
+    problemasGeneral = problemas.consultaGeneral()
+    return render_template('bancoProblemas/problemasGeneral.html',problemasGeneral=problemasGeneral)
+@app.route('/bproblemas/<int:idProblema>')
+def consultarProblema(idProblema): #CONSULTA INDIVIDUAL
+    problemas = BancoProblemas()
+    problemas.idProblema=idProblema
+    problemas = problemas.consultaIndividual()
+    return render_template('bancoProblemas/editarProblema.html',problemas=problemas)
+@app.route('/bproblemas/modificar', methods = ['POST'])
+def actualizarProblema(): #ACTUALIZAR ALUMNOS
+    problemas = BancoProblemas()
+    problemas.idProblema=request.form ['idProblema']
+    problemas.nombre=request.form ['nombre']
+    problemas.puntos=request.form ['puntos']
+    problemas.tiempoMaximo=request.form ['tiempoMaximo']
+    problemas.descripcion=request.form ['descripcion']
+    problemas.actualizar()
+    return redirect(url_for('consultaGeneralProblemas'))
+#FIN BANCO PROBLEMAS
 
 #INICIO CRUD CATEGORIAS WORKING
 @app.route('/categorias/<int:idCategoria>')

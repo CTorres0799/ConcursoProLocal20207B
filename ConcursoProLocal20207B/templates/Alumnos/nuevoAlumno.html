@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <title>ConcursoPRO20207B</title>
 </head>
@@ -8,9 +9,15 @@
 <body>
     <h1>Registro Alumnos</h1>
     <form action="/alumnos/guardar" method="POST">
-        <label>No.Control</label>
+  <div class="input-group mb-3 input-group-lg">
+    <div class="input-group-prepend">
+      <span class="input-group-text">No.Control</span>
+    </div>
+    <input class="form-control" type="number" required name="noControl" maxlength="8">
+  </div>
+      <!--  <label>No.Control</label>
         <input type="number" required name="noControl" maxlength="8" >
-        <br>
+        <br> -->
         <label>Semestre:</label>
         <input type="text" required name="semestre" maxlength="2" >
         <br>
@@ -23,7 +30,7 @@
         <label>idProblemaResuelto:</label>
         <input type="number" required name="idProRes">
         <br>
-        <input type="submit" value="Guardar">
+        <button type="sumbit" class="btn btn-success">Guardar</button>
     </form>
 </body>
 </html>

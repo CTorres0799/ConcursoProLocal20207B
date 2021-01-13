@@ -3,6 +3,8 @@
     <head>
         <title>TecZamora</title>
         <meta charset="utf-8">
+        <script src="{{url_for('static',filename='JS/global.js')}}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
         <img src="{{url_for('static', filename='img/Icono.ico')}}">
         <link rel="stylesheet" href="{{url_for('static',filename='CSS/Estilos.css')}}">
         <script src="{{url_for('static', filename='JS/global.js')}}"></script>
@@ -10,7 +12,7 @@
     <body align = "center">
         <h1>TECNOLOGICO DE ZAMORA</h1>
         <h2 class="text-light">SIE</h2>
-        <form action="/login" method="post">
+        <form id="login-form" action="/login" method="post">
             <label>Email:</label>
             <input type="email" name="email" required>
             <br><br>
