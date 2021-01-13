@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <title>Editar Categoria</title>
 </head>
@@ -19,8 +20,10 @@
         <label>idProblemaPropuesto:</label>
         <input type="number" name="idProPue" value="{{category.idProPue}}">
         <br>
-        <input type="submit" value="Guardar Cambios">
-        <button>Cancelar</button>
+        <button type="sumbit" class="btn btn-success">Guardar Cambios</button>
+        <!--<a type="sumbit" class="btn btn-success" >Guardar Cambios</a>-->
+        <!--<input type="submit" value="Guardar Cambios">-->
+        <button class="btn btn-danger">Cancelar</button>
     </form>
 
 </body>
