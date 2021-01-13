@@ -21,18 +21,6 @@ class Usuario(UserMixin,db.Model):
     estatus=Column(String,nullable = False)
     tipo=Column(String,nullable = False)
     password_hash=Column(String(128),nullable = False)
-    idUsuario = Column(Integer, primary_key=True)
-    nombre = Column(String, nullable= False)
-    sexo = Column(String, nullable = False)
-    telefono = Column(String, nullable = False)
-    email = Column(String, nullable = False)
-    estatus = Column(String, nullable = False)
-    tipo = Column(String, nullable = False)
-
-    password_hash= Column(String(16), nullable = False)
-
-    password_hash= Column(String(128), nullable = False)
-
 
     def insertar(self):
         db.session.add(self)
@@ -88,7 +76,7 @@ class Usuario(UserMixin,db.Model):
 
 #inicio Carrera
 class Carreras(db.Model):
-    __tablename='Carreras'
+    __tablename__='Carreras'
     idCarrera = Column(Integer,primary_key=True)
     noControl = Column(Integer)
     nombre = Column(String(50))
@@ -98,15 +86,104 @@ class Carreras(db.Model):
         db.session.add(self)
         db.session.commit()
     def consultaGeneral(self):
+        Carreras = self.query.all()
+        return Carreras
+    def actualizar(self):
+        db.session.merge(self)
+        db.session.commit()
+    def eliminar(self):
+        carrera = self.consultaIndividual()
+        db.session.delete(carrera)
+        db.session.commit()
+    def consultaIndividual(self):
+        carrera = self.query.get(self.idCarrera)
+        return carrera
+#fin de crud carrera
+
+#inicio Equipos
+class Equipos(db.Model):
+    __tablename__='Equipos'
+    idEquipo = Column(Integer,primary_key=True)
+    idProRes = Column(Integer)
+    idProPue = Column(Integer)
+    nombre = Column(String(40))
+    noControl1 =  Column(Integer)
+    noControl2 = Column(Integer)
+    noControl3 = Column(Integer)
+    idDocentes = Column(Integer)
+    idCategorias = Column(Integer)
+
+    def insertar(self):
+        db.session.add(self)
+        db.session.commit()
+    def consultaGeneral(self):
+        Equipos = self.query.all()
+        return Equipos
+    def actualizar(self):
+        db.session.merge(self)
+        db.session.commit()
+    def eliminar(self):
+        equipos = self.consultaIndividual()
+        db.session.delete(equipos)
+        db.session.commit()
+    def consultaIndividual(self):
+        equipos = self.query.get(self.idEquipo)
+        return equipos
+
+#fin de crud  Equipos
+
+#inicio Ediciones
+class Ediciones(db.Model):
+    __tablename__='Ediciones'
+    idEdiciones = Column(Integer, primary_key=True)
+    idProPue = Column(Integer)
+    idProRes = Column(Integer)
+    nombre = Column(String(40))
+    fechaRegistro = Column(Integer)
+    fechaEvento = Column(Integer)
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+    def consultaGeneral(self):
+        Ediciones = self.query.all()
+        return Ediciones
+    def actualizar(self):
+        db.session.merge()
+        db.session.commit()
+    def eliminar(self):
+        ediciones = self.consultaIndividual()
+        db.session.delete(ediciones)
+        db.session.commit()
+    def consultaIndividual(self):
+        ediciones = self.query.get(self.idEdiciones)
+        return ediciones
+#fin  ediciones
+
+#inicio ProblemasResueltos
+class problemasResueltos(db.Model):
+    __tablename__ = 'problemasResueltos'
+    idProRes = Column(Integer, primary_key=True)
+    idProPue = Column(Integer)
+    idEquipo = Column(Integer)
+    tiempo = Column(Integer)
+    tiempoEjecicion = Column(Integer)
+    puntaje = Column(Integer)
+
+    def inserta(self):
+        db.session.add(self)
+        db.session.commit()
+    def consultaGeneral(self):
         return self.query.all()
     def actualizar(self):
         db.session.merge(self)
         db.session.commit()
     def eliminar(self):
-        db.session.delete(self.consultaIndividual)
+        db.session.delete(self.consultaIndividual())
         db.session.commit()
     def consultaIndividual(self):
-        return self.query.get(self.idCarrera)
+        return self.query.get(self.idProRes)
+##fin de crud ProblemasResueltos
 #CRISTIAN DEVELOPED
 
 #INICIO ALUMNOS

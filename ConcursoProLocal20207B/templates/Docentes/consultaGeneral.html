@@ -6,6 +6,8 @@
 </head>
 <body>
     <h1>Consulta General: Docentes</h1>
+    {% if curren_user.is:authenticated and current.is_admin()%}
+    {% endif %}
     <table border="1">
         <thead>
         <th>idDocente</th>

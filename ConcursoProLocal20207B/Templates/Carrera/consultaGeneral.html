@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>TecZamora</title>
+    </head>
+    <body>
+        <hi>Consulta General: Carrera</hi>
+        <table border="1">
+            <thead>
+            <th>idCarrera</th>
+            <th>noControl</th>
+            <th>nombre</th>
+            <th>siglas</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+            </thead>
+            {% for ca in caGeneral %}
+            <tr>
+                <td>{{ca.idCarrera}}</td>
+                <td>{{ca.noControl}}</td>
+                <td>{{ca.nombre}}</td>
+                <td>{{ca.siglas}}</td>
+                <td><a href="/carrera/{{ca.idCarrera}}"><img src="{{url_for('static',filename='IMG/modificar.png')}}"></a></td>
+                <td><a href="/carrera/eliminar/{{ca.idCarrera}}"></a><img src="{{url_for('static',filename='IMG/eliminar.png')}}"></td>
+            </tr>
+            {% endfor %}
+        </table>
+    <a href="carrera/new">Añadir Carrera</a>
+
+    </body>
+</html>
+
