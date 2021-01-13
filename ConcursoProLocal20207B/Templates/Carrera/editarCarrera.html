@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Editar Carreras</title>
+    </head>
+    <body>
+        <h1>Editar Carrera</h1>
+        <form action="/carrera/modificar" method="POST">
+            <label>idCarrera</label>
+            <input type="number" required name="{{ca.idCarrera}}">
+            <br>
+            <label>noControl:</label>
+            <input type="number" required name="{{ca.noControl}}" maxlength="8" >
+            <br>
+            <label>Nombre:</label>
+            <input type="text" required name="{{ca.nombre}}" >
+            <br>
+            <label>Siglas:</label>
+            <input type="text" name="{{ca.siglas}}">
+            <br>
+            <input type="submit" value="Guardar Cambios">
+            <button>Cancelar</button>
+        </form>
+    </body>
+</html>
+

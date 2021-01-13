@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar Ediciones</title>
+</head>
+<body>
+    <h1>Consulta General: Alumnos</h1>
+    <table border="1">
+        <thead>
+        <th>idEquipo</th>
+        <th>idProRes</th>
+        <th>idProPue</th>
+        <th>nombre</th>
+        <th>noControl1</th>
+        <th>noControl2</th>
+        <th>noControl3</th>
+        <th>idDocentes</th>
+        <th>idCategorias</th>
+        <th>puntos</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+        </thead>
+        {% for eq in eqGeneral %}
+         <tr>
+             <td>{{eq.idEquipo}}</td>
+             <td>{{eq.idProRes}}</td>
+             <td>{{eq.idProPue}}</td>
+             <td>{{eq.nombre}}</td>
+             <td>{{eq.noControl1}}</td>
+             <td>{{eq.noControl2}}</td>
+             <td>{{eq.noControl3}}</td>
+             <td>{{eq.idDocentes}}</td>
+             <td>{{eq.puntos}}</td>
+             <td><a href="/equipos/{{a.idEquipo}}"><img src="{{url_for('static',filename='IMG/modificar.png')}}"></a></td>
+             <td><a href="/equipos/eliminar/{{a.idEquipo}}"><img src="{{url_for('static',filename='IMG/eliminar.png')}}"></a></td>
+         </tr>
+        {% endfor %}
+    </table>
+<a href="alumnos/new">Añadir Alumno</a>
+</body>
+</html>
