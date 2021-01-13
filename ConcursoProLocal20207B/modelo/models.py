@@ -142,8 +142,9 @@ class Alumnos(db.Model):
         noControl = self.consultaIndividual()
         db.session.delete(noControl)
 
-        usuario = self.consultaInduvidual()
-        db.session.delete(usuario)
+
+        #usuario = self.consultaInduvidual()
+        #db.session.delete(usuario)
         db.session.commit()
     def consultaIndividual(self):
         usuario = self.query.get(self.idUsuario)
@@ -182,6 +183,58 @@ class Categorias(db.Model):
         return categoria
 #FIN CATEGORIAS
 
+#INICIO P.PROPUESTOS
+class ProblemasPropuestos(db.Model):
+    __tablename__='ProblemasPropuestos'
+    idProPue = Column(Integer,primary_key=True)
+    globo = Column(String(15))
+    idProblema = Column(Integer)
+    idEdicion = Column(Integer)
+    idCategoria = Column(Integer)
+    def insertar(self):
+        db.session.add(self)
+        db.session.commit()
+    def consultaGeneral(self):
+        ProblemasPropuestos = self.query.all()
+        return ProblemasPropuestos
+    def actualizar(self):
+        db.session.merge(self)
+        db.session.commit()
+    def eliminar(self):
+        ProblemasPropuestos = self.consultaIndividual()
+        db.session.delete(ProblemasPropuestos)
+        db.session.commit()
+    def consultaIndividual(self):
+        ProblemasPropuestos = self.query.get(self.idProPue)
+        return ProblemasPropuestos
+#FIN P.PROPUESTOS
+
+#INICIO BANCO PROBLEMAS
+class BancoProblemas(db.Model):
+    __tablename__= 'bancoProblemas'
+    idProblema = Column(Integer,primary_key=True)
+    nombre = Column(String(50))
+    puntos = Column(Integer)
+    tiempoMaximo = Column(Integer)
+    descripcion = Column(String(120))
+    def insertar(self):
+        db.session.add(self)
+        db.session.commit()
+    def consultaGeneral(self):
+        BancoProblemas = self.query.all()
+        return BancoProblemas
+    def actualizar(self):
+        db.session.merge(self)
+        db.session.commit()
+    def eliminar(self):
+        BancoProblemas = self.consultaIndividual()
+        db.session.delete(BancoProblemas)
+        db.session.commit()
+    def consultaIndividual(self):
+        BancoProblemas = self.query.get(self.idProblema)
+        return BancoProblemas
+#FIN BANCO PROBLEMAS
+
 #INICIO DOCENTES
 class Docentes (db.Model):
     __tablename__='Docentes'
@@ -210,25 +263,5 @@ class Docentes (db.Model):
         return Docentes
 #FIN DOCENTES
 
-class PPropuestos (db.Model):
-    __tablename__='ProblemasPropuestos'
-    idProPue = Column(Integer,primary_key=True)
-    globo = Column(String(15))
-    idProblema = Column(Integer)
-    idEdicion = Column(Integer)
-    idCategoria = Column(Integer)
-    def insertar(self):
-        db.session.add(self)
-        db.session.commit()
-    def consultaGeneral(self):
-        PP = self.query.all()
-        return PP
-
-    def insert(self):
-        db.session.add(self)
-        db.session.add()
-    def consultarGeneral(self):
-        docentes = self.query.all()
-        return docentes
 
 

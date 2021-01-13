@@ -12,7 +12,7 @@ body {
     font-size: 18px;/*utilizado para el tamaño de letras*/
     transition: 0.2s ease-in;
     border-radius: 30px;/*para que se vean redondos los bordes*/
-    background-attachment: fixed;
+    background-attachment: fixed; 
 }
 #copy{
     position: relative;
@@ -23,3 +23,53 @@ body {
 #SitioITESZ{
     color: white;
 }
+footer{
+    align-self: flex-end;
+    padding: 3px;  
+    display: block;
+}
+ul{
+    background: rgb(24, 66, 131);
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
+    transition: 0.2s ease-in;
+}
+#texto1{
+    color: wheat;
+}
+fieldset{
+    color: white;
+}
+button{
+    color: rgb(31, 241, 217);
+}
+#Encabezado{
+    border-bottom-style: groove;
+    border-bottom-color: rgb(24, 66, 131);
+    border-bottom-width: 7px;
+    font-size: 30px;
+    color: rgb(9, 156, 204);;
+  }
+#Guardar{
+    color: white;
+}
+#Cancelar{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

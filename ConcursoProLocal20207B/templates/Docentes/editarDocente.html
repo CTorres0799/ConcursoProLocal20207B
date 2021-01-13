@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <title>Editar Docente</title>
 </head>
@@ -28,8 +29,12 @@
         <br>
         <label>noControl:</label>
         <input type="number" required name="noControl" value="{{docentis.noControl}}">
-        <input type="submit" value="Guardar">
-        <button>Cancelar</button>
+        <br>
+        <br>
+        <button type="sumbit" class="btn btn-success">Guardar Cambios</button>
+        <!--<a type="sumbit" class="btn btn-success" >Guardar Cambios</a>-->
+        <!--<input type="submit" value="Guardar Cambios">-->
+        <button class="btn btn-danger">Cancelar</button>
     </form>
 
 </body>

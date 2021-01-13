@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <title>Consultar Categorias</title>
 </head>
 <body>
+<ul class="nav nav-tabs">
+      <li class="nav-item">
+    <a class="nav-link" href="/">Inicio</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/Alumnos">Alumnos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="/Categorias">Categorias</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/Docentes">Docentes</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/Problemas">BancoProblemas</a>
+  </li>
+      <li class="nav-item">
+    <a class="nav-link" href="/PPropue">PPropuestos</a>
+  </li>
+
+</ul>
     <h1>Consulta General: Categorias</h1>
-    <table border="1">
+    <table class="table table-striped" border="1">
         <thead>
         <th>idProPue</th>
         <th>nombre</th>
@@ -26,6 +48,7 @@
          </tr>
         {% endfor %}
     </table>
-<a href="/categorias/new">Añadir Categoria</a>
+<a href="/categorias/new" class="btn btn-success" role="button">Añadir Categoria</a>
+
 </body>
 </html>

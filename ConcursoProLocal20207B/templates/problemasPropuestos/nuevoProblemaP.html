@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>ConcursoPRO20207B</title>
+</head>
+<a href="/PPropue"> Regresar </a>
+<body>
+    <h1>Registro PP</h1>
+    <form action="/ppropuestos/guardar" method="POST">
+  <div class="input-group mb-3 input-group-lg">
+    <div class="input-group-prepend">
+      <span class="input-group-text">idProPue</span>
+    </div>
+    <input class="form-control" type="number" required name="idProPue" >
+  </div>
+        <label>Globo:</label>
+        <input type="text" required name="globo" maxlength="15" >
+        <br>
+        <label>idProblema:</label>
+        <input type="number" required name="idProblema" >
+        <br>
+        <label>idEdicion:</label>
+        <input type="number" required name="idEdicion" >
+        <br>
+        <label>idCategoria:</label>
+        <input type="number" required name="idCategoria">
+        <br>
+        <button type="sumbit" class="btn btn-success">Guardar</button>
+    </form>
+</body>
+</html>

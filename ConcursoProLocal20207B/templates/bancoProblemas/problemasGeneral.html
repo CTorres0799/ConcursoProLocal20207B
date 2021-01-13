@@ -1,0 +1,56 @@
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Consultar Problemas</title>
+</head>
+<body>
+<ul class="nav nav-tabs">
+      <li class="nav-item">
+    <a class="nav-link" href="/">Inicio</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/Alumnos">Alumnos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/Categorias">Categorias</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/Docentes">Docentes</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link active" href="/Problemas">BancoProblemas</a>
+  </li>
+      <li class="nav-item">
+    <a class="nav-link" href="/PPropue">PPropuestos</a>
+  </li>
+
+</ul>
+    <h1>Consulta General: Problemas</h1>
+    <table class="table table-striped" border="1">
+        <thead>
+        <th>idProblema</th>
+        <th>nombre</th>
+        <th>puntos</th>
+        <th>tiempoMaximo</th>
+        <th>descripcion</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+        </thead>
+        {% for a in problemasGeneral %}
+         <tr>
+             <td>{{a.idProblema}}</td>
+             <td>{{a.nombre}}</td>
+             <td>{{a.puntos}}</td>
+             <td>{{a.tiempoMaximo}}</td>
+             <td>{{a.descripcion}}</td>
+             <td><a href="/bproblemas/{{a.idProblema}}"><img src="{{url_for('static',filename='IMG/modificar.png')}}"></a></td>
+             <td><a href="/bproblemas/eliminar/{{a.idProblema}}"><img src="{{url_for('static',filename='IMG/eliminar.png')}}"></a></td>
+         </tr>
+        {% endfor %}
+    </table>
+<!--<a href="alumnos/new">Añadir Alumno</a>-->
+<a href="bproblemas/new" class="btn btn-info" role="button">Añadir Problema</a>
+</body>
+</html>

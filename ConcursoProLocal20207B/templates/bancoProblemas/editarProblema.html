@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Editar Problema</title>
+</head>
+<body>
+    <h1>Edicion: Problemas</h1>
+    <form action="/bproblemas/modificar" method="post">
+        <label>idProblema:</label>
+        <input type="number" required name="idProblema" value="{{problemas.idProblema}}" >
+        <br>
+        <label>nombre:</label>
+        <input type="text" required name="nombre" value="{{problemas.nombre}}" >
+        <br>
+        <label>puntos:</label>
+        <input type="number" required name="puntos" value="{{problemas.puntos}}" >
+        <br>
+        <label>tiempoMaximo:</label>
+        <input type="number" required name="tiempoMaximo" value="{{problemas.tiempoMaximo}}" >
+        <br>
+        <label>descripcion:</label>
+        <input type="text" required name="descripcion" value="{{problemas.descripcion}}">
+        <br>
+        <button type="sumbit" class="btn btn-success">Guardar Cambios</button>
+        <!--<a type="sumbit" class="btn btn-success" >Guardar Cambios</a>-->
+        <!--<input type="submit" value="Guardar Cambios">-->
+        <button class="btn btn-danger">Cancelar</button>
+    </form>
+
+</body>
+</html>
